@@ -2,8 +2,8 @@ import customers from '../lib/customers';
 
 const CustomerSlider = () => (
   <>
-    <h2 className="text-white">Who trust in us</h2>
-    <div className="w-full bg-gray-700 border-gray-500 border">
+    <h2>Who trust in us:</h2>
+    <div className="w-full bg-white bg-opacity-75">
       <div className="flex justify-around items-center p-4 h-20">
         {customers.map(customer => (
           <a
