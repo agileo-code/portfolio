@@ -1,7 +1,10 @@
+import Layout from '../components/layout';
+
 export default function Home() {
   return (
-    <div className="p-4 mx-auto">
-      <h1>Next.js Boilerplate</h1>
-    </div>
+    <Layout>
+      <div className="bg-green-500 h-screen relative"></div>
+      <div className="h-screen">Next.js Boilerplate</div>
+    </Layout>
   );
 }
