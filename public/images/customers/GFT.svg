@@ -1,14 +1,49 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 131 24" style="enable-background:new 0 0 131 24;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#213E7F;}
-</style>
-<g>
-	<path class="st0" d="M0,0v24h131V0H0z M85.2,15.4L85.2,15.4c-1,1.4-2.7,2.2-4.7,2.2c-3.5,0-5.9-2.3-5.9-5.8c0-3.5,2.4-5.8,5.9-5.8
-		c1.8,0,3.3,0.6,4.3,1.7l0.1,0.1l-1.4,1.4l-0.1-0.1c-0.8-0.7-1.8-1.1-2.9-1.1c-2.1,0-3.6,1.5-3.6,3.8c0,2.3,1.5,3.8,3.6,3.8
-		c1,0,1.9-0.3,2.5-0.9v-1.9h-2.6v-1.9h4.9V15.4z M96.6,8.3h-6.3v2.6h5.9v2h-5.9v4.6H88V6.3h8.7V8.3z M106.2,8.3h-3.1v9.2h-2.3V8.3
-		h-3v-2h8.4V8.3z M124.6,17.5h-11.1V6.3h11.1V17.5z"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="GFT.svg"
+   xml:space="preserve"
+   style="enable-background:new 0 0 131 24;"
+   viewBox="0 0 131 24"
+   y="0px"
+   x="0px"
+   id="Ebene_1"
+   version="1.1"><metadata
+   id="metadata938"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+   id="defs936" /><sodipodi:namedview
+   inkscape:current-layer="Ebene_1"
+   inkscape:window-maximized="1"
+   inkscape:window-y="0"
+   inkscape:window-x="1680"
+   inkscape:cy="12"
+   inkscape:cx="65.5"
+   inkscape:zoom="10.21374"
+   showgrid="false"
+   id="namedview934"
+   inkscape:window-height="1026"
+   inkscape:window-width="1920"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0"
+   guidetolerance="10"
+   gridtolerance="10"
+   objecttolerance="10"
+   borderopacity="1"
+   bordercolor="#666666"
+   pagecolor="#ffffff" />
+<g
+   style="fill:currentColor;fill-opacity:1"
+   id="g931">
+	<path
+   id="path929"
+   d="M0,0v24h131V0H0z M85.2,15.4L85.2,15.4c-1,1.4-2.7,2.2-4.7,2.2c-3.5,0-5.9-2.3-5.9-5.8c0-3.5,2.4-5.8,5.9-5.8   c1.8,0,3.3,0.6,4.3,1.7l0.1,0.1l-1.4,1.4l-0.1-0.1c-0.8-0.7-1.8-1.1-2.9-1.1c-2.1,0-3.6,1.5-3.6,3.8c0,2.3,1.5,3.8,3.6,3.8   c1,0,1.9-0.3,2.5-0.9v-1.9h-2.6v-1.9h4.9V15.4z M96.6,8.3h-6.3v2.6h5.9v2h-5.9v4.6H88V6.3h8.7V8.3z M106.2,8.3h-3.1v9.2h-2.3V8.3   h-3v-2h8.4V8.3z M124.6,17.5h-11.1V6.3h11.1V17.5z"/>
 </g>
 </svg>

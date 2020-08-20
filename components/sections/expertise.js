@@ -4,7 +4,7 @@ import services from '../../lib/services';
 const Expertise = () => (
   <SectionLayout dark>
     <h2 className="self-center mb-10">Services</h2>
-    <div className="grid grid-cols-4 gap-20">
+    <div className="grid gap-20 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
       {services.map(service => (
         <IconBox
           key={service.title}
