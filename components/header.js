@@ -18,13 +18,17 @@ const Header = () => {
       }`}
     >
       <div
-        className={`flex items-center text-black h-full ml-4 ${
-          transparent ? 'w-32' : 'w-24'
+        className={`flex items-center h-full ml-4 ${
+          transparent ? 'w-32 text-corporative-color' : 'w-24 text-black'
         }`}
       >
         <Logo />
       </div>
-      <div className={`mr-6 text-gray-700`}>
+      <div
+        className={`mr-6 ${
+          transparent ? 'text-corporative-color' : 'text-black'
+        }`}
+      >
         <Burger />
       </div>
     </div>

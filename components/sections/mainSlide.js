@@ -2,7 +2,7 @@ import CustomerSlider from '../customerSlider';
 import SectionLayout from '../sectionLayout';
 import Code from '../../public/images/code.svg';
 const MainSlide = () => (
-  <SectionLayout dark className="h-screen">
+  <SectionLayout className="h-screen">
     <div className="flex items-center flex-1">
       <div>
         <h1>RUSHMORE CODE</h1>

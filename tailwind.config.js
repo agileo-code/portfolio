@@ -3,6 +3,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        corporative: {
+          slideDark: 'black',
+          slideLight: '#2d2d2d',
+          color: 'white'
+        },
         gray: {
           100: '#f7f7f7',
           200: '#ededed',

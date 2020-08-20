@@ -29,3 +29,23 @@ h1 {
   font-weight: bold;
   font-size: calc(2rem + 3vw);
 }
+
+h2 {
+  font-weight: bold;
+  font-size: calc(1.23rem + 1vw);
+}
+
+h3 {
+  font-weight: bold;
+  font-size: calc(0.76rem + 1vw);
+}
+
+h4 {
+  font-weight: bold;
+  font-size: calc(0.47rem + 1vw);
+}
+
+h5 {
+  font-weight: bold;
+  font-size: calc(0.29rem + 1vw);
+}
