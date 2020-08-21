@@ -3,7 +3,7 @@ import SectionLayout from '../sectionLayout';
 import Code from '../../public/images/code.svg';
 import Universe from '../universe/universe';
 const MainSlide = () => (
-  <SectionLayout className="h-screen bg-corporative-slideLight text-corporative-color">
+  <SectionLayout className="h-screen bg-corporative-slideDark text-corporative-color">
     <div className="grid lg:grid-cols-2 flex-1">
       <div className="self-center">
         <h1>RUSHMORE CODE</h1>
