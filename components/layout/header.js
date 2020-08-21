@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import Burger from '../public/images/burger.svg';
-import Logo from '../public/images/temporalLogo.svg';
+import Burger from '../../public/images/burger.svg';
+import Logo from '../../public/images/temporalLogo.svg';
 const Header = () => {
   const [transparent, setTransparent] = useState(true);
 

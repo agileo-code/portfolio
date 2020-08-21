@@ -2,7 +2,7 @@ import SectionLayout from '../sectionLayout';
 import IconBox from '../iconBox';
 import services from '../../lib/services';
 const Expertise = () => (
-  <SectionLayout dark>
+  <SectionLayout className="bg-corporative-slideDark text-corporative-color">
     <h2 className="self-center mb-10">Services</h2>
     <div className="grid gap-20 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
       {services.map(service => (
