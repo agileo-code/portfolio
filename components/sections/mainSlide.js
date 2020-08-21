@@ -1,6 +1,5 @@
 import CustomerSlider from '../customerSlider';
 import SectionLayout from '../sectionLayout';
-import Code from '../../public/images/code.svg';
 import Universe from '../universe/universe';
 const MainSlide = () => (
   <SectionLayout className="h-screen bg-corporative-slideDark text-corporative-color">
