@@ -1,7 +1,7 @@
 ---
 title: 'Video conference Grow Meeting'
 desc: 'The covid radar prediction project'
-icon: '/images/projects/covid-radar.png'
+icon: '/images/projects/grow-meetting.png'
 url: 'https://covid-radar.xyz/'
 ---
 
