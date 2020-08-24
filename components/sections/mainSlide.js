@@ -1,6 +1,7 @@
 import CustomerSlider from '../customerSlider';
 import SectionLayout from '../sectionLayout';
 import Universe from '../universe/universe';
+
 const MainSlide = () => (
   <SectionLayout className="h-screen bg-corporative-slideDark text-corporative-color">
     <div className="grid lg:grid-cols-2 flex-1">

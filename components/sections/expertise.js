@@ -1,6 +1,7 @@
 import SectionLayout from '../sectionLayout';
 import IconBox from '../iconBox';
 import services from '../../lib/services';
+
 const Expertise = () => (
   <SectionLayout className="bg-corporative-slideDark text-corporative-color">
     <h2 className="self-center mb-10">Services</h2>
@@ -11,7 +12,7 @@ const Expertise = () => (
           icon={service.icon}
           title={service.title}
           desc={service.desc}
-        ></IconBox>
+        />
       ))}
     </div>
   </SectionLayout>

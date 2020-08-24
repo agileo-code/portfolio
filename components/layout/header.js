@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import Burger from '../../public/images/burger.svg';
 import Logo from '../../public/images/temporalLogo.svg';
+
 const Header = () => {
   const [transparent, setTransparent] = useState(true);
 
   useEffect(() => {
     setTransparent(window.pageYOffset < 60);
-    window.addEventListener('scroll', e => {
+    window.addEventListener('scroll', () => {
       setTransparent(window.pageYOffset < 60);
     });
   }, []);

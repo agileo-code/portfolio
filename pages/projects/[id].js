@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import Layout from '../../components/layout/layout';
 import SectionLayout from '../../components/sectionLayout';
 import { getAllMarkDownIds, getMarkDownData } from '../../lib/markDowns';

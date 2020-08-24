@@ -1,3 +1,4 @@
+/* eslint-disable react/destructuring-assignment */
 import { useSpring, animated } from 'react-spring';
 import styles from './styles.module.css'; // // Icons made by Freepik from www.flaticon.com
 
@@ -14,6 +15,7 @@ function Universe() {
     xy: [0, 0],
     config: { mass: 10, tension: 550, friction: 140 }
   }));
+
   return (
     <div
       className={styles.container}
