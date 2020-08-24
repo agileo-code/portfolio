@@ -1,7 +1,7 @@
 ---
-title: 'Contract platform Assegur'
+title: 'Assurance contract platform'
 desc: 'The covid radar prediction project'
-icon: '/images/projects/covid-radar.png'
+icon: '/images/projects/assurance-app.png'
 url: 'https://covid-radar.xyz/'
 ---
 
