@@ -2,6 +2,7 @@
 title: 'Assurance contract platform'
 desc: 'The covid radar prediction project'
 icon: '/images/projects/assurance-app.png'
+technologies: 'react javascript styledComponent aws'
 ---
 
 A simple predictive model and tracker for COVID-19 Spain cases.

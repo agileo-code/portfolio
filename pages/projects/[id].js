@@ -3,9 +3,11 @@ import Link from 'next/link';
 import Layout from '../../components/layout/layout';
 import SectionLayout from '../../components/sectionLayout';
 import { getAllMarkDownIds, getMarkDownData } from '../../lib/markDowns';
+import AvailableTechnologies from '../../lib/technologies';
 
 const Project = ({ projectData }) => {
-  const { title, icon, contentHtml } = projectData;
+  const { title, icon, contentHtml, technologies } = projectData;
+  const projectTechnologies = technologies.split(' ');
   return (
     <Layout>
       <SectionLayout className="bg-black text-white">
@@ -14,9 +16,29 @@ const Project = ({ projectData }) => {
           <div className="w-full h-full">
             <img src={icon} alt={`${title} Thumb`} />
           </div>
-          <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
+          <div>
+            <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
+            <h5 className="mt-10">Technologies:</h5>
+            <div className="p-10 flex gap-3">
+              {projectTechnologies.map(techId => {
+                const theTech = AvailableTechnologies[techId];
+                return (
+                  theTech && (
+                    <div key={techId}>
+                      <img
+                        src={theTech.icon}
+                        title={theTech.name}
+                        alt={theTech.name}
+                        className="w-12 h-12"
+                      />
+                    </div>
+                  )
+                );
+              })}
+            </div>
+          </div>
         </div>
-        <div>Technologies</div>
+
         <Link href="/#projects">
           <a className="m-2 text-blue-600">← Back</a>
         </Link>
