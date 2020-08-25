@@ -16,9 +16,7 @@ const ProjectBox = ({ icon, title, desc, className, url, id }) => (
         </a>
       )}
       <Link href="/projects/[id]" as={`/projects/${id}`}>
-        <a className="m-2" target="_blank">
-          More info
-        </a>
+        <a className="m-2">More info</a>
       </Link>
     </div>
   </div>

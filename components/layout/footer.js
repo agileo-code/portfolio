@@ -1,7 +1,7 @@
 import SectionLayout from '../sectionLayout';
 
 const Footer = () => (
-  <SectionLayout className="bg-red-700 text-corporative-color">
+  <SectionLayout className="bg-black text-corporative-color">
     Footer
   </SectionLayout>
 );
