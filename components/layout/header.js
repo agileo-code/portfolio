@@ -8,6 +8,17 @@ import Cross from '../../public/images/cross.svg';
 import Logo from '../../public/images/Agileo.svg';
 import LogoText from '../../public/images/AgileoText.svg';
 
+const onMenuClick = (router, section) => {
+  const pageSection = document.getElementById(section);
+  if (pageSection) {
+    pageSection.scrollIntoView({
+      behavior: 'smooth'
+    });
+  } else {
+    router.push(`/#${section}`);
+  }
+};
+
 const Header = () => {
   const [transparent, setTransparent] = useState(true);
   const [showMenu, setShowMenu] = useState(false);
@@ -19,44 +30,33 @@ const Header = () => {
     });
   }, []);
 
-  const onMenuClick = section => {
-    const pageSection = document.getElementById(section);
-    if (pageSection) {
-      pageSection.scrollIntoView({
-        behavior: 'smooth'
-      });
-    } else {
-      router.push(`/#${section}`);
-    }
-  };
-
   const Menu = () => (
     <>
       <button
         type="button"
         className="m-2 cursor-pointer"
-        onClick={() => onMenuClick('main')}
+        onClick={() => onMenuClick(router, 'main')}
       >
         Home
       </button>
       <button
         type="button"
         className="m-2 cursor-pointer"
-        onClick={() => onMenuClick('services')}
+        onClick={() => onMenuClick(router, 'services')}
       >
         Services
       </button>
       <button
         type="button"
         className="m-2 cursor-pointer"
-        onClick={() => onMenuClick('projects')}
+        onClick={() => onMenuClick(router, 'projects')}
       >
         Projects
       </button>
       <button
         type="button"
         className="m-2 cursor-pointer"
-        onClick={() => onMenuClick('contact')}
+        onClick={() => onMenuClick(router, 'contact')}
       >
         Contact
       </button>
@@ -116,7 +116,7 @@ const Header = () => {
     </div>
   );
 };
-export default Header;
+export { Header as default, onMenuClick };
 
 const BlurDiv = styled.div`
   backdrop-filter: blur(4px);
