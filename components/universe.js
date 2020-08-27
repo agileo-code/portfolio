@@ -40,9 +40,9 @@ const World = styled(animated.div)`
   background-position: center center;
   background-repeat: no-repeat;
   will-change: transform;
-  width: 35vmax;
-  height: 35vmax;
-  background-image: url(https://www.seekpng.com/png/full/18-189202_planet-svg-emoji-emoji-earth.png);
+  width: 30vmax;
+  height: 30vmax;
+  background-image: url(/images/universe/world.svg);
 `;
 
 const Clouds = styled(animated.div)`
@@ -51,8 +51,8 @@ const Clouds = styled(animated.div)`
   background-position: center center;
   background-repeat: no-repeat;
   will-change: transform;
-  width: 15vmax;
-  height: 15vmax;
+  width: 10vmax;
+  height: 10vmax;
   background-image: url(https://image.flaticon.com/icons/svg/414/414927.svg);
 `;
 
@@ -64,5 +64,5 @@ const Rocket = styled(animated.div)`
   will-change: transform;
   width: 20vmax;
   height: 20vmax;
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/e/e5/Emojione_1F680.svg);
+  background-image: url(/images/universe/rocket.svg);
 `;
