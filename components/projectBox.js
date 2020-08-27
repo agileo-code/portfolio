@@ -11,12 +11,19 @@ const ProjectBox = ({ icon, title, desc, className, url, id }) => (
     <span>{desc}</span>
     <div className="flex justify-center w-full">
       {url && (
-        <a className="m-2" href={url} target="_blank" rel="noreferrer">
-          View Demo
+        <a
+          className="m-2 border-2 rounded-md border-blue-500 text-white p-1 pr-3 pl-3"
+          href={url}
+          target="_blank"
+          rel="noreferrer"
+        >
+          View Demo <span className="text-blue-500">⬀</span>
         </a>
       )}
       <Link href="/projects/[id]" as={`/projects/${id}`}>
-        <a className="m-2">More info</a>
+        <a className="m-2 border-2 rounded-md border-blue-500 text-white p-1 pr-3 pl-3">
+          More info
+        </a>
       </Link>
     </div>
   </div>

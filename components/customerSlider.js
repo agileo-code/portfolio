@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import styled, { keyframes } from 'styled-components';
 import customers from '../lib/customers';
 
 const CustomerSlider = ({ className }) => {
@@ -36,8 +37,7 @@ const CustomerSlider = ({ className }) => {
         >
           {showCustomers.map(customer => {
             return (
-              <a
-                className="w-20"
+              <AFade
                 key={customer.name}
                 href={customer.url}
                 target="_blank"
@@ -45,7 +45,7 @@ const CustomerSlider = ({ className }) => {
                 title={customer.name}
               >
                 {customer.logo}
-              </a>
+              </AFade>
             );
           })}
         </div>
@@ -55,3 +55,17 @@ const CustomerSlider = ({ className }) => {
 };
 
 export default CustomerSlider;
+
+const fadeIn = keyframes`
+   from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+`;
+
+const AFade = styled.a`
+  width: 5rem;
+  animation: ${fadeIn} 1s ease-in;
+`;
