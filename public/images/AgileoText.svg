@@ -79,7 +79,7 @@
       <path
          id="path856"
          d="m 15.828563,5.0947095 q 0,0.2790015 -0.188736,0.5251794 -0.188737,0.2461778 -0.504665,0.2461778 -0.356958,0 -0.545694,-0.225663 -0.188736,-0.229766 -0.188736,-0.5456942 0,-0.3159283 0.188736,-0.5497973 0.188736,-0.237972 0.545694,-0.237972 0.315928,0 0.504665,0.229766 0.188736,0.2256631 0.188736,0.5580033 z"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5833px;font-family:Ani;-inkscape-font-specification:'Ani, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.396987;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5833px;font-family:Ani;-inkscape-font-specification:'Ani, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:none;fill-opacity:1;stroke:currentColor;stroke-width:0.396987;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <path
          id="path838"
          d="m 14.693602,10.088188 0.0052,-1.5451207 0.0052,-2.3150968 0.80615,0.7751441 v 2.6044838 l 1.033525,-0.4340806 -0.925005,0.8009821 z"
