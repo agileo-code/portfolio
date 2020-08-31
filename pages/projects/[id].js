@@ -12,14 +12,14 @@ const Project = ({ projectData }) => {
     <Layout>
       <SectionLayout className="bg-black text-white">
         <h2>{title}</h2>
-        <div className="grid p-20 gap-32 content-center items-center md:grid-cols-2 ">
-          <div className="w-full h-full">
+        <div className="grid gap-8 mt-8 lg:mt-0 lg:p-20 lg:gap-32 content-center items-center lg:grid-cols-2 ">
+          <div className="w-full h-full md:p-20 lg:p-0">
             <img src={icon} alt={`${title} Thumb`} />
           </div>
           <div>
             <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
             <h5 className="mt-10">Technologies:</h5>
-            <div className="p-10 flex gap-3">
+            <div className="flex gap-3 p-10">
               {projectTechnologies.map(techId => {
                 const theTech = AvailableTechnologies[techId];
                 return (
@@ -40,7 +40,7 @@ const Project = ({ projectData }) => {
         </div>
 
         <Link href="/#projects">
-          <a className="m-2 text-blue-600">← Back</a>
+          <a className="m-2 text-blue-600 font-bold">← Back</a>
         </Link>
       </SectionLayout>
     </Layout>
