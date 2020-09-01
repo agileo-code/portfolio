@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 
-import { LanguageContext } from '@context/language';
+import { LanguageContext } from '../../context/language';
 import SectionLayout from '../sectionLayout';
 
 const Contact = () => {
@@ -22,8 +22,8 @@ const Contact = () => {
 
   return (
     <SectionLayout id="contact" className="items-center bg-blue-600 text-black">
-      <h2>{getTranslation('Contact Title')}</h2>
-      <span>{getTranslation('Contact Subtitle')}</span>
+      <h2>{getTranslation('[Contact Title]')}</h2>
+      <span>{getTranslation('[Contact Subtitle]')}</span>
       <form
         className="m-10 max-w-2xl flex flex-col w-full items-center"
         onSubmit={handleSubmit(onSubmit)}

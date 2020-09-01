@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from 'react';
-import { useTranslation } from '@bit/dastag.utils.use-translation';
+import useTranslation from '@bit/dastag.utils.use-translation';
 
-import Translations from '../translations';
+import Translations from '../lib/translations';
 
 export const defaultLocale = 'en';
 export const locales = ['ca', 'es', 'en'];
@@ -22,7 +22,7 @@ export default function LanguageProvider({ children }) {
 
   return (
     <LanguageContext.Provider
-      value={[locale, setLocale, changeLanguage, getTranslation]}
+      value={{ locale, setLocale, changeLanguage, getTranslation }}
     >
       {children}
     </LanguageContext.Provider>

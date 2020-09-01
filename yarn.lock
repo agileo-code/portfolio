@@ -1036,6 +1036,11 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
+"@bit/dastag.utils.use-translation@^0.0.2":
+  version "0.0.2"
+  resolved "https://node.bit.dev/dastag.utils.use-translation/-/dastag.utils.use-translation-0.0.2.tgz#7cb3061d11c33d5db323d81724a6caa5cf719e54"
+  integrity sha1-fLMGHRHDPV2zI9gXJKbKpc9xnlQ=
+
 "@bit/rushmore-code.ui-components.circle-icon@^0.0.2":
   version "0.0.2"
   resolved "https://node.bit.dev/rushmore-code.ui-components.circle-icon/-/rushmore-code.ui-components.circle-icon-0.0.2.tgz#dbc7ebfc913a29536e76684f767af2329c4bb414"
