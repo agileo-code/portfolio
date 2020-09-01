@@ -1,10 +1,13 @@
+import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 
+import { LanguageContext } from '@context/language';
 import SectionLayout from '../sectionLayout';
 
 const Contact = () => {
   const { register, handleSubmit, errors } = useForm();
+  const { getTranslation } = useContext(LanguageContext);
 
   const onSubmit = data => {
     // TODO change the console log for modals or something to alert the user
@@ -19,8 +22,8 @@ const Contact = () => {
 
   return (
     <SectionLayout id="contact" className="items-center bg-blue-600 text-black">
-      <h2>Do you have a great idea you want to turn into a business?</h2>
-      <span>Let&apos;s talk, together we can achieve great things.</span>
+      <h2>{getTranslation('Contact Title')}</h2>
+      <span>{getTranslation('Contact Subtitle')}</span>
       <form
         className="m-10 max-w-2xl flex flex-col w-full items-center"
         onSubmit={handleSubmit(onSubmit)}

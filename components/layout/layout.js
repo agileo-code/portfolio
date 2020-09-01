@@ -2,13 +2,15 @@ import Header from './header';
 import Contact from './contact';
 import Footer from './footer';
 
+import LanguageProvider from '../../context/language';
+
 const Layout = ({ children }) => (
-  <div>
+  <LanguageProvider>
     <Header />
-    <div>{children}</div>
+    <main>{children}</main>
     <Contact />
     <Footer />
-  </div>
+  </LanguageProvider>
 );
 
 export default Layout;
