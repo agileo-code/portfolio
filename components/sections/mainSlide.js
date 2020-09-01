@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import CustomerSlider from '../customerSlider';
 import Universe from '../universe';
 import { onMenuClick } from '../layout/header';
-import Logo from '../../public/images/AgileoText.svg';
+import Logo from '../../public/images/AiryText.svg';
 
 const MainSlide = () => {
   const router = useRouter();
