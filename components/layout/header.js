@@ -6,8 +6,8 @@ import styled from 'styled-components';
 
 import Burger from '../../public/images/burger.svg';
 import Cross from '../../public/images/cross.svg';
-import Logo from '../../public/images/Agileo.svg';
-import LogoText from '../../public/images/AgileoText.svg';
+import Logo from '../../public/images/nimbel/NimbelInside.svg';
+import LogoText from '../../public/images/nimbel/NimbelRight.svg';
 import { LanguageContext } from '../../context/language';
 import LanguageSelector from '../LanguageSelector';
 
@@ -75,7 +75,7 @@ const Header = () => {
     >
       <div
         className={`flex items-center h-full ml-4 ${
-          transparent ? 'w-10 text-corporative-color' : 'w-40 text-black'
+          transparent ? 'w-20 text-corporative-color' : 'w-40 text-black'
         }`}
       >
         {transparent ? (
