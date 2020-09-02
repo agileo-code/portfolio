@@ -3,8 +3,12 @@ import useTranslation from '@bit/dastag.utils.use-translation';
 
 import Translations from '../lib/translations';
 
-export const defaultLocale = 'ca';
-export const locales = ['ca', 'es', 'en'];
+export const defaultLocale = 'en';
+export const locales = [
+  { value: 'ca', label: 'Catalá' },
+  { value: 'es', label: 'Español' },
+  { value: 'en', label: 'English' }
+];
 export const LanguageContext = createContext();
 
 export default function LanguageProvider({ children }) {
@@ -15,9 +19,10 @@ export default function LanguageProvider({ children }) {
   );
 
   useEffect(() => {
-    // TODO detect here the browser language
-    // setLocale('en');
-    // changeLanguage('en');
+    const lang = navigator?.language || navigator?.userLanguage;
+    if (lang === defaultLocale) return;
+    setLocale(lang);
+    changeLanguage(lang);
   }, []);
 
   return (

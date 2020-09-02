@@ -9,6 +9,7 @@ import Cross from '../../public/images/cross.svg';
 import Logo from '../../public/images/Agileo.svg';
 import LogoText from '../../public/images/AgileoText.svg';
 import { LanguageContext } from '../../context/language';
+import LanguageSelector from '../LanguageSelector';
 
 const onMenuClick = (router, section) => {
   const pageSection = document.getElementById(section);
@@ -24,7 +25,7 @@ const onMenuClick = (router, section) => {
 const Header = () => {
   const [transparent, setTransparent] = useState(true);
   const [showMenu, setShowMenu] = useState(false);
-  const { getTranslation, locale } = useContext(LanguageContext);
+  const { getTranslation } = useContext(LanguageContext);
   const router = useRouter();
   useEffect(() => {
     setTransparent(window.pageYOffset < 60);
@@ -88,9 +89,9 @@ const Header = () => {
           transparent ? 'text-corporative-color' : 'text-black'
         }`}
       >
-        <div className="hidden md:block">
+        <div className="hidden md:flex">
           <Menu />
-          <div>{locale}</div>
+          <LanguageSelector desktop />
         </div>
 
         <div className="cursor-pointer" title="Open menu">
@@ -112,6 +113,7 @@ const Header = () => {
             >
               <div className="flex flex-col h-full items-center justify-center text-4xl">
                 <Menu />
+                <LanguageSelector />
               </div>
             </BlurDiv>
           )}
