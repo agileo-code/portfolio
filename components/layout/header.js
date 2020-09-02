@@ -1,12 +1,15 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-import { useState, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
+
 import Burger from '../../public/images/burger.svg';
 import Cross from '../../public/images/cross.svg';
 import Logo from '../../public/images/nimbel/NimbelInside.svg';
 import LogoText from '../../public/images/nimbel/NimbelRight.svg';
+import { LanguageContext } from '../../context/language';
+import LanguageSelector from '../LanguageSelector';
 
 const onMenuClick = (router, section) => {
   const pageSection = document.getElementById(section);
@@ -22,6 +25,7 @@ const onMenuClick = (router, section) => {
 const Header = () => {
   const [transparent, setTransparent] = useState(true);
   const [showMenu, setShowMenu] = useState(false);
+  const { getTranslation } = useContext(LanguageContext);
   const router = useRouter();
   useEffect(() => {
     setTransparent(window.pageYOffset < 60);
@@ -37,28 +41,28 @@ const Header = () => {
         className="m-2 cursor-pointer"
         onClick={() => onMenuClick(router, 'main')}
       >
-        Home
+        {getTranslation('[Home]')}
       </button>
       <button
         type="button"
         className="m-2 cursor-pointer"
         onClick={() => onMenuClick(router, 'services')}
       >
-        Services
+        {getTranslation('[Services]')}
       </button>
       <button
         type="button"
         className="m-2 cursor-pointer"
         onClick={() => onMenuClick(router, 'projects')}
       >
-        Projects
+        {getTranslation('[Projects]')}
       </button>
       <button
         type="button"
         className="m-2 cursor-pointer"
         onClick={() => onMenuClick(router, 'contact')}
       >
-        Contact
+        {getTranslation('[Contact]')}
       </button>
     </>
   );
@@ -85,8 +89,9 @@ const Header = () => {
           transparent ? 'text-corporative-color' : 'text-black'
         }`}
       >
-        <div className="hidden md:block">
+        <div className="hidden md:flex">
           <Menu />
+          <LanguageSelector desktop />
         </div>
 
         <div className="cursor-pointer" title="Open menu">
@@ -108,6 +113,7 @@ const Header = () => {
             >
               <div className="flex flex-col h-full items-center justify-center text-4xl">
                 <Menu />
+                <LanguageSelector />
               </div>
             </BlurDiv>
           )}

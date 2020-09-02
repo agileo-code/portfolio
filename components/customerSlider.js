@@ -1,8 +1,11 @@
-import { useState, useEffect, useRef } from 'react';
+import { useContext, useEffect, useState, useRef } from 'react';
 import styled, { keyframes } from 'styled-components';
+
 import customers from '../lib/customers';
+import { LanguageContext } from '../context/language';
 
 const CustomerSlider = ({ className }) => {
+  const { getTranslation } = useContext(LanguageContext);
   const [showCustomers, setShowCustomers] = useState([]);
   const containerEl = useRef(null);
 
@@ -29,7 +32,7 @@ const CustomerSlider = ({ className }) => {
 
   return (
     <div className={`flex items-center text-gray-500 flex-col ${className}`}>
-      <span>Who trust in us</span>
+      <span>{getTranslation('[Who trust in us]')}</span>
       <div className="flex justify-center text-corporative-slideLight p-10 bg-gray-400 rounded-sm h-20 w-full">
         <div
           ref={containerEl}
