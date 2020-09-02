@@ -19,8 +19,7 @@ export default function LanguageProvider({ children }) {
   );
 
   useEffect(() => {
-    const lang = navigator?.language || navigator?.userLanguage;
-    console.log(`User Language: ${lang}`);
+    const lang = navigator?.language?.split('-')[0];
     if (lang === defaultLocale) return;
     setLocale(lang);
     changeLanguage(lang);
