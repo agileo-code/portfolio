@@ -13,6 +13,7 @@ const Expertise = () => (
           icon={service.icon}
           title={service.title}
           desc={service.desc}
+          link={service.link}
         />
       ))}
     </div>
