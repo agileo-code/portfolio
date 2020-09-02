@@ -43,6 +43,7 @@ export default function LanguageSelector({ desktop }) {
     locale,
     setLocale,
     locales,
+    localesDescription,
     changeLanguage
   } = useContext(LanguageContext);
 
@@ -52,17 +53,22 @@ export default function LanguageSelector({ desktop }) {
     changeLanguage(userLang);
   };
 
+  const options = locales.map(lang => ({
+    value: lang,
+    label: localesDescription[lang]
+  }));
+
   return desktop ? (
     <Select
       components={{ IndicatorSeparator: null }}
       defaultValue={[{ value: locale, label: getTranslation(`[${locale}]`) }]}
       onChange={onChangeLocale}
-      options={locales}
+      options={options}
       styles={customStyles}
     />
   ) : (
     <div className="flex text-xl p-4">
-      {locales.map(lang => (
+      {options.map(lang => (
         <button
           key={lang.value}
           value={lang.value}
