@@ -20,6 +20,7 @@ export default function LanguageProvider({ children }) {
 
   useEffect(() => {
     const lang = navigator?.language || navigator?.userLanguage;
+    console.log(`User Language: ${lang}`);
     if (lang === defaultLocale) return;
     setLocale(lang);
     changeLanguage(lang);
