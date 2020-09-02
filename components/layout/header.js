@@ -10,7 +10,6 @@ import Logo from '../../public/images/Agileo.svg';
 import LogoText from '../../public/images/AgileoText.svg';
 import { LanguageContext } from '../../context/language';
 import LanguageSelector from '../LanguageSelector';
-import LogoText from '../../public/images/AiryText.svg';
 
 const onMenuClick = (router, section) => {
   const pageSection = document.getElementById(section);
