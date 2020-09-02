@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import CustomerSlider from '../customerSlider';
 import Universe from '../universe';
 import { onMenuClick } from '../layout/header';
-import Logo from '../../public/images/AiryText.svg';
+import Logo from '../../public/images/nimbel/NimbelRight.svg';
 
 const MainSlide = () => {
   const router = useRouter();
@@ -13,7 +13,7 @@ const MainSlide = () => {
     >
       <div className="grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 content-center flex-1">
         <div className="flex flex-col justify-center items-center lg:items-start lg:ml-10">
-          <Logo className="w-2/5" />
+          <Logo className="w-3/5" />
           <h4 className="mt-3">
             The power of latest software technology for your you.
           </h4>
