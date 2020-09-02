@@ -31,40 +31,40 @@ const Contact = () => {
         <div className="w-full grid gap-3 text-black">
           <input
             className={`placeholder-black p-2 ${errorStyle('name')}`}
-            placeholder="Name*"
+            placeholder={`${getTranslation('[Name]')}*`}
             name="name"
             ref={register({ required: 'This field is required' })}
           />
           <input
             className={`placeholder-black p-2 ${errorStyle('phone')}`}
-            placeholder="Phone number"
+            placeholder={getTranslation('[Phone number]')}
             name="phone"
             ref={register}
           />
           <input
             className={`placeholder-black p-2 ${errorStyle('email')}`}
-            placeholder="Email*"
+            placeholder={`${getTranslation('[Email]')}*`}
             name="email"
             ref={register({
-              required: 'This field is required',
+              required: getTranslation('[Required Field]'),
               pattern: {
                 value: /\S+@\S+\.\S+/,
-                message: 'Entered value does not match email format'
+                message: getTranslation('[Email validation]')
               }
             })}
           />
           <textarea
             className={`placeholder-black p-2 ${errorStyle('comments')}`}
-            placeholder="Tell us briefly about your project*"
+            placeholder={`${getTranslation('[Comments]')}*`}
             name="comments"
-            ref={register({ required: 'This field is required' })}
+            ref={register({ required: getTranslation('[Required Field]') })}
           />
         </div>
         <button
           className="bg-black w-32 mt-5 rounded-md text-white"
           type="submit"
         >
-          Submit
+          {getTranslation('[Submit]')}
         </button>
       </form>
     </SectionLayout>

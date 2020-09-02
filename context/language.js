@@ -3,7 +3,7 @@ import useTranslation from '@bit/dastag.utils.use-translation';
 
 import Translations from '../lib/translations';
 
-export const defaultLocale = 'en';
+export const defaultLocale = 'ca';
 export const locales = ['ca', 'es', 'en'];
 export const LanguageContext = createContext();
 
@@ -22,7 +22,7 @@ export default function LanguageProvider({ children }) {
 
   return (
     <LanguageContext.Provider
-      value={{ locale, setLocale, changeLanguage, getTranslation }}
+      value={{ locale, setLocale, locales, changeLanguage, getTranslation }}
     >
       {children}
     </LanguageContext.Provider>
