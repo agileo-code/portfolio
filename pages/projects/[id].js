@@ -8,8 +8,8 @@ import { getAllMarkDownIds, getMarkDownData } from '../../lib/markDowns';
 import AvailableTechnologies from '../../lib/technologies';
 
 const Project = ({ projectData }) => {
-  const { getTranslation } = useContext(LanguageContext);
-  const { title, icon, contentHtml, technologies } = projectData;
+  const { getTranslation, locale } = useContext(LanguageContext);
+  const { title, icon, contentHtml, technologies } = projectData[locale];
   const projectTechnologies = technologies.split(' ');
   return (
     <>
@@ -59,7 +59,7 @@ const getStaticPaths = async () => {
 };
 
 const getStaticProps = async ({ params }) => {
-  const projectData = await getMarkDownData('projects', params.id);
+  const projectData = await getMarkDownData(`projects/${params.id}`, params.id);
   return {
     props: {
       projectData
