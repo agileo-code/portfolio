@@ -6,13 +6,11 @@ import IdeaPerson from '../public/images/ideaPerson.svg';
 export default function Training() {
   return (
     <Layout>
-      <SectionLayout className="bg-black text-white items-center pt-48">
-        <h2>Training programs</h2>
-      </SectionLayout>
-      <SectionLayout className="bg-white text-black">
+      <SectionLayout className="bg-black text-white items-center pt-24">
         <div className="grid grid-cols-2">
-          <div className="flex flex-col justify-center">
-            <IdeaPerson className="w-1/4 ml-64" />
+          <div className="grid grid-rows-2">
+            <h2 className="self-center">Training programs</h2>
+            <IdeaPerson className="w-1/4 self-start" />
           </div>
           <WhiteBoard />
         </div>
