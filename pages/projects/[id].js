@@ -1,15 +1,18 @@
 /* eslint-disable react/no-danger */
 import Link from 'next/link';
-import Layout from '../../components/layout/layout';
+import { useContext } from 'react';
+
 import SectionLayout from '../../components/sectionLayout';
+import { LanguageContext } from '../../context/language';
 import { getAllMarkDownIds, getMarkDownData } from '../../lib/markDowns';
 import AvailableTechnologies from '../../lib/technologies';
 
 const Project = ({ projectData }) => {
+  const { getTranslation } = useContext(LanguageContext);
   const { title, icon, contentHtml, technologies } = projectData;
   const projectTechnologies = technologies.split(' ');
   return (
-    <Layout>
+    <>
       <SectionLayout className="bg-black text-white">
         <h2>{title}</h2>
         <div className="grid gap-8 mt-8 lg:mt-0 lg:p-20 lg:gap-32 content-center items-center lg:grid-cols-2 ">
@@ -18,8 +21,8 @@ const Project = ({ projectData }) => {
           </div>
           <div>
             <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
-            <h5 className="mt-10">Technologies:</h5>
-            <div className="flex gap-3 p-10">
+            <h5 className="mt-10">{getTranslation('[Technologies]')}:</h5>
+            <div className="grid grid-flow-col gap-3 p-10">
               {projectTechnologies.map(techId => {
                 const theTech = AvailableTechnologies[techId];
                 return (
@@ -43,7 +46,7 @@ const Project = ({ projectData }) => {
           <a className="m-2 text-blue-600 font-bold">← Back</a>
         </Link>
       </SectionLayout>
-    </Layout>
+    </>
   );
 };
 
