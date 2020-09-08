@@ -24,5 +24,3 @@ Over time, the ministry's data has been changing in form and quantity, so the pr
 - It offers the best performance anywhere in the world, wherever our website is deployed in the closest router to your position to ensure that you get the shortest possible response time.
 - Supports huge amounts of traffic without compromising performance.
 - Mobile-first design, compatible with all other devices
-
-Translated with www.DeepL.com/Translator (free version)

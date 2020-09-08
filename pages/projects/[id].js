@@ -57,7 +57,9 @@ const Project = ({ projectData }) => {
         </div>
 
         <Link href="/#projects">
-          <a className="m-2 text-blue-600 font-bold">← Back</a>
+          <a className="m-2 text-blue-600 font-bold">
+            ← {getTranslation('[Back]')}
+          </a>
         </Link>
       </SectionLayout>
     </>
