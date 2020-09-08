@@ -1,6 +1,7 @@
 /* eslint-disable react/no-danger */
 import Link from 'next/link';
 import { useContext } from 'react';
+import styled from 'styled-components';
 
 import SectionLayout from '../../components/sectionLayout';
 import { LanguageContext } from '../../context/language';
@@ -20,7 +21,9 @@ const Project = ({ projectData }) => {
             <img src={icon} alt={`${title} Thumb`} />
           </div>
           <div>
-            <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
+            <ProjectDescription
+              dangerouslySetInnerHTML={{ __html: contentHtml }}
+            />
             <h5 className="mt-10">{getTranslation('[Technologies]')}:</h5>
             <div className="grid grid-flow-col gap-3 p-10">
               {projectTechnologies.map(techId => {
@@ -68,3 +71,11 @@ const getStaticProps = async ({ params }) => {
 };
 
 export { Project as default, getStaticPaths, getStaticProps };
+
+const ProjectDescription = styled.div`
+  ul {
+    li {
+      margin: 1rem 0 1rem 0;
+    }
+  }
+`;

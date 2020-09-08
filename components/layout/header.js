@@ -2,6 +2,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import { useContext, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 import styled from 'styled-components';
 
 import Burger from '../../public/images/burger.svg';
@@ -64,6 +65,11 @@ const Header = () => {
       >
         {getTranslation('[Contact]')}
       </button>
+      <Link href="/training">
+        <button type="button" className="m-2 cursor-pointer">
+          {getTranslation('[Training]')}
+        </button>
+      </Link>
     </>
   );
 
