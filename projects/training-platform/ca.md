@@ -1,15 +1,15 @@
 ---
-title: 'Training platform'
-desc: 'A Training platform'
+title: 'Plataforma de formació'
+desc: 'Plataforma de formació'
 icon: '/images/projects/training-platform.png'
 url: 'https://training-platform.netlify.app/'
-technologies: 'react javascript styledComponent aws'
+technologies: 'react gatsby javascript tailwind netlify'
 ---
 
-Made with:
+##### Plataforma de formació
 
-- ReactJS
-- GatsbyJS
-- Firebase / Firestore / Cloud Functions
-- Netlify
-- NPM
+Aquesta aplicació genera una plataforma per a formació, permetent publicar cursos, professors i contingut.
+
+Permet que els usuaris puguin veure alguns vídeos com preview del curs i paguin quan volen veure el curs complet.
+
+Permet gestionar usuaris, amb permisos, preparar paquets de formació i ofertes.
