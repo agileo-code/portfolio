@@ -4,6 +4,7 @@ import { useContext } from 'react';
 import styled from 'styled-components';
 
 import SectionLayout from '../../components/sectionLayout';
+import ActionCallCard from '../../components/actionCallCard';
 import { LanguageContext } from '../../context/language';
 import { getAllMarkDownIds, getMarkDownData } from '../../lib/markDowns';
 import AvailableTechnologies from '../../lib/technologies';
@@ -30,6 +31,14 @@ const Project = ({ projectData }) => {
                 <span className="text-blue-500">⬀</span>
               </a>
             )}
+            <div>
+              <ActionCallCard
+                className="mt-10"
+                buttonText={getTranslation("[Let's talk]")}
+              >
+                {getTranslation('[Do you need something similar]')}
+              </ActionCallCard>
+            </div>
           </div>
           <div>
             <ProjectDescription

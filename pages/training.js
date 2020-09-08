@@ -1,6 +1,4 @@
 import { useContext } from 'react';
-import { useRouter } from 'next/router';
-import { onMenuClick } from '../components/layout/header';
 
 import SectionLayout from '../components/sectionLayout';
 
@@ -9,25 +7,8 @@ import WhiteBoard from '../public/images/whiteboard.svg';
 
 import { LanguageContext } from '../context/language';
 import IconBox from '../components/iconBox';
+import ActionCallCard from '../components/actionCallCard';
 import TrainingTopics from '../lib/training-topics';
-
-const TrainingPriceCard = ({ title, price, children, getTranslation }) => {
-  const router = useRouter();
-  return (
-    <div className="bg-white text-gray-900 shadow-2xl rounded-lg p-4 flex flex-col justify-between items-center">
-      <h3 className="mb-3">{title}</h3>
-      {children}
-      <div className="m-3">{price}</div>
-      <button
-        type="button"
-        className="bg-blue-700 text-white rounded-sm p-1 pr-3 pl-3 mt-2"
-        onClick={() => onMenuClick(router, 'contact')}
-      >
-        {getTranslation('[I want it!]')}
-      </button>
-    </div>
-  );
-};
 
 export default function Training() {
   const { getTranslation } = useContext(LanguageContext);
@@ -71,20 +52,20 @@ export default function Training() {
       <SectionLayout className="bg-black text-white">
         <h2 className="self-center mb-10">{getTranslation('[Options]')}</h2>
         <div className="self-center max-w-5xl grid md:grid-cols-2 md:p-10 justify-items-center text-center gap-10">
-          <TrainingPriceCard
+          <ActionCallCard
             title={getTranslation('[Individual]')}
             price={<h3>140€/h</h3>}
-            getTranslation={getTranslation}
+            buttonText={getTranslation('[I want it!]')}
           >
             <span>{getTranslation('[Individual option description]')}</span>
-          </TrainingPriceCard>
-          <TrainingPriceCard
+          </ActionCallCard>
+          <ActionCallCard
             title={getTranslation('[Company]')}
             price={<h3>2.300€/8h</h3>}
-            getTranslation={getTranslation}
+            buttonText={getTranslation('[I want it!]')}
           >
             <span>{getTranslation('[Company option description]')}</span>
-          </TrainingPriceCard>
+          </ActionCallCard>
         </div>
       </SectionLayout>
     </>
