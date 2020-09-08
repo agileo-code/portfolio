@@ -61,7 +61,7 @@ export default function LanguageSelector({ desktop }) {
   return desktop ? (
     <Select
       components={{ IndicatorSeparator: null }}
-      defaultValue={[{ value: locale, label: getTranslation(`[${locale}]`) }]}
+      value={[{ value: locale, label: getTranslation(`[${locale}]`) }]}
       onChange={onChangeLocale}
       options={options}
       styles={customStyles}
