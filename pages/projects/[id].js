@@ -10,15 +10,26 @@ import AvailableTechnologies from '../../lib/technologies';
 
 const Project = ({ projectData }) => {
   const { getTranslation, locale } = useContext(LanguageContext);
-  const { title, icon, contentHtml, technologies } = projectData[locale];
+  const { title, icon, contentHtml, technologies, url } = projectData[locale];
   const projectTechnologies = technologies.split(' ');
   return (
     <>
       <SectionLayout className="bg-black text-white">
         <h2>{title}</h2>
         <div className="grid gap-8 mt-8 lg:mt-0 lg:p-20 lg:gap-32 content-center items-center lg:grid-cols-2 ">
-          <div className="w-full h-full md:p-20 lg:p-0">
+          <div className="flex flex-col items-center w-full h-full md:p-20 lg:p-0">
             <img src={icon} alt={`${title} Thumb`} />
+            {url && (
+              <a
+                className="m-2 border-2 rounded-md border-blue-500 text-white p-1 pr-3 pl-3"
+                href={url}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {getTranslation('[View Demo]')}{' '}
+                <span className="text-blue-500">⬀</span>
+              </a>
+            )}
           </div>
           <div>
             <ProjectDescription
@@ -74,8 +85,13 @@ export { Project as default, getStaticPaths, getStaticProps };
 
 const ProjectDescription = styled.div`
   ul {
+    list-style: square;
+    margin-left: 1rem;
     li {
       margin: 1rem 0 1rem 0;
     }
+  }
+  p {
+    margin: 1rem 0 1rem 0;
   }
 `;
