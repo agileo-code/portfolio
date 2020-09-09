@@ -2,6 +2,7 @@ import { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import Modal from 'react-modal';
+import { Button, Input, Textarea } from '@chakra-ui/core';
 
 import { LanguageContext } from '../../context/language';
 import SectionLayout from '../sectionLayout';
@@ -20,7 +21,7 @@ const customStyles = {
 const Contact = () => {
   const [modalIsOpen, setIsOpen] = useState(false);
   const [modalContent, setModalContext] = useState(null);
-  const { register, handleSubmit, errors, reset } = useForm();
+  const { register, handleSubmit, reset } = useForm();
   const { getTranslation } = useContext(LanguageContext);
 
   const onSubmit = data => {
@@ -36,10 +37,6 @@ const Contact = () => {
       });
   };
 
-  // TODO implement whatever notification error you want
-  const errorStyle = name =>
-    errors[name]?.message ? 'border border-red-900' : '';
-
   return (
     <SectionLayout id="contact" className="items-center bg-blue-600 text-black">
       <h2>{getTranslation('[Contact Title]')}</h2>
@@ -49,23 +46,20 @@ const Contact = () => {
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className="w-full grid gap-3 text-black">
-          <input
-            className={`placeholder-black p-2 ${errorStyle('name')}`}
+          <Input
             placeholder={`${getTranslation('[Name]')}*`}
             name="name"
             ref={register()}
             maxLength={256}
             required
           />
-          <input
-            className={`placeholder-black p-2 ${errorStyle('phone')}`}
+          <Input
             placeholder={getTranslation('[Phone number]')}
             name="phone"
             ref={register}
             maxLength={256}
           />
-          <input
-            className={`placeholder-black p-2 ${errorStyle('email')}`}
+          <Input
             placeholder={`${getTranslation('[Email]')}*`}
             name="email"
             ref={register()}
@@ -73,8 +67,8 @@ const Contact = () => {
             maxLength={256}
             required
           />
-          <textarea
-            className={`placeholder-black p-2 ${errorStyle('comments')}`}
+          <Textarea
+            style={{ resize: 'none' }}
             placeholder={`${getTranslation('[Comments]')}*`}
             name="comments"
             ref={register()}
@@ -82,12 +76,15 @@ const Contact = () => {
             required
           />
         </div>
-        <button
-          className="bg-black w-32 mt-5 rounded-md text-white"
+        <Button
+          className="mt-5"
+          bg="black"
+          color="white"
+          _hover={{ bg: 'white', color: 'black' }}
           type="submit"
         >
           {getTranslation('[Submit]')}
-        </button>
+        </Button>
       </form>
       <Modal
         isOpen={modalIsOpen}

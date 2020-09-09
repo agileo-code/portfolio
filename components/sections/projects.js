@@ -13,7 +13,7 @@ export default function Projects({ allProjectsData }) {
       className="bg-corporative-slideDark text-white"
     >
       <h2 className="self-center mb-10">{getTranslation('[Projects]')}</h2>
-      <div className="grid gap-20 md:grid-cols-3">
+      <div className="grid gap-20 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
         {allProjectsData.map(projectData => (
           <ProjectBox
             key={projectData.id}

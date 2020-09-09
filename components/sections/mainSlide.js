@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { useRouter } from 'next/router';
+import { Button, ButtonGroup } from '@chakra-ui/core';
 
 import CustomerSlider from '../customerSlider';
 import Universe from '../universe';
@@ -19,22 +20,24 @@ const MainSlide = () => {
         <div className="flex flex-col justify-center items-center lg:items-start lg:ml-10">
           <Logo className="w-3/5" />
           <h4 className="mt-3">{getTranslation('[Slogan]')}</h4>
-          <div className="flex mt-8">
-            <button
+          <ButtonGroup spacing={4} className="mt-6">
+            <Button
               type="button"
               onClick={() => onMenuClick(router, 'services')}
-              className="bg-white text-black border-2 hover:bg-gray-400 p-1 pr-4 pl-4"
+              backgroundColor="white"
+              color="black"
             >
               {getTranslation('[Services]')}
-            </button>
-            <button
+            </Button>
+            <Button
               type="button"
               onClick={() => onMenuClick(router, 'contact')}
-              className="bg-white text-black border-2 hover:bg-gray-400 p-1 pr-4 pl-4 ml-4"
+              backgroundColor="white"
+              color="black"
             >
               {getTranslation('[Contact]')}
-            </button>
-          </div>
+            </Button>
+          </ButtonGroup>
         </div>
         <Universe className="self-center" />
       </div>
