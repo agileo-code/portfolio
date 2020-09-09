@@ -1,9 +1,6 @@
 ---
 title: 'Covid Radar'
 desc: 'The covid radar prediction project'
-icon: '/images/projects/covid-radar.png'
-url: 'https://covid-radar.xyz/'
-technologies: 'react javascript gatsby netlify'
 ---
 
 ##### Un simple model predictiu i rastrejador per als casos de COVID19 a Espanya.

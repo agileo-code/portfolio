@@ -11,7 +11,8 @@ import AvailableTechnologies from '../../lib/technologies';
 
 const Project = ({ projectData }) => {
   const { getTranslation, locale } = useContext(LanguageContext);
-  const { title, icon, contentHtml, technologies, url } = projectData[locale];
+  const { icon, technologies, url } = projectData?.index;
+  const { title, contentHtml } = projectData[locale];
   const projectTechnologies = technologies.split(' ');
   return (
     <>

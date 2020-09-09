@@ -1,8 +1,6 @@
 ---
 title: "Plataforma de contractació d'assegurances"
 desc: "Plataforma de contractació d'assegurances"
-icon: '/images/projects/assurance-app.png'
-technologies: 'react javascript styledComponent aws'
 ---
 
 - Plataforma de contractació d'assegurances, totalment responsive, de manera que s'adapta perfectament a qualsevol mena de dispositiu.
