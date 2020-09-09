@@ -5,7 +5,7 @@ import ProjectBox from '../projectBox';
 import { LanguageContext } from '../../context/language';
 
 export default function Projects({ allProjectsData }) {
-  const { getTranslation } = useContext(LanguageContext);
+  const { getTranslation, locale } = useContext(LanguageContext);
 
   return (
     <SectionLayout
@@ -14,8 +14,14 @@ export default function Projects({ allProjectsData }) {
     >
       <h2 className="self-center mb-10">{getTranslation('[Projects]')}</h2>
       <div className="grid gap-20 md:grid-cols-3">
-        {allProjectsData.map(({ id, icon, title, url }) => (
-          <ProjectBox key={id} icon={icon} title={title} url={url} id={id} />
+        {allProjectsData.map(projectData => (
+          <ProjectBox
+            key={projectData.id}
+            icon={projectData?.index?.icon}
+            title={projectData[locale]?.title}
+            url={projectData?.index?.url}
+            id={projectData.id}
+          />
         ))}
       </div>
     </SectionLayout>

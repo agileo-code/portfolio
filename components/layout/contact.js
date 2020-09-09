@@ -1,19 +1,39 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
+import Modal from 'react-modal';
 
 import { LanguageContext } from '../../context/language';
 import SectionLayout from '../sectionLayout';
 
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)'
+  }
+};
+
 const Contact = () => {
-  const { register, handleSubmit, errors } = useForm();
+  const [modalIsOpen, setIsOpen] = useState(false);
+  const [modalContent, setModalContext] = useState(null);
+  const { register, handleSubmit, errors, reset } = useForm();
   const { getTranslation } = useContext(LanguageContext);
 
   const onSubmit = data => {
-    // TODO change the console log for modals or something to alert the user
     axios({ method: 'POST', url: 'https://formspree.io/mwkrdvon', data })
-      .then(response => console.log(response?.data?.ok))
-      .catch(error => console.log(error));
+      .then(() => {
+        setModalContext(<div>{getTranslation('[ContactOK]')}</div>);
+        setIsOpen(true);
+        reset();
+      })
+      .catch(() => {
+        setModalContext(<div>{getTranslation('[ContactKO]')}</div>);
+        setIsOpen(true);
+      });
   };
 
   // TODO implement whatever notification error you want
@@ -33,31 +53,33 @@ const Contact = () => {
             className={`placeholder-black p-2 ${errorStyle('name')}`}
             placeholder={`${getTranslation('[Name]')}*`}
             name="name"
-            ref={register({ required: 'This field is required' })}
+            ref={register()}
+            maxLength={256}
+            required
           />
           <input
             className={`placeholder-black p-2 ${errorStyle('phone')}`}
             placeholder={getTranslation('[Phone number]')}
             name="phone"
             ref={register}
+            maxLength={256}
           />
           <input
             className={`placeholder-black p-2 ${errorStyle('email')}`}
             placeholder={`${getTranslation('[Email]')}*`}
             name="email"
-            ref={register({
-              required: getTranslation('[Required Field]'),
-              pattern: {
-                value: /\S+@\S+\.\S+/,
-                message: getTranslation('[Email validation]')
-              }
-            })}
+            ref={register()}
+            type="email"
+            maxLength={256}
+            required
           />
           <textarea
             className={`placeholder-black p-2 ${errorStyle('comments')}`}
             placeholder={`${getTranslation('[Comments]')}*`}
             name="comments"
-            ref={register({ required: getTranslation('[Required Field]') })}
+            ref={register()}
+            maxLength={256}
+            required
           />
         </div>
         <button
@@ -67,6 +89,13 @@ const Contact = () => {
           {getTranslation('[Submit]')}
         </button>
       </form>
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={() => setIsOpen(false)}
+        style={customStyles}
+      >
+        {modalContent}
+      </Modal>
     </SectionLayout>
   );
 };
