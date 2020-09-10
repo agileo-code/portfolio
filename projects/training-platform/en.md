@@ -2,8 +2,8 @@
 title: 'Training platform'
 desc: 'A Training platform'
 icon: '/images/projects/training-platform.png'
-url: 'https://training-platform.netlify.app/'
-technologies: 'react gatsby javascript tailwind netlify'
+url: 'https://training-platform.vercel.app/'
+technologies: 'react vercel javascript tailwind netlify'
 ---
 
 #### Training platform
