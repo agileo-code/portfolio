@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import Link from 'next/link';
+import { Button, ButtonGroup } from '@chakra-ui/core';
 
 import { LanguageContext } from '../context/language';
 
@@ -15,24 +16,30 @@ const ProjectBox = ({ icon, title, desc, className, url, id }) => {
       </div>
       <h4 className="m-2">{title}</h4>
       <span>{desc}</span>
-      <div className="flex justify-center w-full">
+      <ButtonGroup spacing={2}>
         {url && (
-          <a
-            className="m-2 border-2 rounded-md border-blue-500 text-white p-1 pr-3 pl-3"
-            href={url}
-            target="_blank"
-            rel="noreferrer"
+          <Button
+            variant="outline"
+            borderColor="#00B4D8"
+            rightIcon="external-link"
+            _hover={{ bg: 'white', color: 'black' }}
           >
-            {getTranslation('[View Demo]')}{' '}
-            <span className="text-blue-500">⬀</span>
-          </a>
+            <a href={url} target="_blank" rel="noreferrer">
+              {getTranslation('[View Demo]')}
+            </a>
+          </Button>
         )}
         <Link href="/projects/[id]" as={`/projects/${id}`}>
-          <a className="m-2 border-2 rounded-md border-blue-500 text-white p-1 pr-3 pl-3">
+          <Button
+            variant="outline"
+            borderColor="#00B4D8"
+            rightIcon="view"
+            _hover={{ bg: 'white', color: 'black' }}
+          >
             {getTranslation('[More info]')}
-          </a>
+          </Button>
         </Link>
-      </div>
+      </ButtonGroup>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 ---
-icon: '/images/projects/training-platform.png'
-url: 'https://training-platform.netlify.app/'
-technologies: 'react gatsby javascript tailwind netlify'
+icon: '/images/projects/training-platform.webp'
+url: 'https://training-platform.vercel.app/'
+technologies: 'react vercel javascript tailwind'
 ---

@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 
 import SectionLayout from '../components/sectionLayout';
+import Layout from '../components/layout';
 
 import IdeaPerson from '../public/images/ideaPerson.svg';
 import WhiteBoard from '../public/images/whiteboard.svg';
@@ -14,7 +15,7 @@ export default function Training() {
   const { getTranslation } = useContext(LanguageContext);
 
   return (
-    <>
+    <Layout>
       <SectionLayout className="bg-black text-white">
         <div className="grid md:grid-cols-2 mt-10">
           <div className="md:grid md:grid-rows-2 flex justify-center">
@@ -68,6 +69,6 @@ export default function Training() {
           </ActionCallCard>
         </div>
       </SectionLayout>
-    </>
+    </Layout>
   );
 }
