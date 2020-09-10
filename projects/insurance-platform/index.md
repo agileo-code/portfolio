@@ -1,6 +1,4 @@
 ---
-title: 'Insurance contract platform'
-desc: 'Insurance contract platform'
-icon: '/images/projects/assurance-app.png'
+icon: '/images/projects/assurance-app.webp'
 technologies: 'react javascript styledComponent aws'
 ---

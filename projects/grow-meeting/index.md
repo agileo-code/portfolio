@@ -1,7 +1,5 @@
 ---
-title: 'Grow Meeting'
-desc: 'Grow Meeting'
-icon: '/images/projects/grow-meeting.png'
+icon: '/images/projects/grow-meeting.webp'
 url: 'https://grow-meeting.netlify.app/'
 technologies: 'react javascript gatsby jitsi netlify heroku socketIo'
 ---

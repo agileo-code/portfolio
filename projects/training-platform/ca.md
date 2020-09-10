@@ -1,9 +1,6 @@
 ---
 title: 'Plataforma de formació'
 desc: 'Plataforma de formació'
-icon: '/images/projects/training-platform.png'
-url: 'https://training-platform.vercel.app/'
-technologies: 'react vercel javascript tailwind netlify'
 ---
 
 ##### Plataforma de formació

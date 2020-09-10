@@ -1,7 +1,5 @@
 ---
-title: 'Training platform'
-desc: 'A Training platform'
-icon: '/images/projects/training-platform.png'
+icon: '/images/projects/training-platform.webp'
 url: 'https://training-platform.netlify.app/'
 technologies: 'react gatsby javascript tailwind netlify'
 ---

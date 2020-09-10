@@ -1,44 +1,45 @@
-import { useContext, useState } from 'react';
-import { useForm } from 'react-hook-form';
+import { useContext } from 'react';
+import { Controller, useForm } from 'react-hook-form';
 import axios from 'axios';
-import Modal from 'react-modal';
+import {
+  Button,
+  FormControl,
+  FormErrorMessage,
+  Input,
+  Textarea,
+  useToast
+} from '@chakra-ui/core';
 
 import { LanguageContext } from '../../context/language';
 import SectionLayout from '../sectionLayout';
 
-const customStyles = {
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)'
-  }
-};
-
 const Contact = () => {
-  const [modalIsOpen, setIsOpen] = useState(false);
-  const [modalContent, setModalContext] = useState(null);
-  const { register, handleSubmit, errors, reset } = useForm();
+  const toast = useToast();
+  const { control, errors, register, handleSubmit, reset } = useForm();
   const { getTranslation } = useContext(LanguageContext);
 
   const onSubmit = data => {
     axios({ method: 'POST', url: 'https://formspree.io/mwkrdvon', data })
       .then(() => {
-        setModalContext(<div>{getTranslation('[ContactOK]')}</div>);
-        setIsOpen(true);
+        toast({
+          title: 'Ok',
+          description: getTranslation('[ContactOK]'),
+          status: 'success',
+          duration: 2000,
+          isClosable: true
+        });
         reset();
       })
       .catch(() => {
-        setModalContext(<div>{getTranslation('[ContactKO]')}</div>);
-        setIsOpen(true);
+        toast({
+          title: 'Error',
+          description: getTranslation('[ContactKO]'),
+          status: 'error',
+          duration: 2000,
+          isClosable: true
+        });
       });
   };
-
-  // TODO implement whatever notification error you want
-  const errorStyle = name =>
-    errors[name]?.message ? 'border border-red-900' : '';
 
   return (
     <SectionLayout id="contact" className="items-center bg-blue-600 text-black">
@@ -48,54 +49,72 @@ const Contact = () => {
         className="m-10 max-w-2xl flex flex-col w-full items-center"
         onSubmit={handleSubmit(onSubmit)}
       >
-        <div className="w-full grid gap-3 text-black">
-          <input
-            className={`placeholder-black p-2 ${errorStyle('name')}`}
-            placeholder={`${getTranslation('[Name]')}*`}
-            name="name"
-            ref={register()}
-            maxLength={256}
-            required
-          />
-          <input
-            className={`placeholder-black p-2 ${errorStyle('phone')}`}
+        <div className="w-full grid gap-4 text-black">
+          <FormControl isInvalid={errors.name}>
+            <Controller
+              as={Input}
+              placeholder={`${getTranslation('[Name]')}*`}
+              name="name"
+              rules={{
+                required: getTranslation('[Required Field]')
+              }}
+              maxLength={128}
+              control={control}
+              isInvalid={errors.name}
+              focusBorderColor="#000"
+              errorBorderColor="red.400"
+            />
+            <FormErrorMessage>{errors?.name?.message}</FormErrorMessage>
+          </FormControl>
+          <Input
             placeholder={getTranslation('[Phone number]')}
             name="phone"
             ref={register}
-            maxLength={256}
+            focusBorderColor="#000"
+            maxLength={128}
           />
-          <input
-            className={`placeholder-black p-2 ${errorStyle('email')}`}
-            placeholder={`${getTranslation('[Email]')}*`}
-            name="email"
-            ref={register()}
-            type="email"
-            maxLength={256}
-            required
-          />
-          <textarea
-            className={`placeholder-black p-2 ${errorStyle('comments')}`}
-            placeholder={`${getTranslation('[Comments]')}*`}
-            name="comments"
-            ref={register()}
-            maxLength={256}
-            required
-          />
+          <FormControl isInvalid={errors.email}>
+            <Input
+              placeholder={`${getTranslation('[Email]')}*`}
+              name="email"
+              ref={register({
+                required: getTranslation('[Required Field]'),
+                pattern: {
+                  value: /^\S+@\S+\.\S+$/,
+                  message: getTranslation('[Email validation]')
+                }
+              })}
+              type="email"
+              focusBorderColor="#000"
+              errorBorderColor="red.400"
+              maxLength={128}
+            />
+            <FormErrorMessage>{errors?.email?.message}</FormErrorMessage>
+          </FormControl>
+          <FormControl isInvalid={errors.comments}>
+            <Textarea
+              style={{ resize: 'none' }}
+              placeholder={`${getTranslation('[Comments]')}*`}
+              name="comments"
+              ref={register({ required: getTranslation('[Required Field]') })}
+              maxLength={256}
+              focusBorderColor="#000"
+              errorBorderColor="red.400"
+              isInvalid={errors.comments}
+            />
+            <FormErrorMessage>{errors?.comments?.message}</FormErrorMessage>
+          </FormControl>
         </div>
-        <button
-          className="bg-black w-32 mt-5 rounded-md text-white"
+        <Button
+          className="mt-5"
+          bg="black"
+          color="white"
+          _hover={{ bg: 'white', color: 'black' }}
           type="submit"
         >
           {getTranslation('[Submit]')}
-        </button>
+        </Button>
       </form>
-      <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={() => setIsOpen(false)}
-        style={customStyles}
-      >
-        {modalContent}
-      </Modal>
     </SectionLayout>
   );
 };

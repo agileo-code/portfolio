@@ -1,8 +1,6 @@
 ---
 title: 'Plataforma de contratación de seguros'
 desc: 'Plataforma de contratación de seguros'
-icon: '/images/projects/assurance-app.png'
-technologies: 'react javascript styledComponent aws'
 ---
 
 - Plataforma de contratación de seguros, totalmente responsive, de manera que se adapta perfectamente a cualquier tipo de dispositivo.
