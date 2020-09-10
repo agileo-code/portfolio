@@ -24,7 +24,7 @@ const ProjectBox = ({ icon, title, desc, className, url, id }) => {
             rightIcon="external-link"
             _hover={{ bg: 'white', color: 'black' }}
           >
-            <a href={url} target="_blank" rel="noreferrer">
+            <a href={url} target="_blank" rel="noopener noreferrer">
               {getTranslation('[View Demo]')}
             </a>
           </Button>
