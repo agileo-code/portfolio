@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useContext } from 'react';
 import styled from 'styled-components';
 
+import Layout from '../../components/layout';
 import SectionLayout from '../../components/sectionLayout';
 import ActionCallCard from '../../components/actionCallCard';
 import { LanguageContext } from '../../context/language';
@@ -15,7 +16,7 @@ const Project = ({ projectData }) => {
   const { title, contentHtml } = projectData[locale];
   const projectTechnologies = technologies.split(' ');
   return (
-    <>
+    <Layout>
       <SectionLayout className="bg-black text-white">
         <h2>{title}</h2>
         <div className="grid gap-8 mt-8 lg:mt-0 lg:p-20 lg:gap-32 content-center items-center lg:grid-cols-2 ">
@@ -72,7 +73,7 @@ const Project = ({ projectData }) => {
           </a>
         </Link>
       </SectionLayout>
-    </>
+    </Layout>
   );
 };
 

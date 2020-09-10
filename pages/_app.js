@@ -1,13 +1,13 @@
-import Layout from '../components/layout';
 import analytics from '../util/analytics';
+import GlobalProviders from '../components/globalProviders';
 
 import '../styles/index.css';
 
 export default function App({ Component, pageProps }) {
   return (
-    <Layout>
+    <GlobalProviders>
       <Component {...pageProps} />
-    </Layout>
+    </GlobalProviders>
   );
 }
 
