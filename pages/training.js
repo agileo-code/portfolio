@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { useContext } from 'react';
 
 import SectionLayout from '../components/sectionLayout';
@@ -16,6 +17,10 @@ export default function Training() {
 
   return (
     <Layout>
+      <Head>
+        <title>Training - Nimbel</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <SectionLayout className="bg-black text-white">
         <div className="grid md:grid-cols-2 mt-10">
           <div className="md:grid md:grid-rows-2 flex justify-center">

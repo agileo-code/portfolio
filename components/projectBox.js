@@ -12,7 +12,7 @@ const ProjectBox = ({ icon, title, desc, className, url, id }) => {
       className={`flex flex-col items-center justify-center text-center ${className}`}
     >
       <div className="w-full h-full">
-        <img src={icon} alt={`${title} Thumb`} />
+        <img loading="lazy" src={icon} alt={`${title} Thumb`} />
       </div>
       <h4 className="m-2">{title}</h4>
       <span>{desc}</span>
