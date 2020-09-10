@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { Controller, useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import {
   Button,
@@ -17,7 +17,7 @@ import SectionLayout from '../sectionLayout';
 
 const Contact = () => {
   const toast = useToast();
-  const { control, errors, register, handleSubmit, reset } = useForm();
+  const { errors, register, handleSubmit, reset } = useForm();
   const { getTranslation } = useContext(LanguageContext);
 
   const onSubmit = data => {
@@ -53,18 +53,16 @@ const Contact = () => {
       >
         <div className="w-full grid gap-4 text-black">
           <FormControl isInvalid={errors.name}>
-            <Controller
-              as={Input}
+            <Input
               placeholder={`${getTranslation('[Name]')}*`}
               name="name"
-              rules={{
-                required: getTranslation('[Required Field]')
-              }}
               maxLength={128}
-              control={control}
               isInvalid={errors.name}
               focusBorderColor="#000"
               errorBorderColor="red.400"
+              rules={{
+                required: getTranslation('[Required Field]')
+              }}
             />
             <FormErrorMessage>{errors?.name?.message}</FormErrorMessage>
           </FormControl>
