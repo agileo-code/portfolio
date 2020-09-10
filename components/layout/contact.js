@@ -110,9 +110,9 @@ const Contact = () => {
             <Checkbox
               variantColor="transparent"
               name="accept"
-              rules={{
-                required: getTranslation('[Required Field]')
-              }}
+              ref={register({
+                validate: value => value
+              })}
             >
               {getTranslation('[I accept the]')}{' '}
               <Link href="termsAndConditions">
