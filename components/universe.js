@@ -53,7 +53,7 @@ const Clouds = styled(animated.div)`
   will-change: transform;
   width: 10vmax;
   height: 10vmax;
-  background-image: url(https://image.flaticon.com/icons/svg/414/414927.svg);
+  background-image: url(/images/universe/clouds.svg);
 `;
 
 const Rocket = styled(animated.div)`

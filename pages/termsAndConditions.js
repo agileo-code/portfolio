@@ -14,7 +14,7 @@ export default function Privacy() {
         <p>{getTranslation('[tc-sumary]')}</p>
         <h3 className="mt-10">{getTranslation('[tc-general-title]')}</h3>
         <p>{getTranslation('[tc-general]')}</p>
-        <h3 className="mt-10">{getTranslation('[tc-general]')}</h3>
+        <h3 className="mt-10">{getTranslation('[tc-personal-data-title]')}</h3>
         <p>
           {getTranslation('[read]')}{' '}
           <Link href="privacy">
@@ -29,8 +29,8 @@ export default function Privacy() {
         <p>{getTranslation('[tc-commitments-2]')}</p>
         <h3 className="mt-10">{getTranslation('[tc-security-title]')}</h3>
         <p>{getTranslation('[tc-security]')}</p>
-        <h3 className="mt-10">{getTranslation('[tc-claims-title]')}</h3>
-        <p>{getTranslation('[tc-claims]')}</p>
+        <h3 className="mt-10">{getTranslation('[tc-complaints-title]')}</h3>
+        <p>{getTranslation('[tc-complaints]')}</p>
         <h3 className="mt-10">{getTranslation('[tc-platform-title]')}</h3>
         <p>{getTranslation('[tc-platform]')}</p>
         <h3 className="mt-10">

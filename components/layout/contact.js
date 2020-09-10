@@ -7,8 +7,10 @@ import {
   FormErrorMessage,
   Input,
   Textarea,
-  useToast
+  useToast,
+  Checkbox
 } from '@chakra-ui/core';
+import Link from 'next/link';
 
 import { LanguageContext } from '../../context/language';
 import SectionLayout from '../sectionLayout';
@@ -102,6 +104,29 @@ const Contact = () => {
               errorBorderColor="red.400"
               isInvalid={errors.comments}
             />
+            <FormErrorMessage>{errors?.comments?.message}</FormErrorMessage>
+          </FormControl>
+          <FormControl isInvalid={errors.accept}>
+            <Checkbox
+              variantColor="transparent"
+              name="accept"
+              ref={register({
+                validate: value => value
+              })}
+            >
+              {getTranslation('[I accept the]')}{' '}
+              <Link href="termsAndConditions">
+                <a target="_blank" className="underline">
+                  {getTranslation('[Terms of service]')}
+                </a>
+              </Link>{' '}
+              {getTranslation('[and]')}{' '}
+              <Link href="privacy">
+                <a target="_blank" className="underline">
+                  {getTranslation('[Privacy policy]')}
+                </a>
+              </Link>
+            </Checkbox>
             <FormErrorMessage>{errors?.comments?.message}</FormErrorMessage>
           </FormControl>
         </div>
