@@ -7,6 +7,7 @@ const customStyles = {
   control: provided => ({
     ...provided,
     backgroundColor: 'rgba(255, 255, 255, 0.2);',
+    borderRadius: '0',
     border: '0',
     color: 'currentColor',
     outline: 'none',
