@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { useContext } from 'react';
 import styled from 'styled-components';
+import { Button } from '@chakra-ui/core';
 
 import Layout from '../../components/layout';
 import SectionLayout from '../../components/sectionLayout';
@@ -23,19 +24,21 @@ const Project = ({ projectData }) => {
           <div className="flex flex-col items-center w-full h-full md:p-20 lg:p-0">
             <img src={icon} alt={`${title} Thumb`} />
             {url && (
-              <a
-                className="m-2 border-2 rounded-md border-blue-500 text-white p-1 pr-3 pl-3"
-                href={url}
-                target="_blank"
-                rel="noreferrer"
+              <Button
+                className="my-6"
+                variant="outline"
+                borderColor="#00B4D8"
+                rightIcon="external-link"
+                _hover={{ bg: 'white', color: 'black' }}
               >
-                {getTranslation('[View Demo]')}{' '}
-                <span className="text-blue-500">⬀</span>
-              </a>
+                <a href={url} target="_blank" rel="noreferrer">
+                  {getTranslation('[View Demo]')}
+                </a>
+              </Button>
             )}
             <div>
               <ActionCallCard
-                className="mt-10"
+                className="mt-4"
                 buttonText={getTranslation("[Let's talk]")}
               >
                 {getTranslation('[Do you need something similar]')}
@@ -46,8 +49,8 @@ const Project = ({ projectData }) => {
             <ProjectDescription
               dangerouslySetInnerHTML={{ __html: contentHtml }}
             />
-            <h5 className="mt-10">{getTranslation('[Technologies]')}:</h5>
-            <div className="grid grid-flow-col gap-3 p-10">
+            <h3 className="mt-10">{getTranslation('[Technologies]')}:</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-5 p-10">
               {projectTechnologies.map(techId => {
                 const theTech = AvailableTechnologies[techId];
                 return (

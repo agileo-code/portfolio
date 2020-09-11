@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import Link from 'next/link';
-import { Button, ButtonGroup } from '@chakra-ui/core';
+import { Button } from '@chakra-ui/core';
 
 import { LanguageContext } from '../context/language';
 
@@ -12,11 +12,11 @@ const ProjectBox = ({ icon, title, desc, className, url, id }) => {
       className={`flex flex-col items-center justify-center text-center ${className}`}
     >
       <div className="w-full h-full">
-        <img loading="lazy" src={icon} alt={`${title} Thumb`} />
+        <img src={icon} alt={`${title} Thumb`} />
       </div>
       <h4 className="m-2">{title}</h4>
       <span>{desc}</span>
-      <ButtonGroup spacing={2}>
+      <div className="grid gap-3 md:grid-cols-2">
         {url && (
           <Button
             variant="outline"
@@ -39,7 +39,7 @@ const ProjectBox = ({ icon, title, desc, className, url, id }) => {
             {getTranslation('[More info]')}
           </Button>
         </Link>
-      </ButtonGroup>
+      </div>
     </div>
   );
 };
