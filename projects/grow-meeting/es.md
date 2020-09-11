@@ -3,7 +3,7 @@ title: 'Grow Meeting'
 desc: 'Grow Meeting'
 ---
 
-##### Prueba de concepto de videoconferencia con acciones personalizadas
+### Prueba de concepto de videoconferencia con acciones personalizadas
 
 Este proyecto es una prueba de concepto que para comprobar como se puede integrar una videoconferencia (Jitsi) en una aplicación que se comunica para enviar y recibir eventos.
 

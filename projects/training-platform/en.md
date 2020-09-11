@@ -3,7 +3,7 @@ title: 'Training platform'
 desc: 'A Training platform'
 ---
 
-#### Training platform
+### Training platform
 
 This application generates a platform for training, allowing the publication of courses, teachers and content.
 
