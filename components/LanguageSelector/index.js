@@ -49,6 +49,7 @@ export default function LanguageSelector({ desktop }) {
 
   const onChangeLocale = lang => {
     const userLang = lang?.target?.value || lang?.value;
+    localStorage.setItem('user-language', userLang);
     setLocale(userLang);
     changeLanguage(userLang);
   };
