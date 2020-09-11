@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
-import { LanguageContext } from '../../context/language';
+import { LanguageContext } from '../context/language';
 
 export const onClick = (router, section) => {
   const pageSection = document.getElementById(section);
@@ -19,10 +19,12 @@ export default function Menu({ desktop }) {
   const { getTranslation } = useContext(LanguageContext);
   const router = useRouter();
 
-  const style = desktop ? 'grid-flow-col gap-2' : 'grid-cols-1 gap-1 text-3xl';
-
   return (
-    <div className={`grid ${style}`}>
+    <div
+      className={`grid ${
+        desktop ? 'grid-flow-col gap-5 mr-5' : 'grid-cols-1 gap-1 text-3xl'
+      }`}
+    >
       <button
         type="button"
         className="cursor-pointer"

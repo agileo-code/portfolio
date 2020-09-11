@@ -1,12 +1,12 @@
 import { useContext } from 'react';
 import Select from 'react-select';
 
-import { LanguageContext } from '../../context/language';
+import { LanguageContext } from '../context/language';
 
 const customStyles = {
   control: provided => ({
     ...provided,
-    backgroundColor: 'transparent',
+    backgroundColor: 'rgba(255, 255, 255, 0.2);',
     border: '0',
     color: 'currentColor',
     outline: 'none',
