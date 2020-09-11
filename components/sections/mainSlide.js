@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { Button, ButtonGroup } from '@chakra-ui/core';
 
 import CustomerSlider from '../customerSlider';
-import Universe from '../universe-m';
+import Universe from '../universe';
 import { onMenuClick } from '../layout/header';
 import { LanguageContext } from '../../context/language';
 import Logo from '../../public/images/nimbel/NimbelRight.svg';

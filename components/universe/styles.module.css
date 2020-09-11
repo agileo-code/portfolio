@@ -3,7 +3,6 @@
 .card3,
 .card4 {
   position: absolute;
-  border-radius: 5px;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -11,25 +10,20 @@
 }
 
 .card1 {
-  min-width: 30ch;
-  min-height: 30ch;
-  width: 25vw;
-  height: 25vw;
-  border-radius: 50%;
-  max-width: 100ch;
-  max-height: 100ch;
+  width: 30vmax;
+  height: 30vmax;
   background-image: url(/images/universe/world.svg);
 }
 
 .card2 {
-  width: 20ch;
-  height: 20ch;
+  width: 10vmax;
+  height: 10vmax;
   background-image: url(/images/universe/clouds.svg);
 }
 
 .card4 {
-  width: 25ch;
-  height: 25ch;
+  width: 20vmax;
+  height: 20vmax;
   background-image: url(/images/universe/rocket.svg);
 }
 
