@@ -30,7 +30,7 @@ export default function Header() {
       }`}
     >
       <div
-        className={`flex items-center h-full ml-4 ${
+        className={`flex items-center h-full ${
           transparent ? 'w-20 text-corporative-color' : 'w-40 text-black'
         }`}
       >

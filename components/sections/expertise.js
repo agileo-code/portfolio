@@ -9,10 +9,13 @@ const Expertise = () => {
   const { getTranslation } = useContext(LanguageContext);
 
   return (
-    <SectionLayout id="services" className="bg-gray-100 text-black">
+    <SectionLayout
+      id="services"
+      className="bg-white text-black md:mr-20 md:ml-20"
+    >
       <h2 className="self-center mb-10">{getTranslation('[Services]')}</h2>
 
-      <div className="grid gap-10 md:gap-20 grid-cols-2 md:grid-cols-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-20">
         {services().map(service => (
           <IconBox
             key={service.title}
