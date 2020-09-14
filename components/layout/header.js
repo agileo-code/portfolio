@@ -5,8 +5,7 @@ import styled from 'styled-components';
 
 import Burger from '../../public/images/burger.svg';
 import Cross from '../../public/images/cross.svg';
-import Logo from '../../public/images/nimbel/NimbelInside.svg';
-import LogoText from '../../public/images/nimbel/NimbelRight.svg';
+import Logo from '../../public/images/nimbel.svg';
 import Menu, { onClick } from '../Menu';
 
 import LanguageSelector from '../LanguageSelector';
@@ -35,11 +34,7 @@ export default function Header() {
           transparent ? 'w-20 text-corporative-color' : 'w-40 text-black'
         }`}
       >
-        {transparent ? (
-          <Logo className="w-full h-16" />
-        ) : (
-          <LogoText className="w-full" />
-        )}
+        {!transparent && <Logo className="w-full m-5" />}
       </div>
       <div
         className={`mr-6 ${
