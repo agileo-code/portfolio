@@ -31,9 +31,9 @@ const CustomerSlider = ({ className }) => {
   }, []);
 
   return (
-    <div className={`flex items-center text-gray-500 flex-col ${className}`}>
+    <div className={`flex items-center text-grey-500 flex-col ${className}`}>
       <span>{getTranslation('[Who trust in us]')}</span>
-      <div className="flex justify-center text-corporative-slideLight p-10 bg-gray-400 rounded-sm h-20 w-full">
+      <div className="flex justify-center text-white p-10 bg-blue-700 rounded-sm h-20 w-full">
         <div
           ref={containerEl}
           className="flex justify-around items-center w-full"

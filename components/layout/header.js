@@ -25,7 +25,7 @@ export default function Header() {
 
   return (
     <div
-      className={`transition duration-500 flex justify-between items-center w-full z-10 fixed ${
+      className={`transition duration-500 flex justify-between items-center w-full z-10 fixed shadow-md ${
         transparent ? 'bg-transparent h-20' : 'bg-white h-12'
       }`}
     >

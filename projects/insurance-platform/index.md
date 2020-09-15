@@ -1,4 +1,4 @@
 ---
-icon: '/images/projects/assurance-app-medium.webp'
+icon: '/images/projects/assurance-app.webp'
 technologies: 'react javascript styledComponent aws'
 ---

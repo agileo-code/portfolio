@@ -18,16 +18,16 @@ const ProjectBox = ({ icon, title, desc, className, url, id }) => {
       <span>{desc}</span>
       <div className="grid gap-3 md:grid-cols-2">
         {url && (
-          <Button
-            variant="outline"
-            borderColor="#00B4D8"
-            rightIcon="external-link"
-            _hover={{ bg: 'white', color: 'black' }}
-          >
-            <a href={url} target="_blank" rel="noreferrer">
+          <a href={url} target="_blank" rel="noreferrer">
+            <Button
+              variant="outline"
+              borderColor="#00B4D8"
+              rightIcon="external-link"
+              _hover={{ bg: 'white', color: 'black' }}
+            >
               {getTranslation('[View Demo]')}
-            </a>
-          </Button>
+            </Button>
+          </a>
         )}
         <Link href="/projects/[id]" as={`/projects/${id}`}>
           <Button

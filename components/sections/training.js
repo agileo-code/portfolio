@@ -28,9 +28,9 @@ const Expertise = () => {
       className="bg-white text-black border-t border-gray-500 border-dashed"
     >
       <h2 className="self-center mb-10">
-        {getTranslation('[Continous learning]')}
+        {getTranslation('[Training Programs]')}
       </h2>
-      <div className="flex flex-col md:flex-row justify-between items-center md:mr-10 md:ml-10">
+      <div className="flex flex-col lg:flex-row justify-between items-center md:mr-10 md:ml-10">
         <div>
           <span className="text-gray-800">
             {getTranslation('[Continous learning desc]')}
@@ -41,7 +41,7 @@ const Expertise = () => {
             ))}
           </Bullets>
         </div>
-        <OnlineLearning className="w-1/2 lg:w-1/3 mr-10 ml-10" />
+        <OnlineLearning className="mr-10 ml-10 w-1/2 lg:w-full" />
       </div>
       <div className="flex justify-center flex-col sm:flex-row mt-8">
         <Button
