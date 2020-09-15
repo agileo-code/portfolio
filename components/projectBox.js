@@ -16,10 +16,11 @@ const ProjectBox = ({ icon, title, desc, className, url, id }) => {
       </div>
       <h4 className="m-2">{title}</h4>
       <span>{desc}</span>
-      <div className="grid gap-3 md:grid-cols-2">
+      <div className="flex justify-around flex-wrap w-3/4">
         {url && (
           <a href={url} target="_blank" rel="noreferrer">
             <Button
+              className="m-1"
               variant="outline"
               borderColor="#00B4D8"
               rightIcon="external-link"
@@ -31,6 +32,7 @@ const ProjectBox = ({ icon, title, desc, className, url, id }) => {
         )}
         <Link href="/projects/[id]" as={`/projects/${id}`}>
           <Button
+            className="m-1"
             variant="outline"
             borderColor="#00B4D8"
             rightIcon="view"
