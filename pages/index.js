@@ -4,6 +4,7 @@ import useBannerCookies from '../hooks/useBannerCookies';
 import MainSlide from '../components/sections/mainSlide';
 import Expertise from '../components/sections/expertise';
 import Projects from '../components/sections/projects';
+import Training from '../components/sections/training';
 import Layout from '../components/layout';
 import { getAllMarkDownData } from '../lib/markDowns';
 
@@ -18,6 +19,7 @@ export default function Home({ allProjectsData }) {
       </Head>
       <MainSlide />
       <Expertise />
+      <Training />
       <Projects allProjectsData={allProjectsData} />
     </Layout>
   );
