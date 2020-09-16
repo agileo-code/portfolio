@@ -18,8 +18,7 @@ const Expertise = () => {
     getTranslation('[training-bullet-3]'),
     getTranslation('[training-bullet-4]'),
     getTranslation('[training-bullet-5]'),
-    getTranslation('[training-bullet-6]'),
-    getTranslation('[training-bullet-7]')
+    getTranslation('[training-bullet-6]')
   ];
 
   return (

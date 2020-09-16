@@ -16,7 +16,7 @@ const ProjectBox = ({ icon, title, desc, className, url, id }) => {
       </div>
       <h4 className="m-2">{title}</h4>
       <span>{desc}</span>
-      <div className="flex justify-around flex-wrap w-3/4">
+      <div className="flex justify-around flex-wrap w-4/5">
         {url && (
           <a href={url} target="_blank" rel="noreferrer">
             <Button

@@ -5,7 +5,7 @@ import SectionLayout from '../components/sectionLayout';
 import Layout from '../components/layout';
 
 import IdeaPerson from '../public/images/ideaPerson.svg';
-import WhiteBoard from '../public/images/whiteboard.svg';
+import WhiteBoard from '../public/images/mobile-whiteboard.svg';
 
 import { LanguageContext } from '../context/language';
 import IconBox from '../components/iconBox';
@@ -43,7 +43,7 @@ export default function Training() {
       <SectionLayout className="bg-white text-black">
         <h2 className="self-center mb-10">{getTranslation('[Topics]')}</h2>
 
-        <div className="grid gap-10 md:gap-20 grid-cols-2 md:grid-cols-3">
+        <div className="grid gap-10 md:gap-20 md:grid-cols-2 lg:grid-cols-3 xl:mr-20 xl:ml-20">
           {TrainingTopics().map(service => (
             <IconBox
               key={service.title}
