@@ -3,7 +3,7 @@ title: 'Plataforma de formació'
 desc: 'Plataforma de formació'
 ---
 
-##### Plataforma de formació
+### Plataforma de formació
 
 Aquesta aplicació genera una plataforma per a formació, permetent publicar cursos, professors i contingut.
 

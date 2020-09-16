@@ -3,7 +3,7 @@ title: 'Grow Meeting'
 desc: 'Grow Meeting'
 ---
 
-#### Proof of concept for video conferencing with custom actions
+### Proof of concept for video conferencing with custom actions
 
 This project is a proof of concept to see how a videoconference (Jitsi) can be integrated into an application that communicates to send and receive events.
 

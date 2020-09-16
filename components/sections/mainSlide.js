@@ -6,7 +6,7 @@ import CustomerSlider from '../customerSlider';
 import Universe from '../universe';
 import { onMenuClick } from '../layout/header';
 import { LanguageContext } from '../../context/language';
-import Logo from '../../public/images/nimbel/NimbelRight.svg';
+import Logo from '../../public/images/nimbel.svg';
 
 const MainSlide = () => {
   const { getTranslation } = useContext(LanguageContext);

@@ -1,12 +1,13 @@
 import { useContext } from 'react';
 import Select from 'react-select';
 
-import { LanguageContext } from '../../context/language';
+import { LanguageContext } from '../context/language';
 
 const customStyles = {
   control: provided => ({
     ...provided,
-    backgroundColor: 'transparent',
+    backgroundColor: 'rgba(255, 255, 255, 0.2);',
+    borderRadius: '0',
     border: '0',
     color: 'currentColor',
     outline: 'none',
@@ -49,6 +50,7 @@ export default function LanguageSelector({ desktop }) {
 
   const onChangeLocale = lang => {
     const userLang = lang?.target?.value || lang?.value;
+    localStorage.setItem('user-language', userLang);
     setLocale(userLang);
     changeLanguage(userLang);
   };
@@ -65,6 +67,7 @@ export default function LanguageSelector({ desktop }) {
       onChange={onChangeLocale}
       options={options}
       styles={customStyles}
+      isSearchable={false}
     />
   ) : (
     <div className="flex text-xl p-4">

@@ -20,7 +20,9 @@ export default function LanguageProvider({ children }) {
   );
 
   useEffect(() => {
-    const lang = navigator?.language?.split('-')[0];
+    const lang =
+      localStorage.getItem('user-language') ||
+      navigator?.language?.split('-')[0];
     if (lang === defaultLocale || !locales.includes(lang)) return;
     setLocale(lang);
     changeLanguage(lang);

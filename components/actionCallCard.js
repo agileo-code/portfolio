@@ -1,4 +1,6 @@
 import { useRouter } from 'next/router';
+import { Button } from '@chakra-ui/core';
+
 import { onMenuClick } from './layout/header';
 
 const ActionCallCard = ({ className, title, price, children, buttonText }) => {
@@ -10,13 +12,13 @@ const ActionCallCard = ({ className, title, price, children, buttonText }) => {
       <h3 className="mb-3">{title}</h3>
       {children}
       <div className="m-3">{price}</div>
-      <button
+      <Button
         type="button"
-        className="bg-blue-700 text-white rounded-sm p-1 pr-3 pl-3 mt-2"
+        variantColor="blue"
         onClick={() => onMenuClick(router, 'contact')}
       >
         {buttonText}
-      </button>
+      </Button>
     </div>
   );
 };
