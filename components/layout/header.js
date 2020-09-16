@@ -2,6 +2,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import router from 'next/router';
 
 import Burger from '../../public/images/burger.svg';
 import Cross from '../../public/images/cross.svg';
@@ -34,7 +35,12 @@ export default function Header() {
           transparent ? 'w-20 text-corporative-color' : 'w-40 text-black'
         }`}
       >
-        {!transparent && <Logo className="w-full m-5" />}
+        {!transparent && (
+          <Logo
+            className="w-full m-5 cursor-pointer"
+            onClick={() => onMenuClick(router, 'main')}
+          />
+        )}
       </div>
       <div
         className={`mr-6 ${
