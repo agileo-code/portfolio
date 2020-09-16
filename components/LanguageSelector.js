@@ -67,6 +67,7 @@ export default function LanguageSelector({ desktop }) {
       onChange={onChangeLocale}
       options={options}
       styles={customStyles}
+      isSearchable={false}
     />
   ) : (
     <div className="flex text-xl p-4">
