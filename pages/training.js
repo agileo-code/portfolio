@@ -6,6 +6,7 @@ import Layout from '../components/layout';
 
 import IdeaPerson from '../public/images/ideaPerson.svg';
 import WhiteBoard from '../public/images/mobile-whiteboard.svg';
+import NimbelCertified from '../public/images/nimbel-certified.svg';
 
 import { LanguageContext } from '../context/language';
 import IconBox from '../components/iconBox';
@@ -42,7 +43,6 @@ export default function Training() {
       </SectionLayout>
       <SectionLayout className="bg-white text-black">
         <h2 className="self-center mb-10">{getTranslation('[Topics]')}</h2>
-
         <div className="grid gap-10 md:gap-20 md:grid-cols-2 lg:grid-cols-3 xl:mr-20 xl:ml-20">
           {TrainingTopics().map(service => (
             <IconBox
@@ -53,6 +53,22 @@ export default function Training() {
               link={service.link}
             />
           ))}
+        </div>
+      </SectionLayout>
+      <SectionLayout className="bg-black text-white border-b border-gray-500 border-dashed">
+        <div className="flex flex-col items-center">
+          <h3 className="mb-5 text-center">
+            {getTranslation('[Get your certificate]')}
+          </h3>
+          <div className="w-1/3">
+            <NimbelCertified />
+          </div>
+          <p className="mt-8">
+            {getTranslation('[Get your certificate desc]')}
+          </p>
+          <p className=" mt-2">
+            {getTranslation('[Get your certificate desc 2]')}
+          </p>
         </div>
       </SectionLayout>
       <SectionLayout className="bg-black text-white">
