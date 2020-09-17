@@ -6,7 +6,7 @@ const Footer = () => {
   const { getTranslation } = useContext(LanguageContext);
   return (
     <div className="bg-black text-corporative-color flex justify-between items-center p-6">
-      Nimbel© {new Date().getFullYear()} Copyright, Sant cugat del Vallés,
+      Nimbel© {new Date().getFullYear()} Copyright, Sant Cugat del Vallès,
       Barcelona
       <div className="flex flex-col text-gray-500 text-xs">
         <Link href="privacy">
