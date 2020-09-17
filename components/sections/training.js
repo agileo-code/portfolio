@@ -44,8 +44,8 @@ const Expertise = () => {
       </div>
       <div className="flex justify-center flex-col sm:flex-row mt-8">
         <Button
-          bg="#0096c7"
-          _hover={{ backgroundColor: '#0079a1' }}
+          bg="#007FA9"
+          _hover={{ backgroundColor: '#006384' }}
           className="m-2 text-white"
           onClick={() => onClick(router, 'contact')}
         >
@@ -53,8 +53,8 @@ const Expertise = () => {
         </Button>
         <Link href="training">
           <Button
-            bg="#0096c7"
-            _hover={{ backgroundColor: '#0079a1' }}
+            bg="#007FA9"
+            _hover={{ backgroundColor: '#006384' }}
             className="m-2 text-white"
           >
             {getTranslation('[More info]')}

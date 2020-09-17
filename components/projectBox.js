@@ -14,7 +14,7 @@ const ProjectBox = ({ icon, title, desc, className, url, id }) => {
       <div className="w-full h-full">
         <img src={icon} alt={`${title} Thumb`} />
       </div>
-      <h4 className="m-2">{title}</h4>
+      <h3 className="m-2">{title}</h3>
       <span>{desc}</span>
       <div className="flex justify-around flex-wrap w-4/5">
         {url && (

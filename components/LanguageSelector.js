@@ -68,6 +68,7 @@ export default function LanguageSelector({ desktop }) {
       options={options}
       styles={customStyles}
       isSearchable={false}
+      aria-label={getTranslation(`[Select language]`)}
     />
   ) : (
     <div className="flex text-xl p-4">
