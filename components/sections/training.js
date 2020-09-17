@@ -44,14 +44,14 @@ const Expertise = () => {
       </div>
       <div className="flex justify-center flex-col sm:flex-row mt-8">
         <Button
-          variantColor="blue"
-          className="m-2"
+          bg="#0096c7"
+          className="m-2 text-white"
           onClick={() => onClick(router, 'contact')}
         >
           {getTranslation('[Contact us]')}
         </Button>
         <Link href="training">
-          <Button variantColor="blue" className="m-2">
+          <Button bg="#0096c7" className="m-2 text-white">
             {getTranslation('[More info]')}
           </Button>
         </Link>

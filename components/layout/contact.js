@@ -106,7 +106,7 @@ const Contact = () => {
           </FormControl>
           <FormControl isInvalid={errors.accept}>
             <Checkbox
-              variantColor="transparent"
+              variantColor="primary"
               name="accept"
               ref={register({
                 validate: value => value
