@@ -36,7 +36,7 @@ const Expertise = () => {
           </span>
           <Bullets className="list-disc m-5 text-sm text-gray-700">
             {trainingBullets.map(bullet => (
-              <li>{bullet}</li>
+              <li key={bullet}>{bullet}</li>
             ))}
           </Bullets>
         </div>
@@ -44,14 +44,19 @@ const Expertise = () => {
       </div>
       <div className="flex justify-center flex-col sm:flex-row mt-8">
         <Button
-          variantColor="blue"
-          className="m-2"
+          bg="#007FA9"
+          _hover={{ backgroundColor: '#006384' }}
+          className="m-2 text-white"
           onClick={() => onClick(router, 'contact')}
         >
           {getTranslation('[Contact us]')}
         </Button>
         <Link href="training">
-          <Button variantColor="blue" className="m-2">
+          <Button
+            bg="#007FA9"
+            _hover={{ backgroundColor: '#006384' }}
+            className="m-2 text-white"
+          >
             {getTranslation('[More info]')}
           </Button>
         </Link>

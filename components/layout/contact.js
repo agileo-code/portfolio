@@ -55,6 +55,7 @@ const Contact = () => {
           <FormControl isInvalid={errors.name}>
             <Input
               placeholder={`${getTranslation('[Name]')}*`}
+              aria-label={getTranslation('[Name]')}
               name="name"
               maxLength={128}
               isInvalid={errors.name}
@@ -68,6 +69,7 @@ const Contact = () => {
           </FormControl>
           <Input
             placeholder={getTranslation('[Phone number]')}
+            aria-label={getTranslation('[Phone number]')}
             name="phone"
             ref={register}
             focusBorderColor="#000"
@@ -76,6 +78,7 @@ const Contact = () => {
           <FormControl isInvalid={errors.email}>
             <Input
               placeholder={`${getTranslation('[Email]')}*`}
+              aria-label={getTranslation('[Email]')}
               name="email"
               ref={register({
                 required: getTranslation('[Required Field]'),
@@ -95,6 +98,7 @@ const Contact = () => {
             <Textarea
               style={{ resize: 'none' }}
               placeholder={`${getTranslation('[Comments]')}*`}
+              aria-label={getTranslation('[Comments]')}
               name="comments"
               ref={register({ required: getTranslation('[Required Field]') })}
               maxLength={256}
@@ -106,7 +110,10 @@ const Contact = () => {
           </FormControl>
           <FormControl isInvalid={errors.accept}>
             <Checkbox
-              variantColor="transparent"
+              variantColor="primary"
+              aria-label={getTranslation(
+                '[Accept privacy policy and terms of service]'
+              )}
               name="accept"
               ref={register({
                 validate: value => value

@@ -13,7 +13,7 @@ const IconBox = ({ icon, title, desc, className, link }) => {
     >
       <div className="flex flex-col items-center md:flex-row">
         <div className="w-20 h-20 md:w-10 md:h-10">{icon}</div>
-        <h4 className="m-2  text-gray-900">{title}</h4>
+        <h3 className="m-2  text-gray-900">{title}</h3>
       </div>
       <span className="text-sm text-gray-700">{desc}</span>
       <div className="flex justify-center">

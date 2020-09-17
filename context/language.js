@@ -20,6 +20,10 @@ export default function LanguageProvider({ children }) {
   );
 
   useEffect(() => {
+    document.documentElement.lang = locale;
+  }, [locale]);
+
+  useEffect(() => {
     const lang =
       localStorage.getItem('user-language') ||
       navigator?.language?.split('-')[0];

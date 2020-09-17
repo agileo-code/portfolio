@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-import useBannerCookies from '../hooks/useBannerCookies';
+import BannerCookies from '../components/bannerCookies';
 import MainSlide from '../components/sections/mainSlide';
 import Expertise from '../components/sections/expertise';
 import Projects from '../components/sections/projects';
@@ -9,7 +9,6 @@ import Layout from '../components/layout';
 import { getAllMarkDownData } from '../lib/markDowns';
 
 export default function Home({ allProjectsData }) {
-  useBannerCookies();
   return (
     <Layout>
       <Head>
@@ -21,6 +20,7 @@ export default function Home({ allProjectsData }) {
       <Expertise />
       <Training />
       <Projects allProjectsData={allProjectsData} />
+      <BannerCookies />
     </Layout>
   );
 }
