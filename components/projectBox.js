@@ -1,6 +1,5 @@
 import { useContext } from 'react';
 import Link from 'next/link';
-import { Button } from '@chakra-ui/core';
 
 import { LanguageContext } from '../context/language';
 
@@ -16,30 +15,21 @@ const ProjectBox = ({ icon, title, desc, className, url, id }) => {
       </div>
       <h3 className="m-2">{title}</h3>
       <span>{desc}</span>
-      <div className="flex justify-around flex-wrap w-4/5">
+      <div className="flex justify-center py-3">
         {url && (
-          <a href={url} target="_blank" rel="noreferrer">
-            <Button
-              className="m-1"
-              variant="outline"
-              borderColor="#00B4D8"
-              rightIcon="external-link"
-              _hover={{ bg: 'white', color: 'black' }}
-            >
-              {getTranslation('[View Demo]')}
-            </Button>
+          <a
+            href={url}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex text-white bg-corporative-blue border-0 py-2 px-6 focus:outline-none hover:bg-blue-700 rounded text-lg"
+          >
+            {getTranslation('[View Demo]')}
           </a>
         )}
         <Link href="/projects/[id]" as={`/projects/${id}`}>
-          <Button
-            className="m-1"
-            variant="outline"
-            borderColor="#00B4D8"
-            rightIcon="view"
-            _hover={{ bg: 'white', color: 'black' }}
-          >
+          <a className="ml-4 inline-flex text-gray-800 bg-gray-200 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded text-lg">
             {getTranslation('[More info]')}
-          </Button>
+          </a>
         </Link>
       </div>
     </div>

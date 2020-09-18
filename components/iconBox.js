@@ -12,7 +12,7 @@ const IconBox = ({ icon, title, desc, link }) => {
         <div className="w-10 h-10 text-black">{icon}</div>
       </div>
       <div className="flex-grow">
-        <h2 className="text-gray-900 text-lg title-font font-medium mb-3">
+        <h2 className="text-gray-900 text-xl title-font font-medium mb-3">
           {title}
         </h2>
         <p className="leading-relaxed text-base text-gray-700">{desc}</p>

@@ -45,11 +45,11 @@ const Contact = () => {
           title="map"
           scrolling="no"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2200863.3116707727!2d0.24310164227886083!3d40.37468437664345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a496c2a6d57035%3A0xb16124d430411319!2sSant%20Cugat%20del%20Vall%C3%A8s%2C%20Barcelona!5e0!3m2!1sen!2ses!4v1600423733834!5m2!1sen!2ses"
-          style={{ filter: 'grayscale(1) contrast(1.2) opacity(0.4)' }}
+          style={{ filter: 'contrast(1) opacity(0.4)' }}
         />
       </div>
       <div className="container px-5 py-24 mx-auto flex">
-        <div className="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10">
+        <div className="lg:w-1/2 md:w-2/4 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-1">
           <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">
             {getTranslation('[Contact Title]')}
           </h2>
