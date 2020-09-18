@@ -23,7 +23,7 @@ const Expertise = () => {
 
   return (
     <SectionLayout
-      id="services"
+      id="training"
       className="bg-white text-black border-t border-gray-500 border-dashed"
     >
       <h2 className="self-center mb-10">
