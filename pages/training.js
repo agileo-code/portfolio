@@ -47,13 +47,15 @@ export default function Training() {
       <SectionLayout className="bg-white text-black">
         <h2 className="self-center mb-10">{getTranslation('[Topics]')}</h2>
         <div className="grid gap-10 md:gap-20 md:grid-cols-2 lg:grid-cols-3 xl:mr-20 xl:ml-20">
-          {TrainingTopics().map(service => (
+          {TrainingTopics().map(module => (
             <IconBox
-              key={service.title}
-              icon={service.icon}
-              title={service.title}
-              desc={service.desc}
-              link={service.link}
+              key={module.title}
+              icon={module.icon}
+              title={module.title}
+              desc={module.desc}
+              link={module.link}
+              regularPrice={module.regularPrice}
+              specialOffer={module.regularPrice}
             />
           ))}
         </div>
