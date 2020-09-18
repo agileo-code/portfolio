@@ -3,7 +3,15 @@ import Link from 'next/link';
 
 import { LanguageContext } from '../context/language';
 
-const IconBox = ({ icon, title, desc, link, regularPrice, specialOffer }) => {
+const IconBox = ({
+  icon,
+  title,
+  desc,
+  link,
+  regularPrice,
+  specialOffer,
+  offerText
+}) => {
   const { getTranslation } = useContext(LanguageContext);
 
   return (
@@ -35,23 +43,49 @@ const IconBox = ({ icon, title, desc, link, regularPrice, specialOffer }) => {
           </Link>
         )}
       </div>
-      <div className="flex flex-col">
+      <div className="flex flex-col text-xs justify-start text-gray-800">
         {regularPrice && (
-          <span>{`${getTranslation('[Price]')}: ${regularPrice} €`}</span>
+          <div className="mt-3">
+            <span className="text-gray-600">{getTranslation('[Price]')}: </span>
+            {specialOffer ? (
+              <span className="text-sm line-through">{`${regularPrice} €`}</span>
+            ) : (
+              <span className="text-red-900 text-base">{`${regularPrice} €`}</span>
+            )}
+          </div>
         )}
         {specialOffer && (
-          <span className="text-red-800">{`${getTranslation(
-            '[Special Offer]'
-          )}: ${specialOffer} €`}</span>
+          <div>
+            <span className="text-gray-600">
+              {getTranslation('[Special Offer]')}:{' '}
+            </span>
+            <span className="text-red-900 text-base">{`${specialOffer} €`}</span>
+            <span className="text-sm ml-3">{offerText}</span>
+          </div>
         )}
         {specialOffer && (
-          <span className="text-red-800">{`${getTranslation('[You save]')}: ${
-            regularPrice - specialOffer
-          }€ (${(((regularPrice - specialOffer) / regularPrice) * 100).toFixed(
-            2
-          )}%)`}</span>
+          <div>
+            <span className="text-gray-600">
+              {getTranslation('[You save]')}:
+            </span>
+            <span className="text-red-900">{`${
+              regularPrice - specialOffer
+            } € (${(
+              ((regularPrice - specialOffer) / regularPrice) *
+              100
+            ).toFixed(2)}%)`}</span>
+          </div>
         )}
       </div>
+      {regularPrice && (
+        <button
+          type="button"
+          // onClick={() => onMenuClick(router, 'contact')}
+          className="text-white bg-corporative-blue border-0 py-2 px-6 focus:outline-none hover:bg-blue-700 rounded text-lg mt-3"
+        >
+          {getTranslation('[Buy now]')}
+        </button>
+      )}
     </div>
   );
 };

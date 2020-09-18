@@ -43,7 +43,7 @@ export default function Training() {
         <div className="flex mt-6 justify-center">
           <div className="w-16 h-1 rounded-full bg-blue-500 inline-flex" />
         </div>
-        <div className="grid gap-10 mt-10 md:gap-20 md:grid-cols-2 lg:grid-cols-2 xl:mr-20 xl:ml-20">
+        <div className="grid gap-10 mt-10 md:gap-20 md:grid-cols-2 lg:grid-cols-3 xl:mr-20 xl:ml-20">
           {TrainingTopics().map(topic => (
             <IconBox
               key={topic.title}
@@ -53,12 +53,13 @@ export default function Training() {
               link={topic.link}
               regularPrice={topic.regularPrice}
               specialOffer={topic.specialOffer}
+              offerText={topic.offerText}
             />
           ))}
         </div>
       </div>
 
-      <SectionLayout className="bg-black text-white border-b border-gray-500 border-dashed">
+      <SectionLayout className="bg-black text-white border-b border-gray-500 border-dashed pr-10 pl-10">
         <div className="flex flex-col items-center">
           <h3 className="mb-5 text-center">
             {getTranslation('[Get your certificate]')}
@@ -66,15 +67,17 @@ export default function Training() {
           <div className="w-1/3">
             <NimbelCertified />
           </div>
-          <p className="mt-8">
-            {getTranslation('[Get your certificate desc]')}
-          </p>
-          <p className="mt-2">
-            {getTranslation('[Get your certificate desc 2]')}
-          </p>
-          <p className="mt-2">
-            {getTranslation('[Get your certificate desc 3]')}
-          </p>
+          <div>
+            <p className="mt-8">
+              {getTranslation('[Get your certificate desc]')}
+            </p>
+            <p className="mt-2">
+              {getTranslation('[Get your certificate desc 2]')}
+            </p>
+            <p className="mt-2">
+              {getTranslation('[Get your certificate desc 3]')}
+            </p>
+          </div>
         </div>
       </SectionLayout>
       <SectionLayout className="bg-black text-white">
