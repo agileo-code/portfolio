@@ -69,8 +69,11 @@ export default function Training() {
           <p className="mt-8">
             {getTranslation('[Get your certificate desc]')}
           </p>
-          <p className=" mt-2">
+          <p className="mt-2">
             {getTranslation('[Get your certificate desc 2]')}
+          </p>
+          <p className="mt-2">
+            {getTranslation('[Get your certificate desc 3]')}
           </p>
         </div>
       </SectionLayout>
