@@ -33,14 +33,17 @@ export default function Training() {
           <WhiteBoard />
         </div>
       </SectionLayout>
-      <SectionLayout className="bg-white text-black border-b border-gray-500 border-dashed">
-        <div className="flex flex-col items-center">
-          <h3 className="mb-5 text-center">
-            {getTranslation('[Design your own training program]')}
-          </h3>
-          <p className="text-center">{getTranslation('[Training desc]')}</p>
+      <div className="text-center mt-20 mb-10">
+        <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
+          {getTranslation('[Design your own training program]')}
+        </h1>
+        <p className="text-base leading-relaxed w-5/6 lg:w-2/3 mx-auto">
+          {getTranslation('[Training desc]')}
+        </p>
+        <div className="flex mt-6 justify-center">
+          <div className="w-16 h-1 rounded-full bg-blue-500 inline-flex" />
         </div>
-      </SectionLayout>
+      </div>
       <SectionLayout className="bg-white text-black">
         <h2 className="self-center mb-10">{getTranslation('[Topics]')}</h2>
         <div className="grid gap-10 md:gap-20 md:grid-cols-2 lg:grid-cols-3 xl:mr-20 xl:ml-20">

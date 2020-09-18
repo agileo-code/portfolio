@@ -17,7 +17,7 @@ const Expertise = () => {
         <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
           {getTranslation('[Services]')}
         </h1>
-        <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
+        <p className="text-base leading-relaxed w-5/6 lg:w-2/3 mx-auto">
           {getTranslation('[Equipo comprometido desc]')}
         </p>
         <div className="flex mt-6 justify-center">
