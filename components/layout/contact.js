@@ -1,23 +1,13 @@
 import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
-import {
-  Button,
-  FormControl,
-  FormErrorMessage,
-  Input,
-  Textarea,
-  useToast,
-  Checkbox
-} from '@chakra-ui/core';
-import Link from 'next/link';
+import { useToast } from '@chakra-ui/core';
 
 import { LanguageContext } from '../../context/language';
-import SectionLayout from '../sectionLayout';
 
 const Contact = () => {
   const toast = useToast();
-  const { errors, register, handleSubmit, reset } = useForm();
+  const { register, handleSubmit, reset } = useForm();
   const { getTranslation } = useContext(LanguageContext);
 
   const onSubmit = data => {
@@ -44,108 +34,59 @@ const Contact = () => {
   };
 
   return (
-    <SectionLayout id="contact" className="items-center bg-blue-600 text-black">
-      <h2>{getTranslation('[Contact Title]')}</h2>
-      <span>{getTranslation('[Contact Subtitle]')}</span>
-      <form
-        className="m-10 max-w-2xl flex flex-col w-full items-center"
-        onSubmit={handleSubmit(onSubmit)}
-      >
-        <div className="w-full grid gap-4 text-black">
-          <FormControl isInvalid={errors.name}>
-            <Input
-              placeholder={`${getTranslation('[Name]')}*`}
-              aria-label={getTranslation('[Name]')}
-              name="name"
-              maxLength={128}
-              isInvalid={errors.name}
-              focusBorderColor="#000"
-              errorBorderColor="red.400"
-              rules={{
-                required: getTranslation('[Required Field]')
-              }}
-            />
-            <FormErrorMessage>{errors?.name?.message}</FormErrorMessage>
-          </FormControl>
-          <Input
-            placeholder={getTranslation('[Phone number]')}
-            aria-label={getTranslation('[Phone number]')}
-            name="phone"
-            ref={register}
-            focusBorderColor="#000"
-            maxLength={128}
-          />
-          <FormControl isInvalid={errors.email}>
-            <Input
-              placeholder={`${getTranslation('[Email]')}*`}
+    <section className="text-gray-700 body-font relative">
+      <div className="absolute inset-0 bg-gray-300">
+        <iframe
+          width="100%"
+          height="100%"
+          frameBorder="0"
+          marginHeight="0"
+          marginWidth="0"
+          title="map"
+          scrolling="no"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2200863.3116707727!2d0.24310164227886083!3d40.37468437664345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a496c2a6d57035%3A0xb16124d430411319!2sSant%20Cugat%20del%20Vall%C3%A8s%2C%20Barcelona!5e0!3m2!1sen!2ses!4v1600423733834!5m2!1sen!2ses"
+          style={{ filter: 'grayscale(1) contrast(1.2) opacity(0.4)' }}
+        />
+      </div>
+      <div className="container px-5 py-24 mx-auto flex">
+        <div className="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10">
+          <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">
+            {getTranslation('[Contact Title]')}
+          </h2>
+          <p className="leading-relaxed mb-5 text-gray-600">
+            {getTranslation('[Contact Subtitle]')}
+          </p>
+          <form className="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
+            <input
               aria-label={getTranslation('[Email]')}
+              className="bg-white rounded border border-gray-400 focus:outline-none focus:border-blue-500 text-base px-4 py-2 mb-4"
               name="email"
-              ref={register({
-                required: getTranslation('[Required Field]'),
-                pattern: {
-                  value: /^\S+@\S+\.\S+$/,
-                  message: getTranslation('[Email validation]')
-                }
-              })}
+              placeholder={getTranslation('[Email]')}
+              ref={register}
+              required
               type="email"
-              focusBorderColor="#000"
-              errorBorderColor="red.400"
-              maxLength={128}
             />
-            <FormErrorMessage>{errors?.email?.message}</FormErrorMessage>
-          </FormControl>
-          <FormControl isInvalid={errors.comments}>
-            <Textarea
-              style={{ resize: 'none' }}
-              placeholder={`${getTranslation('[Comments]')}*`}
+            <textarea
               aria-label={getTranslation('[Comments]')}
+              className="bg-white rounded border border-gray-400 focus:outline-none h-32 focus:border-blue-500 text-base px-4 py-2 mb-4 resize-none"
               name="comments"
-              ref={register({ required: getTranslation('[Required Field]') })}
-              maxLength={256}
-              focusBorderColor="#000"
-              errorBorderColor="red.400"
-              isInvalid={errors.comments}
+              placeholder={getTranslation('[Comments]')}
+              ref={register}
+              required
             />
-            <FormErrorMessage>{errors?.comments?.message}</FormErrorMessage>
-          </FormControl>
-          <FormControl isInvalid={errors.accept}>
-            <Checkbox
-              variantColor="primary"
-              aria-label={getTranslation(
-                '[Accept privacy policy and terms of service]'
-              )}
-              name="accept"
-              ref={register({
-                validate: value => value
-              })}
+            <button
+              type="submit"
+              className="text-white bg-corporative-blue border-0 py-2 px-6 focus:outline-none hover:bg-blue-700 rounded text-lg"
             >
-              {getTranslation('[I accept the]')}{' '}
-              <Link href="termsAndConditions">
-                <a target="_blank" className="underline">
-                  {getTranslation('[Terms of service]')}
-                </a>
-              </Link>{' '}
-              {getTranslation('[and]')}{' '}
-              <Link href="privacy">
-                <a target="_blank" className="underline">
-                  {getTranslation('[Privacy policy]')}
-                </a>
-              </Link>
-            </Checkbox>
-            <FormErrorMessage>{errors?.comments?.message}</FormErrorMessage>
-          </FormControl>
+              {getTranslation('[Submit]')}
+            </button>
+          </form>
+          <p className="text-xs text-gray-500 mt-3">
+            {getTranslation('[Accept privacy policy and terms of service]')}
+          </p>
         </div>
-        <Button
-          className="mt-5"
-          bg="black"
-          color="white"
-          _hover={{ bg: 'white', color: 'black' }}
-          type="submit"
-        >
-          {getTranslation('[Submit]')}
-        </Button>
-      </form>
-    </SectionLayout>
+      </div>
+    </section>
   );
 };
 
