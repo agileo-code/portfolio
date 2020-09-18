@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import { LanguageContext } from '../context/language';
 
-const IconBox = ({ icon, title, desc, link }) => {
+const IconBox = ({ icon, title, desc, link, regularPrice, specialOffer }) => {
   const { getTranslation } = useContext(LanguageContext);
 
   return (
@@ -33,6 +33,23 @@ const IconBox = ({ icon, title, desc, link }) => {
               </svg>
             </a>
           </Link>
+        )}
+      </div>
+      <div className="flex flex-col">
+        {regularPrice && (
+          <span>{`${getTranslation('[Price]')}: ${regularPrice} €`}</span>
+        )}
+        {specialOffer && (
+          <span className="text-red-800">{`${getTranslation(
+            '[Special Offer]'
+          )}: ${specialOffer} €`}</span>
+        )}
+        {specialOffer && (
+          <span className="text-red-800">{`${getTranslation('[You save]')}: ${
+            regularPrice - specialOffer
+          }€ (${(((regularPrice - specialOffer) / regularPrice) * 100).toFixed(
+            2
+          )}%)`}</span>
         )}
       </div>
     </div>

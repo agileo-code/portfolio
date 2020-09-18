@@ -7,7 +7,7 @@ export default function Projects({ allProjectsData }) {
   const { getTranslation, locale } = useContext(LanguageContext);
 
   return (
-    <section className="text-gray-700 body-font" id="projects">
+    <section className="text-gray-700 bg-gray-100 body-font" id="projects">
       <div className="container px-5 py-12 mx-auto">
         <div className="flex flex-col">
           <div className="h-1 bg-gray-200 rounded overflow-hidden">
