@@ -34,7 +34,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="text-gray-700 body-font relative">
+    <section className="text-gray-700 body-font relative" id="contact">
       <div className="absolute inset-0 bg-gray-300">
         <iframe
           width="100%"
@@ -44,7 +44,7 @@ const Contact = () => {
           marginWidth="0"
           title="map"
           scrolling="no"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2200863.3116707727!2d0.24310164227886083!3d40.37468437664345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a496c2a6d57035%3A0xb16124d430411319!2sSant%20Cugat%20del%20Vall%C3%A8s%2C%20Barcelona!5e0!3m2!1sen!2ses!4v1600423733834!5m2!1sen!2ses"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4812537.250982194!2d-0.5386070906669486!3d40.200016691846294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a496c2a6d57035%3A0xb16124d430411319!2sSant%20Cugat%20del%20Vall%C3%A8s%2C%20Barcelona!5e0!3m2!1ses!2ses!4v1600433764346!5m2!1ses!2ses"
           style={{ filter: 'contrast(1) opacity(0.4)' }}
         />
       </div>
