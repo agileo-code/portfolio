@@ -19,7 +19,8 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  @apply font-sans;
+  @apply leading-relaxed;
   width: 100%;
   height: 100%;
   background-color: #fff;

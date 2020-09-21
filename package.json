@@ -1,7 +1,7 @@
 {
-  "name": "nextjs-boilerplate",
+  "name": "nimbel-portfolio",
   "version": "1.0.0",
-  "description": "A NextJS boilerplate with tailwindcss, eslint and prettier",
+  "description": "Nimbel",
   "main": "index.js",
   "scripts": {
     "build": "next build",
@@ -15,29 +15,24 @@
     "tailwindcss",
     "eslint",
     "prettier",
-    "boilerplate",
     "svg"
   ],
-  "author": "dastasoft",
+  "author": "nimbel-code",
   "license": "ISC",
   "dependencies": {
     "@analytics/google-analytics": "0.5.0",
     "@bit/dastag.utils.use-translation": "^0.0.2",
     "@bit/rushmore-code.ui-components.circle-icon": "^0.0.2",
-    "@chakra-ui/core": "^0.8.0",
-    "@emotion/core": "^10.0.35",
-    "@emotion/styled": "^10.0.27",
     "analytics": "0.5.5",
     "axios": "^0.20.0",
-    "emotion-theming": "^10.0.27",
-    "next": "^9.5.2",
+    "next": "^9.5.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-hook-form": "^6.5.3",
+    "react-hook-form": "^6.8.3",
     "react-modal": "^3.11.2",
     "react-select": "^3.1.0",
     "react-spring": "^8.0.27",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.2.0"
   },
   "devDependencies": {
     "babel-plugin-inline-react-svg": "^1.1.1",
@@ -55,7 +50,7 @@
     "prettier": "^2.0.5",
     "remark": "^12.0.1",
     "remark-html": "^12.0.0",
-    "tailwindcss": "^1.8.4"
+    "tailwindcss": "^1.8.10"
   },
   "husky": {
     "hooks": {

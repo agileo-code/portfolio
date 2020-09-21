@@ -13,10 +13,17 @@ const Expertise = () => {
       id="services"
       className="bg-white text-black lg:mr-32 lg:ml-32"
     >
-      <h2 className="self-center">{getTranslation('[Services]')}</h2>
-      <span className="text-center mb-10 lg:mb-24 text-gray-700">
-        {getTranslation('[Equipo comprometido desc]')}
-      </span>
+      <div className="text-center mb-20">
+        <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
+          {getTranslation('[Services]')}
+        </h1>
+        <p className="text-base leading-relaxed w-5/6 lg:w-2/3 mx-auto">
+          {getTranslation('[Equipo comprometido desc]')}
+        </p>
+        <div className="flex mt-6 justify-center">
+          <div className="w-16 h-1 rounded-full bg-blue-500 inline-flex" />
+        </div>
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 md:gap-16">
         {services().map(service => (

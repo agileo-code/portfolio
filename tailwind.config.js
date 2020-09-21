@@ -6,6 +6,7 @@ module.exports = {
         corporative: {
           slideDark: 'black',
           slideLight: '#2d2d2d',
+          blue: '#007FA9',
           color: 'white'
         },
         gray: {
