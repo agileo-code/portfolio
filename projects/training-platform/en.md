@@ -1,6 +1,6 @@
 ---
 title: 'Training platform'
-desc: 'A Training platform'
+desc: 'Add, edit and delete courses easily without worrying about infrastructure and technology changes, integrated payment platform, highly customizable design'
 ---
 
 ### Training platform

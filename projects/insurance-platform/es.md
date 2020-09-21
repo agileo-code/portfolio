@@ -1,6 +1,6 @@
 ---
 title: 'Plataforma de contratación de seguros'
-desc: 'Plataforma de contratación de seguros'
+desc: 'Esta plataforma es altamente adaptable a diferentes productos/servicios debido a que su concepción ha sido pensada para ser una solución generica y personbalizable a medida.'
 ---
 
 - Plataforma de contratación de seguros, totalmente responsive, de manera que se adapta perfectamente a cualquier tipo de dispositivo.

@@ -1,6 +1,6 @@
 ---
 title: 'Insurance contract platform'
-desc: 'Insurance contract platform'
+desc: 'This platform is highly adaptable to different products/services because its conception has been thought to be a generic and customizable solution.'
 ---
 
 - Insurance contracting platform, fully responsive, so that it fits to any device.

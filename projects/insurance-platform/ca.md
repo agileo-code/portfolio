@@ -1,6 +1,6 @@
 ---
 title: "Plataforma de contractació d'assegurances"
-desc: "Plataforma de contractació d'assegurances"
+desc: 'Aquesta plataforma és altament adaptable a diferents productes / serveis a causa de que la seva concepció ha estat pensada per ser una solució genèrica i personbalizable a mida.'
 ---
 
 - Plataforma de contractació d'assegurances, totalment responsive, de manera que s'adapta perfectament a qualsevol mena de dispositiu.
