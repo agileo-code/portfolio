@@ -1,5 +1,7 @@
+import { useRouter } from 'next/router';
 import { useContext } from 'react';
 import Link from 'next/link';
+import { onClick } from './Menu';
 
 import { LanguageContext } from '../context/language';
 
@@ -13,6 +15,7 @@ const IconBox = ({
   offerText
 }) => {
   const { getTranslation } = useContext(LanguageContext);
+  const router = useRouter();
 
   return (
     <div className="p-4 md:mb-0 mb-6 flex flex-col text-center items-center">
@@ -80,7 +83,7 @@ const IconBox = ({
       {regularPrice && (
         <button
           type="button"
-          // onClick={() => onMenuClick(router, 'contact')}
+          onClick={() => onClick(router, 'contact')}
           className="text-white bg-corporative-blue border-0 py-2 px-6 focus:outline-none hover:bg-blue-700 rounded text-lg mt-3"
         >
           {getTranslation('[Buy now]')}
