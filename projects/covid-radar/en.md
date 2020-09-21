@@ -1,6 +1,6 @@
 ---
 title: 'Covid Radar'
-desc: 'The covid radar prediction project'
+desc: 'A simple predictive and tracking model for COVID19 cases in Spain'
 ---
 
 ### A simple predictive and tracking model for COVID19 cases in Spain.

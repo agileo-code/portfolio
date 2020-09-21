@@ -1,6 +1,6 @@
 ---
 title: 'Covid Radar'
-desc: 'The covid radar prediction project'
+desc: 'Un simple model predictiu i rastrejador per als casos de COVID19 a Espanya'
 ---
 
 ### Un simple model predictiu i rastrejador per als casos de COVID19 a Espanya.

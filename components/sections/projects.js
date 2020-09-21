@@ -18,7 +18,7 @@ export default function Projects({ allProjectsData }) {
               {getTranslation('[Projects]')}
             </h1>
             <p className="sm:w-3/5 text-base sm:pl-10 pl-0">
-              Our projects made with love.
+              {getTranslation('[Projects desc]')}
             </p>
           </div>
         </div>

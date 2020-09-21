@@ -1,6 +1,6 @@
 ---
 title: 'Grow Meeting'
-desc: 'Grow Meeting'
+desc: 'Multi-platform videoconferencing service with custom actions between users in real time'
 ---
 
 ### Proof of concept for video conferencing with custom actions

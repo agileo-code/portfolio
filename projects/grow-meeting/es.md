@@ -1,6 +1,6 @@
 ---
 title: 'Grow Meeting'
-desc: 'Grow Meeting'
+desc: 'Servicio de videoconferencia multiplataforma con acciones personalizadas entre usuarios a tiempo real'
 ---
 
 ### Prueba de concepto de videoconferencia con acciones personalizadas

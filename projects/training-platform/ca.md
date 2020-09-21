@@ -1,6 +1,6 @@
 ---
 title: 'Plataforma de formació'
-desc: 'Plataforma de formació'
+desc: "Afegeix, edita i elimina cursos amb facilitat sense preocupar-se per canvis d'infraestructura i tecnologia, plataforma de pagament integrada, disseny altament personalitzable."
 ---
 
 ### Plataforma de formació
