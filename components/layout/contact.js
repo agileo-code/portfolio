@@ -1,35 +1,29 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
-import { useToast } from '@chakra-ui/core';
 
 import { LanguageContext } from '../../context/language';
+import Toast from '../Toast';
 
 const Contact = () => {
-  const toast = useToast();
   const { register, handleSubmit, reset } = useForm();
+  const [alertOpen, setAlertOpen] = useState(false);
+  const [alertMessage, setAlertMessage] = useState('');
+  const [alertType, setAlertType] = useState('error');
   const { getTranslation } = useContext(LanguageContext);
 
   const onSubmit = data => {
     axios({ method: 'POST', url: 'https://formspree.io/mwkrdvon', data })
       .then(() => {
-        toast({
-          title: 'Ok',
-          description: getTranslation('[ContactOK]'),
-          status: 'success',
-          duration: 2000,
-          isClosable: true
-        });
+        setAlertMessage(getTranslation('[ContactOK]'));
+        setAlertType('success');
+        setAlertOpen(true);
         reset();
       })
       .catch(() => {
-        toast({
-          title: 'Error',
-          description: getTranslation('[ContactKO]'),
-          status: 'error',
-          duration: 2000,
-          isClosable: true
-        });
+        setAlertMessage(getTranslation('[ContactContactKOOK]'));
+        setAlertType('error');
+        setAlertOpen(true);
       });
   };
 
@@ -86,6 +80,12 @@ const Contact = () => {
           </p>
         </div>
       </div>
+      <Toast
+        message={alertMessage}
+        type={alertType}
+        alertOpen={alertOpen}
+        setAlertOpen={setAlertOpen}
+      />
     </section>
   );
 };
