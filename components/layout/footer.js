@@ -14,19 +14,19 @@ const Footer = () => {
           <Logo className="w-20 cursor-pointer" />
         </a>
         <p className="text-sm text-white sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
-          © {new Date().getFullYear()} Nimbel —
-          <a
+          © {new Date().getFullYear()} Nimbel
+          {/* — <a
             href="https://twitter.com"
             className="text-gray-600 ml-1"
             rel="noopener noreferrer"
             target="_blank"
           >
             @nimbel-code
-          </a>
+          </a> */}
         </p>
 
         <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center items-center sm:justify-start">
-          <a className="text-white">
+          {/* <a className="text-white">
             <svg
               fill="currentColor"
               strokeLinecap="round"
@@ -80,7 +80,7 @@ const Footer = () => {
               />
               <circle cx="4" cy="4" r="2" stroke="none" />
             </svg>
-          </a>
+          </a> */}
           <div className="flex flex-col text-white text-xs ml-8">
             <Link href="privacy">
               <a rel="nofollow">{getTranslation('[Privacy policy]')}</a>

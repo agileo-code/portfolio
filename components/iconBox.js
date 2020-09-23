@@ -86,7 +86,7 @@ const IconBox = ({
           onClick={() => onClick(router, 'contact')}
           className="text-white bg-corporative-blue border-0 py-2 px-6 focus:outline-none hover:bg-blue-700 rounded text-lg mt-3"
         >
-          {getTranslation('[Buy now]')}
+          {getTranslation('[Know more]')}
         </button>
       )}
     </div>
