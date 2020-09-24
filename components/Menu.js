@@ -58,6 +58,11 @@ export default function Menu({ desktop }) {
           {getTranslation('[Training]')}
         </button>
       </Link>
+      <Link href="/blog">
+        <button type="button" className="cursor-pointer pr-3 pl-3">
+          Blog
+        </button>
+      </Link>
     </div>
   );
 }
