@@ -4,8 +4,6 @@ import Layout from '../components/layout';
 import SectionLayout from '../components/sectionLayout';
 
 export default function Blog({ devDotToPosts }) {
-  console.log(devDotToPosts);
-
   return (
     <Layout>
       <SectionLayout className="text-gray-700 body-font">
