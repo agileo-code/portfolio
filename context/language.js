@@ -5,6 +5,7 @@ import Translations from '../lib/translations';
 
 export const defaultLocale = 'en';
 export const locales = ['ca', 'es', 'en'];
+export const localesObj = { ca: 'catalan', es: 'spanish', en: 'english' };
 export const localesDescription = {
   ca: 'Català',
   es: 'Español',
@@ -40,7 +41,8 @@ export default function LanguageProvider({ children }) {
         locales,
         changeLanguage,
         getTranslation,
-        localesDescription
+        localesDescription,
+        localesObj
       }}
     >
       {children}
