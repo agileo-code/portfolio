@@ -1,10 +1,20 @@
 /* eslint-disable react/no-danger */
 /* eslint-disable camelcase */
 import styled from 'styled-components';
+import Head from 'next/head';
 import Layout from '../../../components/layout';
 
 export default function Post({ devDotToPost }) {
-  const { title, published_at, social_image, body_html, user } = devDotToPost;
+  const {
+    title,
+    published_at,
+    social_image,
+    body_html,
+    user,
+    type_of,
+    description,
+    canonical_url
+  } = devDotToPost;
   const date = new Date(published_at);
   const formatedDate = `${date.getDate()}/${
     parseInt(date.getMonth(), 10) + 1
@@ -12,6 +22,14 @@ export default function Post({ devDotToPost }) {
 
   return (
     <Layout>
+      <Head>
+        <meta property="og:type" content={type_of} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={social_image} />
+        <meta property="og:url" content={canonical_url} />
+        <meta property="og:site_name" content="Nimbel" />
+      </Head>
       <div
         className="flex justify-center bg-black"
         style={{
@@ -19,8 +37,8 @@ export default function Post({ devDotToPost }) {
           backgroundSize: 'contain'
         }}
       >
-        <article className="text-xs p-2 pt-24 pb-20 w-full md:w-3/4 ">
-          <div className="border-2 text-black bg-white rounded-lg overflow-hidden">
+        <article className="text-xs md:pt-24 md:pb-20 w-full md:w-3/4 ">
+          <div className="border-2 text-black bg-white md:rounded-lg overflow-hidden">
             <img className="w-full" src={social_image} alt={title} />
             <div className="p-4 md:p-32">
               <h1>{title}</h1>
@@ -33,9 +51,7 @@ export default function Post({ devDotToPost }) {
                 <span className="mx-4">{user.name}</span>
                 <span className="text-sm">{formatedDate}</span>
               </div>
-              <StyledMarkDown
-                dangerouslySetInnerHTML={{ __html: body_html }}
-              />
+              <StyledMarkDown dangerouslySetInnerHTML={{ __html: body_html }} />
             </div>
           </div>
         </article>
@@ -77,11 +93,10 @@ export async function getStaticPaths() {
 
 const StyledMarkDown = styled.div`
   padding: 1rem 0;
-  text-size-adjust: 100%;
   text-align: left;
   text-rendering: optimizeSpeed;
-  font-size: 20px;
-  
+  font-size: 1rem;
+
   h1,
   h2,
   h3 {
@@ -118,9 +133,15 @@ const StyledMarkDown = styled.div`
   }
 
   .table-wrapper-paragraph {
+    width: 100%;
+    font-size: 1em;
     display: flex;
     justify-content: center;
-    margin: 2rem 0;
+    overflow-x: auto;
+    table {
+      margin: 0.8em auto 1.2em;
+      table-layout: fixed;
+    }
     th {
       border: 1px solid rgba(0, 0, 0, 0.1);
       background-color: #eef0f1;
@@ -132,5 +153,16 @@ const StyledMarkDown = styled.div`
       padding: 0.4rem 1rem;
       text-align: center;
     }
-  } 
+  }
+  @media (max-width: 1000px) {
+    .table-wrapper-paragraph {
+      table {
+        display: flex;
+      }
+      tr {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
 `;

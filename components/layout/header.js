@@ -26,7 +26,7 @@ export default function Header() {
   }, []);
 
   let isBlog = false;
-  if (router.route.indexOf('/blog') > -1) isBlog=true;;
+  if (router.route.indexOf('/blog') > -1) isBlog = true;
 
   return (
     <div
@@ -53,7 +53,7 @@ export default function Header() {
       >
         <div className="hidden md:flex">
           <Menu desktop />
-          <LanguageSelector desktop />
+          {router.route.indexOf('/posts') === -1 && <LanguageSelector desktop />}
         </div>
 
         <div className="cursor-pointer" title="Open menu">
@@ -75,7 +75,7 @@ export default function Header() {
             >
               <div className="flex flex-col h-full items-center justify-center">
                 <Menu />
-                <LanguageSelector />
+                {router.route.indexOf('/posts') === -1 && <LanguageSelector />}
               </div>
             </BlurDiv>
           )}
