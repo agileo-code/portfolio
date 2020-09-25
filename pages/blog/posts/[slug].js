@@ -77,10 +77,9 @@ export async function getStaticPaths() {
 
 const StyledMarkDown = styled.div`
   padding: 1rem 0;
-  text-size-adjust: 100%;
   text-align: left;
   text-rendering: optimizeSpeed;
-  font-size: 20px;
+  font-size: 1rem;
   
   h1,
   h2,
@@ -118,9 +117,15 @@ const StyledMarkDown = styled.div`
   }
 
   .table-wrapper-paragraph {
+    width: 100%;
+    font-size: 1em;
     display: flex;
     justify-content: center;
-    margin: 2rem 0;
+    overflow-x: auto;
+    table{
+      margin: 0.8em auto 1.2em;
+      table-layout: fixed;
+    }
     th {
       border: 1px solid rgba(0, 0, 0, 0.1);
       background-color: #eef0f1;
@@ -132,5 +137,16 @@ const StyledMarkDown = styled.div`
       padding: 0.4rem 1rem;
       text-align: center;
     }
-  } 
+  }
+  @media (max-width:1000px){
+    .table-wrapper-paragraph {
+      table {
+        display: flex;
+      }
+      tr {
+        display:flex;
+        flex-direction: column;
+      }
+    }
+  }
 `;
