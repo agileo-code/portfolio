@@ -1,4 +1,6 @@
+import { useContext } from 'react';
 import Link from 'next/link';
+import { LanguageContext } from '../context/language';
 
 export default function BlogPost({
   img,
@@ -9,6 +11,7 @@ export default function BlogPost({
   likes,
   comments
 }) {
+  const { getTranslation } = useContext(LanguageContext);
   const date = new Date(createdAt);
   const formatedDate = `${date.getDate()}/${
     parseInt(date.getMonth(), 10) + 1
@@ -34,7 +37,7 @@ export default function BlogPost({
       <div className="flex items-center flex-wrap px-6 py-4">
         <Link as={`/blog/posts/${slug}`} href="/blog/posts/[slug]">
           <a className="text-blue-500 inline-flex items-center md:mb-2 lg:mb-0">
-            Continue Reading
+            {getTranslation('[Continue Reading]')}
             <svg
               className="w-4 h-4 ml-2"
               viewBox="0 0 24 24"
