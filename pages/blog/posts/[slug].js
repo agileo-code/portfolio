@@ -12,40 +12,33 @@ export default function Post({ devDotToPost }) {
 
   return (
     <Layout>
-      <div className="flex justify-center bg-black">
-      <article className="text-xs p-2 pt-24 pb-20 w-full md:w-3/4 ">
-        <div className="border-2 text-black bg-white rounded-lg overflow-hidden">
-          <img className="w-full" src={social_image} alt={title} />
-          <div className="p-4 md:p-32">
-            <h1>{title}</h1>
-            <div className="flex items-center text-gray-600">
-              <img
-                className="rounded-full w-12"
-                src={user.profile_image_90}
-                alt={user.name}
+      <div
+        className="flex justify-center bg-black"
+        style={{
+          background: 'url("/images/post.webp")',
+          backgroundSize: 'contain'
+        }}
+      >
+        <article className="text-xs p-2 pt-24 pb-20 w-full md:w-3/4 ">
+          <div className="border-2 text-black bg-white rounded-lg overflow-hidden">
+            <img className="w-full" src={social_image} alt={title} />
+            <div className="p-4 md:p-32">
+              <h1>{title}</h1>
+              <div className="flex items-center text-gray-600">
+                <img
+                  className="rounded-full w-12"
+                  src={user.profile_image_90}
+                  alt={user.name}
+                />
+                <span className="mx-4">{user.name}</span>
+                <span className="text-sm">{formatedDate}</span>
+              </div>
+              <StyledMarkDown
+                dangerouslySetInnerHTML={{ __html: body_html }}
               />
-              <span className="mx-4">{user.name}</span>
-              <span className="text-sm">{formatedDate}</span>
             </div>
-            <StyledMarkDown dangerouslySetInnerHTML={{ __html: body_html }} />
           </div>
-        </div>
-        <div className="my-4 p-4 border-2 border-gray-200 rounded-lg">
-          <div className="text-gray-600 text-sm py-2">
-            Published on {formatedDate} by:
-          </div>
-          <div className="flex items-center py-2">
-            <img
-              className="rounded-full w-16"
-              src={user.profile_image_90}
-              alt={user.name}
-            />
-            <span className="mx-4 text-corporative-blue">
-              @{user.twitter_username}
-            </span>
-          </div>
-        </div>
-      </article>
+        </article>
       </div>
     </Layout>
   );
