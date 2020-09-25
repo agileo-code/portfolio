@@ -37,8 +37,8 @@ export default function Post({ devDotToPost }) {
           backgroundSize: 'contain'
         }}
       >
-        <article className="text-xs p-2 pt-24 pb-20 w-full md:w-3/4 ">
-          <div className="border-2 text-black bg-white rounded-lg overflow-hidden">
+        <article className="text-xs pt-24 pb-20 w-full md:w-3/4 ">
+          <div className="border-2 text-black bg-white md:rounded-lg overflow-hidden">
             <img className="w-full" src={social_image} alt={title} />
             <div className="p-4 md:p-32">
               <h1>{title}</h1>
