@@ -12,10 +12,10 @@ export default function Post({ devDotToPost }) {
   return (
     <Layout>
       <div className="flex justify-center bg-black">
-      <article className="p-2 pt-24 pb-20 w-full md:w-3/4 ">
+      <article className="text-xs p-2 pt-24 pb-20 w-full md:w-3/4 ">
         <div className="border-2 text-black bg-white rounded-lg overflow-hidden">
           <img className="w-full" src={social_image} alt={title} />
-          <div className="p-4 md:p-10">
+          <div className="p-4 md:p-32">
             <h1>{title}</h1>
             <div className="flex items-center text-gray-600">
               <img
