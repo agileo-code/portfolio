@@ -1,10 +1,20 @@
 /* eslint-disable react/no-danger */
 /* eslint-disable camelcase */
 import styled from 'styled-components';
+import Head from 'next/head';
 import Layout from '../../../components/layout';
 
 export default function Post({ devDotToPost }) {
-  const { title, published_at, social_image, body_html, user } = devDotToPost;
+  const {
+    title,
+    published_at,
+    social_image,
+    body_html,
+    user,
+    type_of,
+    description,
+    canonical_url
+  } = devDotToPost;
   const date = new Date(published_at);
   const formatedDate = `${date.getDate()}/${
     parseInt(date.getMonth(), 10) + 1
@@ -12,6 +22,14 @@ export default function Post({ devDotToPost }) {
 
   return (
     <Layout>
+      <Head>
+        <meta property="og:type" content={type_of} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={social_image} />
+        <meta property="og:url" content={canonical_url} />
+        <meta property="og:site_name" content="Nimbel" />
+      </Head>
       <div
         className="flex justify-center bg-black"
         style={{
@@ -33,9 +51,7 @@ export default function Post({ devDotToPost }) {
                 <span className="mx-4">{user.name}</span>
                 <span className="text-sm">{formatedDate}</span>
               </div>
-              <StyledMarkDown
-                dangerouslySetInnerHTML={{ __html: body_html }}
-              />
+              <StyledMarkDown dangerouslySetInnerHTML={{ __html: body_html }} />
             </div>
           </div>
         </article>
@@ -80,7 +96,7 @@ const StyledMarkDown = styled.div`
   text-align: left;
   text-rendering: optimizeSpeed;
   font-size: 1rem;
-  
+
   h1,
   h2,
   h3 {
@@ -122,7 +138,7 @@ const StyledMarkDown = styled.div`
     display: flex;
     justify-content: center;
     overflow-x: auto;
-    table{
+    table {
       margin: 0.8em auto 1.2em;
       table-layout: fixed;
     }
@@ -138,13 +154,13 @@ const StyledMarkDown = styled.div`
       text-align: center;
     }
   }
-  @media (max-width:1000px){
+  @media (max-width: 1000px) {
     .table-wrapper-paragraph {
       table {
         display: flex;
       }
       tr {
-        display:flex;
+        display: flex;
         flex-direction: column;
       }
     }
