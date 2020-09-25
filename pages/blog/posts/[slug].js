@@ -1,7 +1,5 @@
 /* eslint-disable react/no-danger */
 /* eslint-disable camelcase */
-import styled from 'styled-components';
-
 import Layout from '../../../components/layout';
 
 export default function Post({ devDotToPost }) {
@@ -28,7 +26,7 @@ export default function Post({ devDotToPost }) {
               <span className="mx-4">{user.name}</span>
               <span className="text-sm">{formatedDate}</span>
             </div>
-            <StyledMarkdown dangerouslySetInnerHTML={{ __html: body_html }} />
+            <div className="styled-markdown"  dangerouslySetInnerHTML={{ __html: body_html }} />
           </div>
         </div>
         <div className="my-4 p-4 border-2 border-gray-200 rounded-lg">
@@ -51,66 +49,6 @@ export default function Post({ devDotToPost }) {
     </Layout>
   );
 }
-
-const StyledMarkdown = styled.div`
-  padding: 1rem 0;
-  text-size-adjust: 100%;
-  text-align: left;
-  text-rendering: optimizeSpeed;
-  font-size: 20px;
-
-  h1,
-  h2,
-  h3 {
-    margin-top: 2rem;
-  }
-
-  p {
-    margin-bottom: 1rem;
-  }
-
-  ul {
-    list-style: disc;
-    margin-left: 2rem;
-    li {
-      padding: 0.3rem 0;
-    }
-  }
-
-  a {
-    color: #007fa9;
-    text-decoration: underline;
-    cursor: pointer;
-    img{
-      margin: 0 auto;
-    }
-  }
-
-  pre {
-    background-color: black;
-    color: white;
-    padding: 1rem;
-    margin: 1rem 0;
-    border-radius: 0.5rem;
-  }
-
-  .table-wrapper-paragraph {
-    display: flex;
-    justify-content: center;
-    margin: 2rem 0;
-    th {
-      border: 1px solid rgba(0,0,0,0.1);
-      background-color: #eef0f1;
-      padding: 0.4rem 1rem;
-      text-align: center;
-    }
-    td {
-      border: 1px solid rgba(0,0,0,0.1);
-      padding: 0.4rem 1rem;
-      text-align: center;
-    }
-  }
-`;
 
 export const getStaticProps = async ({ params }) => {
   const devDotToPost = await fetch(
