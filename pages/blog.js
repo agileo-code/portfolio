@@ -6,9 +6,9 @@ import SectionLayout from '../components/sectionLayout';
 export default function Blog({ devDotToPosts }) {
   return (
     <Layout>
-      <SectionLayout className="text-gray-700 bg-black body-font" style={{
-        background: 'url("images/main-bg.webp")',
-        backgroundSize: 'contain'
+      <SectionLayout className="text-gray-700 bg-black body-font min-h-screen" style={{
+        background: 'url("images/blog.webp")',
+        backgroundSize: 'cover'
       }}>
         <div className="container px-5 py-10 mx-auto">
           <div className="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
