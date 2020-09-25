@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import router from 'next/router';
+import { useRouter } from 'next/router';
 
 import Burger from '../../public/images/burger.svg';
 import Cross from '../../public/images/cross.svg';
@@ -16,6 +16,7 @@ export const onMenuClick = onClick;
 export default function Header() {
   const [transparent, setTransparent] = useState(true);
   const [showMenu, setShowMenu] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     setTransparent(window.pageYOffset < 40);
@@ -24,18 +25,21 @@ export default function Header() {
     });
   }, []);
 
+  let isBlog = false;
+  if (router.route.indexOf('/blog') > -1) isBlog=true;;
+
   return (
     <div
       className={`transition duration-500 flex justify-between items-center w-full z-10 fixed shadow-md ${
-        transparent ? 'bg-transparent h-20' : 'bg-white h-12'
+        transparent ? `bg-transparent h-20` : 'bg-white h-12'
       }`}
     >
       <div
         className={`flex items-center h-full ${
-          transparent ? 'w-20 text-corporative-color' : 'w-40 text-black'
+          transparent ? 'w-48 text-corporative-color' : 'w-40 text-black'
         }`}
       >
-        {!transparent && (
+        {(!transparent || isBlog) && (
           <Logo
             className="w-full m-5 cursor-pointer"
             onClick={() => onMenuClick(router, 'main')}

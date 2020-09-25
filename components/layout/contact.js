@@ -75,7 +75,7 @@ const Contact = () => {
               {getTranslation('[Submit]')}
             </button>
           </form>
-          <p className="text-xs text-gray-500 mt-3">
+          <p className="text-xs text-gray-600 mt-3">
             {getTranslation('[Accept privacy policy and terms of service]')}
           </p>
         </div>

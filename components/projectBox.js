@@ -20,7 +20,7 @@ const ProjectBox = ({ icon, title, desc, url }) => {
           href={url}
           rel="noreferrer"
           target="_blank"
-          className="text-blue-600 inline-flex items-center mt-3 cursor-pointer"
+          className="text-corporative-blue inline-flex items-center mt-3 cursor-pointer"
         >
           {getTranslation('[View Demo]')}
           <ExternalLinkIcon className="ml-2 h-4" />
