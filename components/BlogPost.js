@@ -15,7 +15,7 @@ export default function BlogPost({
   }/${date.getFullYear()}`;
 
   return (
-    <article className="h-full border-2 border-gray-200 rounded-lg overflow-hidden flex flex-col">
+    <article className="h-full border-2 bg-white rounded-lg overflow-hidden flex flex-col">
       <img
         className="lg:h-48 md:h-36 w-full object-cover object-center"
         src={img}

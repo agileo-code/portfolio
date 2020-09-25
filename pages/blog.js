@@ -6,7 +6,10 @@ import SectionLayout from '../components/sectionLayout';
 export default function Blog({ devDotToPosts }) {
   return (
     <Layout>
-      <SectionLayout className="text-gray-700 body-font">
+      <SectionLayout className="text-gray-700 bg-black body-font" style={{
+        background: 'url("images/main-bg.webp")',
+        backgroundSize: 'contain'
+      }}>
         <div className="container px-5 py-10 mx-auto">
           <div className="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {devDotToPosts.map(
@@ -47,7 +50,7 @@ export default function Blog({ devDotToPosts }) {
 
 export const getStaticProps = async () => {
   const devDotToPosts = await fetch(
-    'https://dev.to/api/articles?username=dastasoft'
+    'https://dev.to/api/articles?username=nimbel'
   );
   const res = await devDotToPosts.json();
 

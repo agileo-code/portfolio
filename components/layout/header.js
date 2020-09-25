@@ -25,21 +25,21 @@ export default function Header() {
     });
   }, []);
 
-  let bgColor = 'bg-transparent ';
-  if (router.route.indexOf('/blog') > -1) bgColor = 'bg-corporative-blue';
+  let isBlog = false;
+  if (router.route.indexOf('/blog') > -1) isBlog=true;;
 
   return (
     <div
       className={`transition duration-500 flex justify-between items-center w-full z-10 fixed shadow-md ${
-        transparent ? `${bgColor} h-20` : 'bg-white h-12'
+        transparent ? `bg-transparent h-20` : 'bg-white h-12'
       }`}
     >
       <div
         className={`flex items-center h-full ${
-          transparent ? 'w-20 text-corporative-color' : 'w-40 text-black'
+          transparent ? 'w-48 text-corporative-color' : 'w-40 text-black'
         }`}
       >
-        {!transparent && (
+        {(!transparent || isBlog) && (
           <Logo
             className="w-full m-5 cursor-pointer"
             onClick={() => onMenuClick(router, 'main')}

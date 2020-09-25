@@ -13,8 +13,9 @@ export default function Post({ devDotToPost }) {
 
   return (
     <Layout>
-      <article className="p-2 pt-24 pb-20 w-full md:w-3/4 mx-auto">
-        <div className="border-2 border-gray-200 rounded-lg overflow-hidden">
+      <div className="flex justify-center bg-black">
+      <article className="p-2 pt-24 pb-20 w-full md:w-3/4 ">
+        <div className="border-2 text-black bg-white rounded-lg overflow-hidden">
           <img className="w-full" src={social_image} alt={title} />
           <div className="p-4 md:p-10">
             <h1>{title}</h1>
@@ -46,6 +47,7 @@ export default function Post({ devDotToPost }) {
           </div>
         </div>
       </article>
+      </div>
     </Layout>
   );
 }
@@ -79,6 +81,9 @@ const StyledMarkdown = styled.div`
     color: #007fa9;
     text-decoration: underline;
     cursor: pointer;
+    img{
+      margin: 0 auto;
+    }
   }
 
   pre {
@@ -88,11 +93,28 @@ const StyledMarkdown = styled.div`
     margin: 1rem 0;
     border-radius: 0.5rem;
   }
+
+  .table-wrapper-paragraph {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+    th {
+      border: 1px solid rgba(0,0,0,0.1);
+      background-color: #eef0f1;
+      padding: 0.4rem 1rem;
+      text-align: center;
+    }
+    td {
+      border: 1px solid rgba(0,0,0,0.1);
+      padding: 0.4rem 1rem;
+      text-align: center;
+    }
+  }
 `;
 
 export const getStaticProps = async ({ params }) => {
   const devDotToPost = await fetch(
-    `https://dev.to/api/articles/dastasoft/${params.slug}`
+    `https://dev.to/api/articles/nimbel/${params.slug}`
   );
   const res = await devDotToPost.json();
 
@@ -105,7 +127,7 @@ export const getStaticProps = async ({ params }) => {
 
 export async function getStaticPaths() {
   const devDotToPosts = await fetch(
-    `https://dev.to/api/articles?username=dastasoft`
+    `https://dev.to/api/articles?username=nimbel`
   );
   const posts = await devDotToPosts.json();
 
