@@ -14,7 +14,7 @@ export default function Blog({ devDotToPosts }) {
       <SectionLayout
         className="text-gray-700 bg-black body-font min-h-screen"
         style={{
-          background: 'url("images/blog.webp")',
+          background: 'url("images/blog.webp"), url("images/blog.jp2")',
           backgroundSize: 'cover'
         }}
       >

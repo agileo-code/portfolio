@@ -33,7 +33,7 @@ export default function Post({ devDotToPost }) {
       <div
         className="flex justify-center bg-black"
         style={{
-          background: 'url("/images/post.webp")',
+          background: 'url("/images/post.webp"), url("/images/post.jp2")',
           backgroundSize: 'contain'
         }}
       >

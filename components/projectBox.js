@@ -9,7 +9,10 @@ const ProjectBox = ({ icon, title, desc, url }) => {
   return (
     <div className="flex flex-col items-center justify-center text-center border border-gray-300 p-6 rounded-lg bg-white shadow-xl">
       <div className="rounded-lg overflow-hidden">
-        <img src={icon} alt={`${title} Thumb`} />
+        <picture>
+          <source srcSet={`${icon}.webp`} type="image/webp" />
+          <img src={`${icon}.jp2`} alt={`${title} Thumb`} />
+        </picture>
       </div>
       <h2 className="text-xl font-medium title-font text-gray-900 mt-5">
         {title}
