@@ -21,7 +21,8 @@ export default function Training() {
     <SectionLayout
       className="bg-black text-white"
       style={{
-        background: 'url("images/training-bg.webp")',
+        background:
+          'url("images/training-bg.webp"), url("images/training-bg.jp2")',
         backgroundSize: 'contain'
       }}
     >
