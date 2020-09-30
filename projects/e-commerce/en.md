@@ -1,6 +1,6 @@
 ---
 title: 'E-Commerce'
-desc: "Don't lose a single sale. With our totally customized e-commerce, you will be able to sell all kinds of products and manage them yourself. Try the fastest e-commerce in the world."
+desc: "Don't lose a single sale. With our totally customized e-commerce, you will be able to sell all kinds of products and manage them yourself."
 ---
 
 ### E-Commerce

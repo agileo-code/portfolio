@@ -1,6 +1,6 @@
 ---
 title: 'Plataforma de ventas (e-commerce)'
-desc: 'No pierdas ni una venta. Con nuestro e-commerce totalmente a medida, podrás vender todo tipo de productos y gestionarlos tu mismo. Prueba el e-commerce más rápido del mundo.'
+desc: 'No pierdas ni una venta. Con nuestro e-commerce totalmente a medida, podrás vender todo tipo de productos y gestionarlos tu mismo'
 ---
 
 ### Plataforma de ventas (e-commerce)
