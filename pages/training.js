@@ -5,7 +5,6 @@ import SectionLayout from '../components/sectionLayout';
 import Layout from '../components/layout';
 import PriceCard from '../components/priceCard';
 
-import IdeaPerson from '../public/images/ideaPerson.svg';
 import WhiteBoard from '../public/images/mobile-whiteboard.svg';
 import NimbelCertified from '../public/images/nimbel-certified.svg';
 
@@ -27,12 +26,9 @@ export default function Training() {
       }}
     >
       <div className="grid md:grid-cols-2 md:m-10">
-        <div className="md:grid md:grid-rows-2 flex justify-center md:justify-start">
-          <h2 className="self-center mb-5 md:mb-0">
-            {getTranslation('[Training Programs]')}
-          </h2>
-          <IdeaPerson className="w-2/4 justify-self-end self-start hidden md:block" />
-        </div>
+        <h2 className="self-center justify-self-center md:justify-self-start mb-5 md:mb-0">
+          {getTranslation('[Training Programs]')}
+        </h2>
         <WhiteBoard />
       </div>
     </SectionLayout>
