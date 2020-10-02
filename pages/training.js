@@ -72,16 +72,13 @@ export default function Training() {
       <h1 className="sm:text-3xl text-2xl font-medium title-font text-white my-8">
         {getTranslation('[Get your certificate]')}
       </h1>
-      <div className="w-1/3">
+      <div className="w-1/4">
         <NimbelCertified />
       </div>
       <div className="text-justify p-4 md:px-8 md:my-8 md:w-2/3">
         <p className="my-4">{getTranslation('[Get your certificate desc]')}</p>
         <p className="my-4">
           {getTranslation('[Get your certificate desc 2]')}
-        </p>
-        <p className="my-4">
-          {getTranslation('[Get your certificate desc 3]')}
         </p>
       </div>
       <div className="flex mt-6 justify-center">
