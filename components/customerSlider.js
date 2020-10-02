@@ -44,7 +44,7 @@ const CustomerSlider = ({ className }) => {
                 rel="noreferrer"
                 title={customer.name}
               >
-                <div className={customer.className}>{customer.logo}</div>
+                {customer.logo}
               </AFade>
             );
           })}
