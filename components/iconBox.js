@@ -23,9 +23,9 @@ const IconBox = ({
         <div className="w-10 text-corporative-blue">{icon}</div>
       </div>
       <div className="flex-grow">
-        <h2 className="text-gray-900 text-xl title-font font-medium mb-3">
+        <h3 className="text-gray-900 text-xl title-font font-medium mb-3">
           {title}
-        </h2>
+        </h3>
         <p className="leading-relaxed text-base text-gray-700">{desc}</p>
         {link && (
           <Link href={link}>

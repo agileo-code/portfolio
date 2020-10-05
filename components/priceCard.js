@@ -28,9 +28,9 @@ const PriceCard = ({ pack }) => {
           </span>
         )}
         {pack.price && (
-          <h1 className="text-5xl text-red-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200">
+          <span className="text-5xl text-red-900 font-bold leading-none flex items-center pb-4 mb-4 border-b border-gray-200">
             <span>{pack.price} €</span>
-          </h1>
+          </span>
         )}
         {pack.features.map(feature => (
           <PriceFeature text={feature} />

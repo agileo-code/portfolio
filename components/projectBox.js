@@ -14,9 +14,9 @@ const ProjectBox = ({ icon, title, desc, url }) => {
           <img src={`${icon}.jp2`} alt={`${title} Thumb`} />
         </picture>
       </div>
-      <h2 className="text-xl font-medium title-font text-gray-900 mt-5">
+      <h3 className="text-xl font-medium title-font text-gray-900 mt-5">
         {title}
-      </h2>
+      </h3>
       <p className="text-base mt-2">{desc}</p>
       {url && (
         <a

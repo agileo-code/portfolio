@@ -12,7 +12,7 @@ export default function Home({ allProjectsData }) {
   return (
     <Layout>
       <Head>
-        <title>Nimbel</title>
+        <title>Nimbel - Digital cloud transformation</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           name="description"
@@ -21,7 +21,7 @@ export default function Home({ allProjectsData }) {
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Nimbel - Digital cloud transformatione"
+          content="Nimbel - Digital cloud transformation"
         />
         <meta
           property="og:description"
