@@ -9,7 +9,7 @@ export default function Privacy() {
     <>
       <Header />
       <div className="bg-black text-white p-10">
-        <h1 className="mt-20">{getTranslation('[Privacy policy]')}</h1>
+        <h2 className="mt-20">{getTranslation('[Privacy policy]')}</h2>
         <p>{getTranslation('[pp-summary]')}</p>
         <h3 className="mt-10">
           {getTranslation('[pp-collected-information-title]')}

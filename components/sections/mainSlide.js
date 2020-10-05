@@ -23,7 +23,7 @@ const MainSlide = () => {
       <div className="grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 content-center flex-1">
         <div className="flex flex-col justify-center items-center lg:items-start lg:ml-10">
           <Logo className="w-3/5" />
-          <h4 className="mt-3">{getTranslation('[Slogan]')}</h4>
+          <h1 className="mt-3">{getTranslation('[Slogan]')}</h1>
           <div className="flex justify-center py-3">
             <button
               type="button"

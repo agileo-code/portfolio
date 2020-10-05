@@ -11,9 +11,9 @@ export default function Projects({ allProjectsData }) {
       <div className="container px-5 py-12 mx-auto">
         <div className="flex flex-col">
           <div className="text-center mb-20">
-            <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
+            <h2 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
               {getTranslation('[Projects]')}
-            </h1>
+            </h2>
             <p className="text-base leading-relaxed w-5/6 lg:w-2/3 mx-auto">
               {getTranslation('[Projects desc]')}
             </p>
