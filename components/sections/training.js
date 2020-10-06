@@ -35,9 +35,9 @@ const Expertise = () => {
           <OnlineLearning className="w-1/2 lg:w-full" />
         </div>
         <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
+          <h2 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
             {getTranslation('[Training Programs]')}
-          </h1>
+          </h2>
           <p>{getTranslation('[Continous learning desc]')}</p>
           <Bullets className="list-disc m-5 mb-12 text-sm text-gray-700 text-left">
             {trainingBullets.map(bullet => (
