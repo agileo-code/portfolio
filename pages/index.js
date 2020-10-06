@@ -29,7 +29,7 @@ export default function Home({ allProjectsData }) {
         />
         <meta
           property="og:image"
-          content="https://nimbel.net/images/nimbel.svg"
+          content="https://nimbel.net/images/Nimbel.png"
         />
         <meta property="og:url" content="https://nimbel.net/" />
         <meta property="og:site_name" content="Nimbel" />
