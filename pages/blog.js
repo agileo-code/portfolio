@@ -62,6 +62,7 @@ export const getStaticProps = async () => {
   const devDotToPosts = await fetch(
     'https://dev.to/api/articles?username=nimbel'
   );
+
   const res = await devDotToPosts.json();
 
   return {
