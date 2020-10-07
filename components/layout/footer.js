@@ -81,6 +81,14 @@ const Footer = () => {
               <circle cx="4" cy="4" r="2" stroke="none" />
             </svg>
           </a> */}
+          <div className="flex flex-col text-white text-xs">
+            <Link href="training">
+              <a className="p-2">{getTranslation('[Training]')}</a>
+            </Link>
+            <Link href="blog">
+              <a className="p-2">Blog</a>
+            </Link>
+          </div>
           <div className="flex flex-col text-white text-xs ml-8">
             <Link href="privacy">
               <a rel="nofollow" className="p-2">
