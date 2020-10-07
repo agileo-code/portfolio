@@ -13,7 +13,7 @@ const Contact = () => {
   const { getTranslation } = useContext(LanguageContext);
 
   const onSubmit = data => {
-    axios({ method: 'POST', url: 'https://formspree.io/mwkrdvon', data })
+    axios({ method: 'POST', url: 'https://formspree.io/f/mnqojbwe', data })
       .then(() => {
         setAlertMessage(getTranslation('[ContactOK]'));
         setAlertType('success');
