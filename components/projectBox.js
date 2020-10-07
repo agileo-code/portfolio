@@ -21,7 +21,7 @@ const ProjectBox = ({ icon, title, desc, url }) => {
       {url && (
         <a
           href={url}
-          rel="noreferrer"
+          rel="noopener noreferrer"
           target="_blank"
           className="text-corporative-blue inline-flex items-center mt-3 cursor-pointer"
         >

@@ -9,7 +9,7 @@ const CustomerSlider = ({ className }) => {
 
   let group = 0;
   const updateCustomersToShow = () => {
-    const itemsByGroup = Math.floor(containerEl.current.clientWidth / 220);
+    const itemsByGroup = Math.ceil(containerEl.current.clientWidth / 220);
     const totalGroups = Math.ceil(customers.length / itemsByGroup);
     setShowCustomers(
       customers.slice(
@@ -41,7 +41,7 @@ const CustomerSlider = ({ className }) => {
                 key={customer.name}
                 href={customer.url}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 title={customer.name}
               >
                 {customer.logo}
