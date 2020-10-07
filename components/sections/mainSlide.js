@@ -14,11 +14,6 @@ const MainSlide = () => {
     <section
       id="main"
       className="flex flex-col h-screen bg-corporative-slideDark text-corporative-color p-10"
-      style={{
-        backgroundImage:
-          'url("images/main-bg.webp"), url("images/main-bg.jp2")',
-        backgroundSize: 'contain'
-      }}
     >
       <div className="grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 content-center flex-1">
         <div className="flex flex-col justify-center items-center lg:items-start lg:ml-10">
