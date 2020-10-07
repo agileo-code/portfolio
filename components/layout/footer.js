@@ -25,6 +25,29 @@ const Footer = () => {
           </a> */}
         </p>
 
+        <div className="flex">
+          <div className="flex flex-col text-white text-xs md:ml-8">
+            <Link href="training">
+              <a className="p-2">{getTranslation('[Training]')}</a>
+            </Link>
+            <Link href="blog">
+              <a className="p-2">Blog</a>
+            </Link>
+          </div>
+          <div className="flex flex-col text-white text-xs ml-8">
+            <Link href="privacy">
+              <a rel="nofollow" className="p-2">
+                {getTranslation('[Privacy policy]')}
+              </a>
+            </Link>
+            <Link href="termsAndConditions">
+              <a rel="nofollow" className="p-2">
+                {getTranslation('[Terms of service]')}
+              </a>
+            </Link>
+          </div>
+        </div>
+
         <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center items-center sm:justify-start">
           {/* <a className="text-white">
             <svg
@@ -63,8 +86,13 @@ const Footer = () => {
               <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
               <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01" />
             </svg>
-          </a>
-          <a className="ml-3 text-white">
+          </a> */}
+          <a
+            href="https://www.linkedin.com/company/nimbel-software"
+            rel="noopener noreferrer nofollow"
+            target="_blank"
+            className="ml-3 text-white"
+          >
             <svg
               fill="currentColor"
               stroke="currentColor"
@@ -80,28 +108,7 @@ const Footer = () => {
               />
               <circle cx="4" cy="4" r="2" stroke="none" />
             </svg>
-          </a> */}
-
-          <div className="flex flex-col text-white text-xs">
-            <Link href="training">
-              <a className="p-2">{getTranslation('[Training]')}</a>
-            </Link>
-            <Link href="blog">
-              <a className="p-2">Blog</a>
-            </Link>
-          </div>
-          <div className="flex flex-col text-white text-xs ml-8">
-            <Link href="privacy">
-              <a rel="nofollow" className="p-2">
-                {getTranslation('[Privacy policy]')}
-              </a>
-            </Link>
-            <Link href="termsAndConditions">
-              <a rel="nofollow" className="p-2">
-                {getTranslation('[Terms of service]')}
-              </a>
-            </Link>
-          </div>
+          </a>
         </span>
       </div>
     </footer>

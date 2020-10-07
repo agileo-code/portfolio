@@ -41,7 +41,7 @@ const CustomerSlider = ({ className }) => {
                 key={customer.name}
                 href={customer.url}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 title={customer.name}
               >
                 {customer.logo}
