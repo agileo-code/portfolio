@@ -18,13 +18,13 @@ const BannerCookies = () => {
         localStorage.setItem('bannerCookieOpened', true);
         setBannerOpen(true);
       }
-    }, 1000);
+    }, 0);
   }, []);
 
   return (
     bannerOpen && (
       <div className="flex justify-center mb-3 z-10 fixed bottom-0 w-screen">
-        <div className="w-5/6 bg-white text-black p-4 rounded-md border shadow-lg">
+        <div className="w-5/6 bg-white text-black p-4 rounded-md border">
           <div className="flex flex-col items-center justify-between lg:flex-row">
             <span>{getTranslation('[Coockie banner text]')}</span>
             <div>
