@@ -60,11 +60,10 @@ export default function Blog({ devDotToPosts }) {
 
 export const getStaticProps = async () => {
   const devDotToPosts = await fetch(
-    'https://dev.to/api/articles?username=rubenofen'
+    'https://dev.to/api/articles?username=nimbel'
   );
 
   const res = await devDotToPosts.json();
-  console.log(JSON.stringify(res));
 
   return {
     props: {

@@ -75,7 +75,7 @@ export const getStaticProps = async ({ params }) => {
 
 export async function getStaticPaths() {
   const devDotToPosts = await fetch(
-    `https://dev.to/api/articles?username=rubenofen`
+    `https://dev.to/api/articles?username=nimbel`
   );
   const posts = await devDotToPosts.json();
 
