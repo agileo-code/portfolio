@@ -83,10 +83,14 @@ const Footer = () => {
           </a> */}
           <div className="flex flex-col text-white text-xs ml-8">
             <Link href="privacy">
-              <a rel="nofollow">{getTranslation('[Privacy policy]')}</a>
+              <a rel="nofollow" className="p-2">
+                {getTranslation('[Privacy policy]')}
+              </a>
             </Link>
             <Link href="termsAndConditions">
-              <a rel="nofollow">{getTranslation('[Terms of service]')}</a>
+              <a rel="nofollow" className="p-2">
+                {getTranslation('[Terms of service]')}
+              </a>
             </Link>
           </div>
         </span>
