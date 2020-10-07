@@ -9,7 +9,7 @@ const CustomerSlider = ({ className }) => {
 
   let group = 0;
   const updateCustomersToShow = () => {
-    const itemsByGroup = Math.floor(containerEl.current.clientWidth / 220);
+    const itemsByGroup = Math.ceil(containerEl.current.clientWidth / 220);
     const totalGroups = Math.ceil(customers.length / itemsByGroup);
     setShowCustomers(
       customers.slice(
