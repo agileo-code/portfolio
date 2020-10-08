@@ -45,7 +45,6 @@ const MainSlide = () => {
 };
 
 export default MainSlide;
-
 const Wrapper = styled.section`
   background-image: url('https://res.cloudinary.com/nimbel/image/upload/v1602060138/Portfolio/main-bg.webp'),
     url('https://res.cloudinary.com/nimbel/image/upload/v1602060138/Portfolio/main-bg.jp2');
