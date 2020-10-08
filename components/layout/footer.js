@@ -11,7 +11,10 @@ const Footer = () => {
     <footer className="text-white body-font bg-black">
       <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
         <Link href="/">
-          <a className="flex title-font font-medium items-center md:justify-start justify-center">
+          <a
+            aria-label="Nimbel Home"
+            className="flex title-font font-medium items-center md:justify-start justify-center"
+          >
             <Logo className="w-20 cursor-pointer" />
           </a>
         </Link>
