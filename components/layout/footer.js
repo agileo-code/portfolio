@@ -91,6 +91,7 @@ const Footer = () => {
             </svg>
           </a> */}
           <a
+            aria-label="Linkedin"
             href="https://www.linkedin.com/company/nimbel-software"
             rel="noopener noreferrer nofollow"
             target="_blank"
