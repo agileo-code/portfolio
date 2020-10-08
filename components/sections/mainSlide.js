@@ -49,17 +49,19 @@ export default MainSlide;
 const Wrapper = styled.section`
   background-image: url('https://res.cloudinary.com/nimbel/image/upload/v1602060138/Portfolio/main-bg.webp'),
     url('https://res.cloudinary.com/nimbel/image/upload/v1602060138/Portfolio/main-bg.jp2');
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+
   @media (max-width: 768px) {
-    background-image: url('https://res.cloudinary.com/nimbel/image/upload/c_crop,w_768/v1602060138/Portfolio/main-bg.webp'),
-      url('https://res.cloudinary.com/nimbel/image/upload/c_crop,w_768/v1602060138/Portfolio/main-bg.jp2');
+    background-image: url('https://res.cloudinary.com/nimbel/image/upload/c_scale,w_768/v1602060138/Portfolio/main-bg.webp'),
+      url('https://res.cloudinary.com/nimbel/image/upload/c_scale,w_768/v1602060138/Portfolio/main-bg.jp2');
   }
   @media (max-width: 600px) {
-    background-image: url('https://res.cloudinary.com/nimbel/image/upload/c_crop,w_600/v1602060138/Portfolio/main-bg.webp'),
-      url('https://res.cloudinary.com/nimbel/image/upload/c_crop,w_600/v1602060138/Portfolio/main-bg.jp2');
+    background-image: url('https://res.cloudinary.com/nimbel/image/upload/c_scale,w_600/v1602060138/Portfolio/main-bg.webp'),
+      url('https://res.cloudinary.com/nimbel/image/upload/c_scale,w_600/v1602060138/Portfolio/main-bg.jp2');
   }
   @media (max-width: 400px) {
-    background-image: url('https://res.cloudinary.com/nimbel/image/upload/c_crop,w_400/v1602060138/Portfolio/main-bg.webp'),
-      url('https://res.cloudinary.com/nimbel/image/upload/c_crop,w_400/v1602060138/Portfolio/main-bg.jp2');
+    background-image: url('https://res.cloudinary.com/nimbel/image/upload/c_scale,w_400/v1602060138/Portfolio/main-bg.webp'),
+      url('https://res.cloudinary.com/nimbel/image/upload/c_scale,w_400/v1602060138/Portfolio/main-bg.jp2');
   }
 `;
