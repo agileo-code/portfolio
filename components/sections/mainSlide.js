@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { useRouter } from 'next/router';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 
 import CustomerSlider from '../customerSlider';
 import Universe from '../universe';
@@ -12,9 +12,15 @@ const MainSlide = () => {
   const { getTranslation } = useContext(LanguageContext);
   const router = useRouter();
   return (
-    <Wrapper
+    <section
       id="main"
       className="flex flex-col h-screen bg-corporative-slideDark text-corporative-color p-10"
+      style={{
+        backgroundImage:
+          "url('https://res.cloudinary.com/nimbel/image/upload/v1602060138/Portfolio/main-bg.webp'), url('https://res.cloudinary.com/nimbel/image/upload/v1602060138/Portfolio/main-bg.jp2')",
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat'
+      }}
     >
       <div className="grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 content-center flex-1">
         <div className="flex flex-col justify-center items-center lg:items-start lg:ml-10">
@@ -40,13 +46,13 @@ const MainSlide = () => {
         <Universe className="self-center" />
       </div>
       <CustomerSlider />
-    </Wrapper>
+    </section>
   );
 };
 
 export default MainSlide;
 
-const Wrapper = styled.section`
+/* const Wrapper = styled.section`
   background-image: url('https://res.cloudinary.com/nimbel/image/upload/v1602060138/Portfolio/main-bg.webp'),
     url('https://res.cloudinary.com/nimbel/image/upload/v1602060138/Portfolio/main-bg.jp2');
   background-size: cover;
@@ -64,4 +70,4 @@ const Wrapper = styled.section`
     background-image: url('https://res.cloudinary.com/nimbel/image/upload/c_scale,w_400/v1602060138/Portfolio/main-bg.webp'),
       url('https://res.cloudinary.com/nimbel/image/upload/c_scale,w_400/v1602060138/Portfolio/main-bg.jp2');
   }
-`;
+`; */
