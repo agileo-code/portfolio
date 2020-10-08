@@ -14,7 +14,8 @@ const Footer = () => {
           <Logo className="w-20 cursor-pointer" />
         </a>
         <p className="text-sm text-white sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
-          © {new Date().getFullYear()} Nimbel
+          © {new Date().getFullYear()} Nimbel, Sant Cugat del Vallès, Barcelona,
+          Spain
           {/* — <a
             href="https://twitter.com"
             className="text-gray-600 ml-1"
