@@ -1,6 +1,5 @@
 import { useContext } from 'react';
 import { useRouter } from 'next/router';
-// import styled from 'styled-components';
 
 import CustomerSlider from '../customerSlider';
 import Universe from '../universe';
@@ -17,7 +16,7 @@ const MainSlide = () => {
       className="flex flex-col h-screen bg-corporative-slideDark text-corporative-color p-10"
       style={{
         backgroundImage:
-          "url('https://res.cloudinary.com/nimbel/image/upload/v1602060138/Portfolio/main-bg.webp'), url('https://res.cloudinary.com/nimbel/image/upload/v1602060138/Portfolio/main-bg.jp2')",
+          'url("images/main-bg.webp"), url("images/main-bg.jp2")',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat'
       }}
@@ -51,23 +50,3 @@ const MainSlide = () => {
 };
 
 export default MainSlide;
-
-/* const Wrapper = styled.section`
-  background-image: url('https://res.cloudinary.com/nimbel/image/upload/v1602060138/Portfolio/main-bg.webp'),
-    url('https://res.cloudinary.com/nimbel/image/upload/v1602060138/Portfolio/main-bg.jp2');
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  @media (max-width: 768px) {
-    background-image: url('https://res.cloudinary.com/nimbel/image/upload/c_scale,w_768/v1602060138/Portfolio/main-bg.webp'),
-      url('https://res.cloudinary.com/nimbel/image/upload/c_scale,w_768/v1602060138/Portfolio/main-bg.jp2');
-  }
-  @media (max-width: 600px) {
-    background-image: url('https://res.cloudinary.com/nimbel/image/upload/c_scale,w_600/v1602060138/Portfolio/main-bg.webp'),
-      url('https://res.cloudinary.com/nimbel/image/upload/c_scale,w_600/v1602060138/Portfolio/main-bg.jp2');
-  }
-  @media (max-width: 400px) {
-    background-image: url('https://res.cloudinary.com/nimbel/image/upload/c_scale,w_400/v1602060138/Portfolio/main-bg.webp'),
-      url('https://res.cloudinary.com/nimbel/image/upload/c_scale,w_400/v1602060138/Portfolio/main-bg.jp2');
-  }
-`; */
