@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { useRouter } from 'next/router';
+import styled from 'styled-components';
 
 import CustomerSlider from '../customerSlider';
 import Universe from '../universe';
@@ -11,14 +12,9 @@ const MainSlide = () => {
   const { getTranslation } = useContext(LanguageContext);
   const router = useRouter();
   return (
-    <section
+    <Wrapper
       id="main"
       className="flex flex-col h-screen bg-corporative-slideDark text-corporative-color p-10"
-      style={{
-        backgroundImage:
-          'url("images/main-bg.webp"), url("images/main-bg.jp2")',
-        backgroundSize: 'contain'
-      }}
     >
       <div className="grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 content-center flex-1">
         <div className="flex flex-col justify-center items-center lg:items-start lg:ml-10">
@@ -44,8 +40,26 @@ const MainSlide = () => {
         <Universe className="self-center" />
       </div>
       <CustomerSlider />
-    </section>
+    </Wrapper>
   );
 };
 
 export default MainSlide;
+
+const Wrapper = styled.section`
+  background-image: url('https://res.cloudinary.com/nimbel/image/upload/v1602060138/Portfolio/main-bg.webp'),
+    url('https://res.cloudinary.com/nimbel/image/upload/v1602060138/Portfolio/main-bg.jp2');
+  background-size: contain;
+  @media (max-width: 768px) {
+    background-image: url('https://res.cloudinary.com/nimbel/image/upload/c_crop,w_768/v1602060138/Portfolio/main-bg.webp'),
+      url('https://res.cloudinary.com/nimbel/image/upload/c_crop,w_768/v1602060138/Portfolio/main-bg.jp2');
+  }
+  @media (max-width: 600px) {
+    background-image: url('https://res.cloudinary.com/nimbel/image/upload/c_crop,w_600/v1602060138/Portfolio/main-bg.webp'),
+      url('https://res.cloudinary.com/nimbel/image/upload/c_crop,w_600/v1602060138/Portfolio/main-bg.jp2');
+  }
+  @media (max-width: 400px) {
+    background-image: url('https://res.cloudinary.com/nimbel/image/upload/c_crop,w_400/v1602060138/Portfolio/main-bg.webp'),
+      url('https://res.cloudinary.com/nimbel/image/upload/c_crop,w_400/v1602060138/Portfolio/main-bg.jp2');
+  }
+`;

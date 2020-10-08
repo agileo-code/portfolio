@@ -25,9 +25,9 @@ const Expertise = () => {
       id="training"
       className="text-gray-700 body-font p-4 md:px-8 md:py-16"
       style={{
-        background:
-          'url("images/training-bg.webp"), url("images/training-bg.jp2")',
-        backgroundSize: 'cover'
+        backgroundImage:
+          'url("images/main-bg.webp"), url("images/main-bg.jp2")',
+        backgroundSize: 'contain'
       }}
     >
       <div className="container mx-auto flex p-8 md:flex-row flex-col items-center bg-white rounded-lg">
