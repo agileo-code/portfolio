@@ -154,6 +154,15 @@ const StyledMarkDown = styled.div`
       text-align: center;
     }
   }
+
+  .highlight {
+    overflow-x: auto;
+  }
+
+  .highlight__panel {
+    display: none;
+  }
+
   @media (max-width: 1000px) {
     .table-wrapper-paragraph {
       table {
