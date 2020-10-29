@@ -1,25 +1,34 @@
 import { useEffect, useState, useContext } from 'react';
 
+import analytics from '../util/analytics';
 import { LanguageContext } from '../context/language';
 
 const BannerCookies = () => {
   const [bannerOpen, setBannerOpen] = useState(false);
+  const [cookiesAccepted, setCookiesAccepted] = useState(false);
   const { getTranslation } = useContext(LanguageContext);
-  const onBannerAccept = () => localStorage.setItem('cookiesAccepted', true);
+  const onBannerAccept = () => {
+    localStorage.setItem('cookiesAccepted', true);
+    setCookiesAccepted(true);
+  };
 
   useEffect(() => {
     setTimeout(() => {
-      const cookiesAccepted =
+      const tempCookiesAccepted =
         localStorage.getItem('cookiesAccepted') === 'true';
       const bannerCookieOpened =
         localStorage.getItem('bannerCookieOpened') === 'true';
 
-      if (!cookiesAccepted && !bannerCookieOpened) {
+      if (!tempCookiesAccepted && !bannerCookieOpened) {
         localStorage.setItem('bannerCookieOpened', true);
         setBannerOpen(true);
       }
     }, 0);
   }, []);
+
+  useEffect(() => {
+    if (cookiesAccepted) analytics();
+  }, [cookiesAccepted]);
 
   return (
     bannerOpen && (
