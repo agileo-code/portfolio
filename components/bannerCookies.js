@@ -1,4 +1,5 @@
 import { useEffect, useState, useContext } from 'react';
+import Link from 'next/link';
 
 import analytics from '../util/analytics';
 import { LanguageContext } from '../context/language';
@@ -33,19 +34,35 @@ const BannerCookies = () => {
   return (
     bannerOpen && (
       <div className="flex justify-center mb-3 z-10 fixed bottom-0 w-screen">
-        <div className="w-5/6 bg-white text-black p-4 rounded-md border">
+        <div className="w-5/6 bg-gray-400 text-black p-4 rounded-md border">
           <div className="flex flex-col items-center justify-between lg:flex-row">
-            <span>{getTranslation('[Coockie banner text]')}</span>
-            <div>
+            <span>
+              {getTranslation('[Coockie banner text]')}
+              <Link href="/privacy">
+                <a rel="nofollow" className="text-blue-700">{` ${getTranslation(
+                  '[More info]'
+                )}`}</a>
+              </Link>
+            </span>
+            <div className="flex flex-1">
               <button
                 type="button"
-                className="ml-4 inline-flex text-blue-700 bg-gray-100 border border-blue-700 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded text-lg"
+                className="ml-4 inline-flex bg-blue-700 text-white py-2 px-6 focus:outline-none hover:bg-blue-800 rounded text-lg"
                 onClick={() => {
                   onBannerAccept();
                   setBannerOpen(false);
                 }}
               >
                 {getTranslation('[Accept]')}
+              </button>
+              <button
+                type="button"
+                className="ml-4 inline-flex text-blue-700 bg-white border border-blue-700 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded text-lg"
+                onClick={() => {
+                  setBannerOpen(false);
+                }}
+              >
+                {getTranslation('[Reject]')}
               </button>
             </div>
           </div>
