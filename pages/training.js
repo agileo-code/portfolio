@@ -29,7 +29,9 @@ export default function Training() {
         <h1 className="self-center justify-self-center md:justify-self-start mb-5 md:mb-0 text-4xl">
           {getTranslation('[Training Programs]')}
         </h1>
-        <WhiteBoard />
+        <div>
+          <WhiteBoard />
+        </div>
       </div>
     </SectionLayout>
   );
