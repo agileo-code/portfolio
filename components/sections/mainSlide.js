@@ -16,7 +16,7 @@ const MainSlide = () => {
       className="flex flex-col h-screen bg-corporative-slideDark text-corporative-color p-10"
       style={{
         backgroundImage:
-          'url("images/main-bg.webp"), url("images/main-bg.jp2")',
+          'url("/images/main-bg.webp"), url("/images/main-bg.jp2")',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat'
       }}

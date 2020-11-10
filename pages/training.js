@@ -21,7 +21,7 @@ export default function Training() {
       className="bg-black text-white"
       style={{
         background:
-          'url("images/training-bg.webp"), url("images/training-bg.jp2")',
+          'url("/images/training-bg.webp"), url("/images/training-bg.jp2")',
         backgroundSize: 'contain'
       }}
     >
