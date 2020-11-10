@@ -57,8 +57,6 @@ export default function BlogPost({
               className="w-4 h-4 mr-1"
               aria-hidden="true"
               focusable="false"
-              data-prefix="far"
-              data-icon="heart"
               strokeWidth="2"
               role="img"
               xmlns="http://www.w3.org/2000/svg"
