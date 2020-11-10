@@ -2,6 +2,7 @@
 /* eslint-disable camelcase */
 import styled from 'styled-components';
 import Head from 'next/head';
+
 import Layout from '../../../components/layout';
 
 export default function Post({ devDotToPost }) {

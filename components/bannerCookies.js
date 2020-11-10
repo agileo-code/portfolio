@@ -1,13 +1,12 @@
 import { useEffect, useState, useContext } from 'react';
 import Link from 'next/link';
 
-import analytics from '../util/analytics';
-import { LanguageContext } from '../context/language';
+import { LangContext } from '../i18n-nimbel'
 
 const BannerCookies = () => {
   const [bannerOpen, setBannerOpen] = useState(false);
   const [cookiesAccepted, setCookiesAccepted] = useState(false);
-  const { getTranslation } = useContext(LanguageContext);
+  const { t } = useContext(LangContext);
   const onBannerAccept = () => {
     localStorage.setItem('cookiesAccepted', true);
     setCookiesAccepted(true);
@@ -28,7 +27,7 @@ const BannerCookies = () => {
   }, []);
 
   useEffect(() => {
-    if (cookiesAccepted) analytics();
+    // if (cookiesAccepted) analytics();
   }, [cookiesAccepted]);
 
   return (
@@ -37,9 +36,9 @@ const BannerCookies = () => {
         <div className="w-5/6 bg-gray-400 text-black p-4 rounded-md border">
           <div className="flex flex-col items-center justify-between lg:flex-row">
             <span>
-              {getTranslation('[Coockie banner text]')}
+              {t('[Coockie banner text]')}
               <Link href="/privacy">
-                <a rel="nofollow" className="text-blue-700">{` ${getTranslation(
+                <a rel="nofollow" className="text-blue-700">{` ${t(
                   '[More info]'
                 )}`}</a>
               </Link>
@@ -53,7 +52,7 @@ const BannerCookies = () => {
                   setBannerOpen(false);
                 }}
               >
-                {getTranslation('[Accept]')}
+                {t('[Accept]')}
               </button>
               <button
                 type="button"
@@ -62,7 +61,7 @@ const BannerCookies = () => {
                   setBannerOpen(false);
                 }}
               >
-                {getTranslation('[Reject]')}
+                {t('[Reject]')}
               </button>
             </div>
           </div>

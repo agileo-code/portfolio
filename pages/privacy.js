@@ -1,34 +1,35 @@
 import { useContext } from 'react';
+
 import Header from '../components/layout/header';
 import Footer from '../components/layout/footer';
-import { LanguageContext } from '../context/language';
+import { LangContext } from '../i18n-nimbel';
 
 export default function Privacy() {
-  const { getTranslation } = useContext(LanguageContext);
+  const { t } = useContext(LangContext);
   return (
     <>
       <Header />
       <div className="bg-black text-white p-10">
-        <h2 className="mt-20">{getTranslation('[Privacy policy]')}</h2>
-        <p>{getTranslation('[pp-summary]')}</p>
+        <h2 className="mt-20">{t('[Privacy policy]')}</h2>
+        <p>{t('[pp-summary]')}</p>
         <h3 className="mt-10">
-          {getTranslation('[pp-collected-information-title]')}
+          {t('[pp-collected-information-title]')}
         </h3>
-        <p>{getTranslation('[pp-collected-information]')}</p>
+        <p>{t('[pp-collected-information]')}</p>
         <h3 className="mt-10">
-          {getTranslation('[pp-information-use-title]')}
+          {t('[pp-information-use-title]')}
         </h3>
-        <p>{getTranslation('[pp-information-use-1]')}</p>
-        <p>{getTranslation('[pp-information-use-2]')}</p>
-        <h3 className="mt-10">{getTranslation('[pp-cookies-title]')}</h3>
-        <p>{getTranslation('[pp-cookies-1]')}</p>
-        <p>{getTranslation('[pp-cookies-2]')}</p>
-        <h3 className="mt-10">{getTranslation('[pp-external-links-title]')}</h3>
-        <p>{getTranslation('[pp-external-links]')}</p>
+        <p>{t('[pp-information-use-1]')}</p>
+        <p>{t('[pp-information-use-2]')}</p>
+        <h3 className="mt-10">{t('[pp-cookies-title]')}</h3>
+        <p>{t('[pp-cookies-1]')}</p>
+        <p>{t('[pp-cookies-2]')}</p>
+        <h3 className="mt-10">{t('[pp-external-links-title]')}</h3>
+        <p>{t('[pp-external-links]')}</p>
         <h3 className="mt-10">
-          {getTranslation('[pp-personal-information-control-title]')}
+          {t('[pp-personal-information-control-title]')}
         </h3>
-        <p>{getTranslation('[pp-personal-information-control]')}</p>
+        <p>{t('[pp-personal-information-control]')}</p>
       </div>
       <Footer />
     </>

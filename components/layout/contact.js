@@ -2,7 +2,7 @@ import { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 
-import { LanguageContext } from '../../context/language';
+import { LangContext } from '../../i18n-nimbel';
 import Toast from '../Toast';
 
 const Contact = () => {
@@ -10,18 +10,18 @@ const Contact = () => {
   const [alertOpen, setAlertOpen] = useState(false);
   const [alertMessage, setAlertMessage] = useState('');
   const [alertType, setAlertType] = useState('error');
-  const { getTranslation } = useContext(LanguageContext);
+  const { t } = useContext(LangContext);
 
   const onSubmit = data => {
     axios({ method: 'POST', url: 'https://formspree.io/f/mnqojbwe', data })
       .then(() => {
-        setAlertMessage(getTranslation('[ContactOK]'));
+        setAlertMessage(t('[ContactOK]'));
         setAlertType('success');
         setAlertOpen(true);
         reset();
       })
       .catch(() => {
-        setAlertMessage(getTranslation('[ContactContactKOOK]'));
+        setAlertMessage(t('[ContactContactKOOK]'));
         setAlertType('error');
         setAlertOpen(true);
       });
@@ -45,26 +45,26 @@ const Contact = () => {
       <div className="container px-5 py-24 mx-auto flex">
         <div className="lg:w-2/5 md:w-2/4 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-1">
           <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">
-            {getTranslation('[Contact Title]')}
+            {t('[Contact Title]')}
           </h2>
           <p className="leading-relaxed mb-5 text-gray-600">
-            {getTranslation('[Contact Subtitle]')}
+            {t('[Contact Subtitle]')}
           </p>
           <form className="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
             <input
-              aria-label={getTranslation('[Email]')}
+              aria-label={t('[Email]')}
               className="bg-white rounded border border-gray-400 focus:outline-none focus:border-blue-500 text-base px-4 py-2 mb-4"
               name="email"
-              placeholder={getTranslation('[Email]')}
+              placeholder={t('[Email]')}
               ref={register}
               required
               type="email"
             />
             <textarea
-              aria-label={getTranslation('[Comments]')}
+              aria-label={t('[Comments]')}
               className="bg-white rounded border border-gray-400 focus:outline-none h-32 focus:border-blue-500 text-base px-4 py-2 mb-4 resize-none"
               name="comments"
-              placeholder={getTranslation('[Comments]')}
+              placeholder={t('[Comments]')}
               ref={register}
               required
             />
@@ -72,11 +72,11 @@ const Contact = () => {
               type="submit"
               className="text-white bg-corporative-blue border-0 py-2 px-6 focus:outline-none hover:bg-blue-700 rounded text-lg"
             >
-              {getTranslation('[Submit]')}
+              {t('[Submit]')}
             </button>
           </form>
           <p className="text-xs text-gray-600 mt-3">
-            {getTranslation('[Accept privacy policy and terms of service]')}
+            {t('[Accept privacy policy and terms of service]')}
           </p>
         </div>
       </div>

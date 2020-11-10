@@ -8,13 +8,13 @@ import PriceCard from '../components/priceCard';
 import WhiteBoard from '../public/images/mobile-whiteboard.svg';
 import NimbelCertified from '../public/images/nimbel-certified.svg';
 
-import { LanguageContext } from '../context/language';
+import { LangContext } from '../i18n-nimbel';
 import IconBox from '../components/iconBox';
 import TrainingTopics from '../lib/training-topics';
 import TrainingPacks from '../lib/trainingPacks';
 
 export default function Training() {
-  const { getTranslation } = useContext(LanguageContext);
+  const { t } = useContext(LangContext);
 
   const Header = () => (
     <SectionLayout
@@ -27,7 +27,7 @@ export default function Training() {
     >
       <div className="grid md:grid-cols-2 md:m-10">
         <h1 className="self-center justify-self-center md:justify-self-start mb-5 md:mb-0 text-4xl">
-          {getTranslation('[Training Programs]')}
+          {t('[Training Programs]')}
         </h1>
         <div>
           <WhiteBoard />
@@ -40,10 +40,10 @@ export default function Training() {
     <>
       <div className="text-center mt-20 mb-10">
         <h2 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
-          {getTranslation('[Design your own training program]')}
+          {t('[Design your own training program]')}
         </h2>
         <p className="text-base leading-relaxed w-5/6 lg:w-2/3 mx-auto">
-          {getTranslation('[Training desc]')}
+          {t('[Training desc]')}
         </p>
         <div className="flex mt-6 justify-center">
           <div className="w-16 h-1 rounded-full bg-blue-500 inline-flex" />
@@ -71,16 +71,14 @@ export default function Training() {
   const NimbelCertifiedSection = () => (
     <div className="text-center bg-black text-white flex flex-col items-center">
       <h2 className="sm:text-3xl text-2xl font-medium title-font text-white my-8">
-        {getTranslation('[Get your certificate]')}
+        {t('[Get your certificate]')}
       </h2>
       <div className="w-1/4">
         <NimbelCertified />
       </div>
       <div className="text-justify p-4 md:px-8 md:my-8 md:w-2/3">
-        <p className="my-4">{getTranslation('[Get your certificate desc]')}</p>
-        <p className="my-4">
-          {getTranslation('[Get your certificate desc 2]')}
-        </p>
+        <p className="my-4">{t('[Get your certificate desc]')}</p>
+        <p className="my-4">{t('[Get your certificate desc 2]')}</p>
       </div>
       <div className="flex mt-6 justify-center">
         <div className="w-16 h-1 rounded-full bg-blue-500 inline-flex" />
@@ -96,7 +94,7 @@ export default function Training() {
             Packs
           </h2>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-            {getTranslation('[Packs desc]')}
+            {t('[Packs desc]')}
           </p>
         </div>
         <div className="flex justify-center flex-wrap">

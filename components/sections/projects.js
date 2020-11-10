@@ -1,10 +1,12 @@
 import { useContext } from 'react';
+import { useRouter } from 'next/router';
 
 import ProjectBox from '../projectBox';
-import { LanguageContext } from '../../context/language';
+import { LangContext } from '../../i18n-nimbel';
 
 export default function Projects({ allProjectsData }) {
-  const { getTranslation, locale } = useContext(LanguageContext);
+  const { locale } = useRouter();
+  const { t } = useContext(LangContext);
 
   return (
     <section className="text-gray-700 bg-gray-100 body-font" id="projects">
@@ -12,10 +14,10 @@ export default function Projects({ allProjectsData }) {
         <div className="flex flex-col">
           <div className="text-center mb-20">
             <h2 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
-              {getTranslation('[Projects]')}
+              {t('[Projects]')}
             </h2>
             <p className="text-base leading-relaxed w-5/6 lg:w-2/3 mx-auto">
-              {getTranslation('[Projects desc]')}
+              {t('[Projects desc]')}
             </p>
             <div className="flex mt-6 justify-center">
               <div className="w-16 h-1 rounded-full bg-blue-500 inline-flex" />

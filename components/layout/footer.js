@@ -1,11 +1,11 @@
 import { useContext } from 'react';
 import Link from 'next/link';
-import { LanguageContext } from '../../context/language';
+import { LangContext } from '../../i18n-nimbel';
 
 import Logo from '../../public/images/nimbel.svg';
 
 const Footer = () => {
-  const { getTranslation } = useContext(LanguageContext);
+  const { t } = useContext(LangContext);
 
   return (
     <footer className="text-white body-font bg-black">
@@ -34,7 +34,7 @@ const Footer = () => {
         <div className="flex">
           <div className="flex flex-col text-white text-xs md:ml-8">
             <Link href="training">
-              <a className="p-2">{getTranslation('[Training]')}</a>
+              <a className="p-2">{t('[Training]')}</a>
             </Link>
             <Link href="blog">
               <a className="p-2">Blog</a>
@@ -43,12 +43,12 @@ const Footer = () => {
           <div className="flex flex-col text-white text-xs ml-8">
             <Link href="privacy">
               <a rel="nofollow" className="p-2">
-                {getTranslation('[Privacy policy]')}
+                {t('[Privacy policy]')}
               </a>
             </Link>
             <Link href="termsAndConditions">
               <a rel="nofollow" className="p-2">
-                {getTranslation('[Terms of service]')}
+                {t('[Terms of service]')}
               </a>
             </Link>
           </div>

@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
-import { LanguageContext } from '../context/language';
+import { LangContext } from '../i18n-nimbel';
 
 export const onClick = (router, section) => {
   const pageSection = document.getElementById(section);
@@ -16,7 +16,7 @@ export const onClick = (router, section) => {
 };
 
 export default function Menu({ desktop }) {
-  const { getTranslation } = useContext(LanguageContext);
+  const { t } = useContext(LangContext);
   const router = useRouter();
 
   return (
@@ -30,32 +30,32 @@ export default function Menu({ desktop }) {
         className="cursor-pointer pr-3 pl-3"
         onClick={() => onClick(router, 'main')}
       >
-        {getTranslation('[Home]')}
+        {t('[Home]')}
       </button>
       <button
         type="button"
         className="cursor-pointer pr-3 pl-3"
         onClick={() => onClick(router, 'services')}
       >
-        {getTranslation('[Services]')}
+        {t('[Services]')}
       </button>
       <button
         type="button"
         className="cursor-pointer pr-3 pl-3"
         onClick={() => onClick(router, 'projects')}
       >
-        {getTranslation('[Projects]')}
+        {t('[Projects]')}
       </button>
       <button
         type="button"
         className="cursor-pointer pr-3 pl-3"
         onClick={() => onClick(router, 'contact')}
       >
-        {getTranslation('[Contact]')}
+        {t('[Contact]')}
       </button>
       <Link href="/training">
         <button type="button" className="cursor-pointer pr-3 pl-3">
-          {getTranslation('[Training]')}
+          {t('[Training]')}
         </button>
       </Link>
       <Link href="/blog">

@@ -1,7 +1,8 @@
 import { useContext } from 'react';
+import { useRouter } from 'next/router';
 import Select from 'react-select';
 
-import { LanguageContext } from '../context/language';
+import { LangContext } from '../i18n-nimbel';
 
 const customStyles = {
   control: provided => ({
@@ -39,36 +40,30 @@ const customStyles = {
 };
 
 export default function LanguageSelector({ desktop }) {
-  const {
-    getTranslation,
-    locale,
-    setLocale,
-    locales,
-    localesDescription,
-    changeLanguage
-  } = useContext(LanguageContext);
+  const { locale, locales } = useRouter();
+
+  const { t, cl } = useContext(LangContext);
 
   const onChangeLocale = lang => {
     const userLang = lang?.target?.value || lang?.value;
     localStorage.setItem('user-language', userLang);
-    setLocale(userLang);
-    changeLanguage(userLang);
+    cl(userLang);
   };
 
   const options = locales.map(lang => ({
     value: lang,
-    label: localesDescription[lang]
+    label: t(`[${lang}]`)
   }));
 
   return desktop ? (
     <Select
       components={{ IndicatorSeparator: null }}
-      value={[{ value: locale, label: getTranslation(`[${locale}]`) }]}
+      value={[{ value: locale, label: t(`[${locale}]`) }]}
       onChange={onChangeLocale}
       options={options}
       styles={customStyles}
       isSearchable={false}
-      aria-label={getTranslation(`[Select language]`)}
+      aria-label={t(`[Select language]`)}
     />
   ) : (
     <div className="flex text-xl p-4">

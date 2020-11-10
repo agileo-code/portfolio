@@ -1,13 +1,15 @@
 /* eslint-disable camelcase */
 import { useContext } from 'react';
+import { useRouter } from 'next/router';
 
+import { LangContext } from '../i18n-nimbel';
 import BlogPost from '../components/BlogPost';
 import Layout from '../components/layout';
 import SectionLayout from '../components/sectionLayout';
-import { LanguageContext } from '../context/language';
 
 export default function Blog({ devDotToPosts }) {
-  const { locale, localesObj } = useContext(LanguageContext);
+  const { locale, locales } = useRouter();
+  const { ft } = useContext(LangContext);
 
   return (
     <Layout>
@@ -35,7 +37,12 @@ export default function Blog({ devDotToPosts }) {
               }) => {
                 return (
                   type_of === 'article' &&
-                  tag_list.includes(localesObj[locale]) && (
+                  tag_list.includes(
+                    ft(
+                      'en',
+                      `[${locales.find(item => item === locale)}]`
+                    ).toLowerCase()
+                  ) && (
                     <BlogPost
                       key={id}
                       id={id}

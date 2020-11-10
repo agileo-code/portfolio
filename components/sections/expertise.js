@@ -3,10 +3,10 @@ import { useContext } from 'react';
 import SectionLayout from '../sectionLayout';
 import IconBox from '../iconBox';
 import services from '../../lib/services';
-import { LanguageContext } from '../../context/language';
+import { LangContext } from '../../i18n-nimbel';
 
 const Expertise = () => {
-  const { getTranslation } = useContext(LanguageContext);
+  const { t } = useContext(LangContext);
 
   return (
     <SectionLayout
@@ -15,10 +15,10 @@ const Expertise = () => {
     >
       <div className="text-center mb-20">
         <h2 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
-          {getTranslation('[Services]')}
+          {t('[Services]')}
         </h2>
         <p className="text-base leading-relaxed w-5/6 lg:w-2/3 mx-auto">
-          {getTranslation('[Equipo comprometido desc]')}
+          {t('[Equipo comprometido desc]')}
         </p>
         <div className="flex mt-6 justify-center">
           <div className="w-16 h-1 rounded-full bg-blue-500 inline-flex" />

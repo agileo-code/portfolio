@@ -1,11 +1,12 @@
 import { useContext } from 'react';
 import { useRouter } from 'next/router';
+
 import PriceFeature from './priceFeature';
 import { onClick } from './Menu';
-import { LanguageContext } from '../context/language';
+import { LangContext } from '../i18n-nimbel';
 
 const PriceCard = ({ pack }) => {
-  const { getTranslation } = useContext(LanguageContext);
+  const { t } = useContext(LangContext);
   const router = useRouter();
   return (
     <div className="p-4 xl:w-1/4 md:w-1/3 w-full">
@@ -24,7 +25,7 @@ const PriceCard = ({ pack }) => {
         </h2>
         {pack.regularPrice && (
           <span className="text-sm line-through">
-            {getTranslation('[Price]')} {pack.regularPrice}€
+            {t('[Price]')} {pack.regularPrice}€
           </span>
         )}
         {pack.price && (
