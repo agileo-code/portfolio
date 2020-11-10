@@ -74,18 +74,25 @@ export const getStaticProps = async ({ params }) => {
   };
 };
 
-export async function getStaticPaths() {
+export async function getStaticPaths({ locales }) {
   const devDotToPosts = await fetch(
     `https://dev.to/api/articles?username=nimbel`
   );
   const posts = await devDotToPosts.json();
+  const localeDescriptions = { en: 'english', es: 'spanish', ca: 'catalan' };
 
   return {
     paths: posts.map(post => {
+      const postLang = post.tag_list;
+      const postLocale = locales.filter(locale =>
+        postLang.includes(localeDescriptions[locale])
+      )[0];
+
       return {
         params: {
           slug: post.slug
-        }
+        },
+        locale: postLocale
       };
     }),
     fallback: false
