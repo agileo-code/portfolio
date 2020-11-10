@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /api
+Disallow: /termsAndConditions
+Disallow: /privacy
+Host: https://nimbel.net
+Sitemap: https://nimbel.net/sitemap.xml

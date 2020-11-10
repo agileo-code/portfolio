@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router';
 import { useContext } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 import { onClick } from './Menu';
 import { LangContext } from '../i18n-nimbel';
@@ -22,12 +21,7 @@ const IconBox = ({
     <div className="p-4 md:mb-0 mb-6 flex flex-col text-center items-center">
       <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-blue-100 mb-5 flex-shrink-0">
         <div className="w-10 text-corporative-blue">
-          <Image
-            src={icon}
-            width="80"
-            height="80"
-            layout="responsive"
-          />
+          <img src={icon} width="80" height="80" alt={title} />
         </div>
       </div>
       <div className="flex-grow">
