@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { DefaultSeo } from 'next-seo';
 
@@ -9,10 +8,6 @@ import '../styles/index.css';
 
 export default function App({ Component, pageProps }) {
   const { locale, push, route } = useRouter();
-
-  useEffect(() => {
-    localStorage.setItem('bannerCookieOpened', false);
-  }, []);
 
   return (
     <LangProvider

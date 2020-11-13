@@ -1,6 +1,5 @@
 import Head from 'next/head';
 
-import BannerCookies from '../components/bannerCookies';
 import MainSlide from '../components/sections/mainSlide';
 import Expertise from '../components/sections/expertise';
 import Projects from '../components/sections/projects';
@@ -24,7 +23,6 @@ export default function Home({ allProjectsData }) {
       <MainSlide />
       <Expertise />
       <Projects allProjectsData={allProjectsData} />
-      <BannerCookies />
     </Layout>
   );
 }
