@@ -41,6 +41,7 @@ export default function Header() {
       >
         {(!transparent || isBlog) && (
           <Logo
+            alt="Nimbel, mvp for startups"
             className="w-full m-5 cursor-pointer"
             onClick={() => onMenuClick(router, 'main')}
           />
@@ -53,7 +54,9 @@ export default function Header() {
       >
         <div className="hidden md:flex">
           <Menu desktop />
-          {router.route.indexOf('/posts') === -1 && <LanguageSelector desktop />}
+          {router.route.indexOf('/posts') === -1 && (
+            <LanguageSelector desktop />
+          )}
         </div>
 
         <div className="cursor-pointer" title="Open menu">
