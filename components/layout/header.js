@@ -41,7 +41,6 @@ export default function Header() {
       >
         {(!transparent || isBlog) && (
           <Logo
-            alt="Nimbel, mvp for startups"
             className="w-full m-5 cursor-pointer"
             onClick={() => onMenuClick(router, 'main')}
           />
