@@ -53,11 +53,6 @@ export default function Menu({ desktop }) {
       >
         {t('[Contact]')}
       </button>
-      <Link href="/training">
-        <button type="button" className="cursor-pointer pr-3 pl-3">
-          {t('[Training]')}
-        </button>
-      </Link>
       <Link href="/blog">
         <button type="button" className="cursor-pointer pr-3 pl-3">
           Blog
