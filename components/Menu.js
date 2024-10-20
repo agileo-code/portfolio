@@ -1,6 +1,5 @@
-import { useContext } from 'react';
 import { useRouter } from 'next/router';
-import Link from 'next/link';
+import { useContext } from 'react';
 
 import { LangContext } from '../i18n-nimbel';
 
@@ -53,11 +52,6 @@ export default function Menu({ desktop }) {
       >
         {t('[Contact]')}
       </button>
-      <Link href="/blog">
-        <button type="button" className="cursor-pointer pr-3 pl-3">
-          Blog
-        </button>
-      </Link>
     </div>
   );
 }

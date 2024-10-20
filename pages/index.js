@@ -1,9 +1,10 @@
 import Head from 'next/head';
 
-import MainSlide from '../components/sections/mainSlide';
-import Expertise from '../components/sections/expertise';
-import Projects from '../components/sections/projects';
 import Layout from '../components/layout';
+import AboutUs from '../components/sections/aboutUs';
+import Expertise from '../components/sections/expertise';
+import MainSlide from '../components/sections/mainSlide';
+import Projects from '../components/sections/projects';
 import { getAllMarkDownData } from '../lib/markDowns';
 
 export default function Home({ allProjectsData }) {
@@ -17,12 +18,17 @@ export default function Home({ allProjectsData }) {
           data-website-id="ce0e9a55-fac5-4288-a50f-4798de494265"
           src="https://landind-copywriting-umami.herokuapp.com/umami.js"
         />
-        <link rel="preconnect" href="https://maps.gstatic.com" />
-        <link rel="preconnect" href="https://maps.googleapis.com" />
+        <link rel="preconnect" href="https://maps.gstatic.com" legacyBehavior />
+        <link
+          rel="preconnect"
+          href="https://maps.googleapis.com"
+          legacyBehavior
+        />
       </Head>
       <MainSlide />
       <Expertise />
       <Projects allProjectsData={allProjectsData} />
+      <AboutUs />
     </Layout>
   );
 }

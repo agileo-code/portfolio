@@ -1,6 +1,6 @@
-import { useContext } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useContext } from 'react';
 import styled from 'styled-components';
 
 import { LangContext } from '../../i18n-nimbel';
@@ -52,7 +52,7 @@ const Expertise = () => {
             >
               {t('[Contact]')}
             </button>
-            <Link href="training">
+            <Link href="training" legacyBehavior>
               <a
                 type="button"
                 className="ml-4 inline-flex text-gray-700 bg-gray-300 border-0 py-2 px-6 focus:outline-none hover:bg-gray-400 rounded text-lg"

@@ -1,8 +1,8 @@
-import { useContext } from 'react';
 import Link from 'next/link';
+import { useContext } from 'react';
 
-import Header from '../components/layout/header';
 import Footer from '../components/layout/footer';
+import Header from '../components/layout/header';
 import { LangContext } from '../i18n-nimbel';
 
 export default function Privacy() {
@@ -18,7 +18,7 @@ export default function Privacy() {
         <h3 className="mt-10">{t('[tc-personal-data-title]')}</h3>
         <p>
           {t('[read]')}{' '}
-          <Link href="privacy">
+          <Link href="privacy" legacyBehavior>
             <a className="text-blue-500" rel="nofollow">
               {t('[Privacy policy]')}
             </a>
@@ -34,9 +34,7 @@ export default function Privacy() {
         <p>{t('[tc-complaints]')}</p>
         <h3 className="mt-10">{t('[tc-platform-title]')}</h3>
         <p>{t('[tc-platform]')}</p>
-        <h3 className="mt-10">
-          {t('[tc-property-rights-title]')}
-        </h3>
+        <h3 className="mt-10">{t('[tc-property-rights-title]')}</h3>
         <p>{t('[tc-property-rights-1]')}</p>
         <p>{t('[tc-property-rights-2]')}</p>
         <h3 className="mt-10">{t('[tc-external-links-title]')}</h3>

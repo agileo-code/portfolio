@@ -1,11 +1,12 @@
-import { useContext } from 'react';
 import { useRouter } from 'next/router';
+import { useContext } from 'react';
+
+import { LangContext } from '../../i18n-nimbel';
+import Logo from '../../public/images/nimbel-code.svg';
 
 import CustomerSlider from '../customerSlider';
-import Universe from '../universe';
 import { onMenuClick } from '../layout/header';
-import { LangContext } from '../../i18n-nimbel';
-import Logo from '../../public/images/nimbel.svg';
+import Universe from '../universe';
 
 const MainSlide = () => {
   const { t } = useContext(LangContext);

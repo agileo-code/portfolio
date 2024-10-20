@@ -1,9 +1,9 @@
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useContext } from 'react';
-import Link from 'next/link';
 
-import { onClick } from './Menu';
 import { LangContext } from '../i18n-nimbel';
+import { onClick } from './Menu';
 
 const IconBox = ({
   icon,
@@ -30,7 +30,7 @@ const IconBox = ({
         </h3>
         <p className="leading-relaxed text-base text-gray-700">{desc}</p>
         {link && (
-          <Link href={link}>
+          <Link href={link} legacyBehavior>
             <a className="mt-3 text-blue-600 inline-flex items-center">
               {t('[More info]')}
               <svg

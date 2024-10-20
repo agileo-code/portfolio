@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
-   sodipodi:docname="nimbel.svg"
-   viewBox="0 0 665 200"
+   inkscape:version="1.3 (0e150ed, 2023-07-21)"
+   sodipodi:docname="nimbel-code.svg"
+   viewBox="0 0 663.94067 280.99609"
    id="svg901"
-   version="1.1">
-   <title>Nimbel, mvp startup development</title>
+   version="1.1"
+   width="663.94067"
+   height="280.99609"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title1">Nimbel, mvp startup development</title>
   <metadata
      id="metadata907">
     <rdf:RDF>
@@ -22,7 +24,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title>Nimbel, mvp startup development</dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -31,16 +33,16 @@
   <sodipodi:namedview
      inkscape:current-layer="g909"
      inkscape:window-maximized="1"
-     inkscape:window-y="0"
-     inkscape:window-x="1680"
-     inkscape:cy="-25.233453"
-     inkscape:cx="123.7018"
-     inkscape:zoom="0.70710678"
+     inkscape:window-y="25"
+     inkscape:window-x="0"
+     inkscape:cy="26.401025"
+     inkscape:cx="576.69739"
+     inkscape:zoom="0.60603707"
      showguides="false"
      showgrid="false"
      id="namedview903"
-     inkscape:window-height="1026"
-     inkscape:window-width="1920"
+     inkscape:window-height="847"
+     inkscape:window-width="1440"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0"
      guidetolerance="10"
@@ -53,14 +55,17 @@
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
-     fit-margin-bottom="0" />
+     fit-margin-bottom="0"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
   <g
      id="g909"
      inkscape:label="Image"
      inkscape:groupmode="layer"
      transform="translate(-3.1165453,-4.0070087)">
     <g
-       transform="matrix(4.4103346,0,0,4.4824074,-259.42977,-544.52818)"
+       transform="matrix(4.4103346,0,0,4.4824074,-259.42977,-559.53519)"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:52px;line-height:1.25;font-family:Gayathri;-inkscape-font-specification:'Gayathri, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:currentColor;fill-opacity:1;stroke:currentColor;stroke-width:2.2491;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="text1781"
        aria-label="Nimbel">
@@ -89,5 +94,11 @@
          id="path1799"
          d="m 204.80859,127.99023 v 33.38868 c 0,0.63476 0.91407,1.14257 2.08203,1.14257 1.14258,0 2.05665,-0.50781 2.05665,-1.14257 v -33.38868 c 0,-0.63476 -0.91407,-1.14257 -2.05665,-1.14257 -1.16796,0 -2.08203,0.50781 -2.08203,1.14257 z" />
     </g>
+    <path
+       id="text1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:126.836px;font-family:'Avenir Next';-inkscape-font-specification:'Avenir Next';fill:currentColor;stroke-width:2.37816"
+       inkscape:label="text1"
+       d="m 47.276834,219.14265 c -24.606159,0 -44.3935122,19.91305 -44.3935122,44.39237 0,24.60616 19.7873532,44.52115 44.3935122,44.52115 H 91.66854 V 292.20175 H 47.276834 c -15.854484,0 -28.66569,-12.81224 -28.66569,-28.66673 0,-15.72765 12.811206,-28.53795 28.66569,-28.53795 H 91.66854 v -15.85442 z m 271.935566,0 c -13.19093,0 -23.84652,10.78264 -23.84652,24.10041 v 40.7127 c 0,13.31777 10.65559,24.10041 23.84652,24.10041 h 64.81221 V 292.20175 H 319.2124 c -4.43926,0 -8.1187,-3.67989 -8.1187,-8.24599 v -16.74108 h 57.0766 v -15.85442 h -57.0766 v -8.1172 c 0,-4.5661 3.67944,-8.24599 8.1187,-8.24599 h 64.81221 v -15.85442 z m -179.34669,0.12667 c -24.47932,0 -44.265215,19.78638 -44.265215,44.2657 0,10.50963 3.631407,20.12331 9.674495,27.70829 L 115.81863,278.925 c -2.82787,-4.44652 -4.49031,-9.71612 -4.49031,-15.38998 0,-15.72765 12.80975,-28.53795 28.53739,-28.53795 4.0807,0 7.9573,0.8779 11.47242,2.42988 l 10.54906,-12.32464 c -6.48578,-3.69382 -13.98685,-5.83299 -22.02148,-5.83299 z m 54.03187,0 v 88.66018 h 44.39351 c 12.17624,0 23.2102,-4.94832 31.20086,-12.93898 1.01469,-0.88785 1.77596,-1.90092 2.53698,-2.78877 6.59547,-7.73699 10.52738,-17.75884 10.52738,-28.66673 0,-24.47932 -19.91273,-44.2657 -44.26522,-44.2657 z m 15.72782,15.85442 h 28.66569 c 15.60081,0 28.41091,12.81047 28.41091,28.41128 0,15.85449 -12.8101,28.66673 -28.41091,28.66673 H 209.6254 Z m -34.60338,1.40599 -10.65748,12.45132 c 2.54751,4.26888 4.04038,9.2352 4.04038,14.55397 0,15.85449 -12.81156,28.66673 -28.53921,28.66673 -3.78209,0 -7.3883,-0.75688 -10.69542,-2.10266 l -10.59785,12.38164 c 6.31576,3.47025 13.56863,5.44877 21.29327,5.44877 24.60616,0 44.39352,-19.78832 44.39352,-44.39448 0,-10.18671 -3.46296,-19.53157 -9.23721,-27.00529 z"
+       transform="scale(1.0808871,0.92516603)" />
   </g>
 </svg>

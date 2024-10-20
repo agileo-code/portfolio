@@ -1,126 +1,82 @@
-import { useContext } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useContext } from 'react';
 import { LangContext } from '../../i18n-nimbel';
-
-import Logo from '../../public/images/nimbel.svg';
+import Logo from '../../public/images/nimbel-code.svg';
+import { onClick } from '../Menu';
 
 const Footer = () => {
   const { t } = useContext(LangContext);
+  const router = useRouter();
 
   return (
-    <footer className="text-white body-font bg-black">
-      <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-        <Link href="/">
-          <a
-            aria-label="Nimbel Home"
-            className="flex title-font font-medium items-center md:justify-start justify-center"
-          >
-            <Logo
-              className="w-20 cursor-pointer"
-              alt="Nimbel, mvp for startups"
-            />
-          </a>
-        </Link>
-        <p className="text-sm text-white sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
-          © {new Date().getFullYear()} Nimbel, Sant Cugat del Vallès, Barcelona,
-          Spain
-          {/* — <a
-            href="https://twitter.com"
-            className="text-gray-600 ml-1"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            @nimbel-code
-          </a> */}
-        </p>
-
-        <div className="flex">
-          <div className="flex flex-col text-white text-xs md:ml-8">
-            <Link href="training">
-              <a className="p-2">{t('[Training]')}</a>
-            </Link>
-            <Link href="blog">
-              <a className="p-2">Blog</a>
-            </Link>
-          </div>
-          <div className="flex flex-col text-white text-xs ml-8">
-            <Link href="privacy">
-              <a rel="nofollow" className="p-2">
-                {t('[Privacy policy]')}
-              </a>
-            </Link>
-            <Link href="termsAndConditions">
-              <a rel="nofollow" className="p-2">
-                {t('[Terms of service]')}
-              </a>
-            </Link>
-          </div>
+    <footer className="footer bg-black text-white p-10">
+      <aside>
+        <div className="w-24 h-15">
+          <Logo className="w-full h-full" />
         </div>
-
-        <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center items-center sm:justify-start">
-          {/* <a className="text-white">
-            <svg
-              fill="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              className="w-5 h-5"
-              viewBox="0 0 24 24"
-            >
-              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
-            </svg>
-          </a>
-          <a className="ml-3 text-white">
-            <svg
-              fill="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              className="w-5 h-5"
-              viewBox="0 0 24 24"
-            >
-              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
-            </svg>
-          </a>
-          <a className="ml-3 text-white">
-            <svg
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              className="w-5 h-5"
-              viewBox="0 0 24 24"
-            >
-              <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01" />
-            </svg>
-          </a> */}
-          <a
-            aria-label="Linkedin"
-            href="https://www.linkedin.com/company/nimbel-software"
-            rel="noopener noreferrer nofollow"
-            target="_blank"
-            className="ml-3 text-white"
-          >
-            <svg
-              fill="currentColor"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="0"
-              className="w-5 h-5"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke="none"
-                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
-              />
-              <circle cx="4" cy="4" r="2" stroke="none" />
-            </svg>
-          </a>
-        </span>
-      </div>
+        <p>{t('[Desarrollo de software a medida para empresas]')}</p>
+      </aside>
+      <nav>
+        <h6 className="footer-title">{t('[Services]')}</h6>
+        <button
+          type="button"
+          className="link link-hover"
+          onClick={() => onClick(router, 'services')}
+        >
+          {t('[Web Development]')}
+        </button>
+        <button
+          type="button"
+          className="link link-hover"
+          onClick={() => onClick(router, 'services')}
+        >
+          {t('[Mobile App Development]')}
+        </button>
+        <button
+          type="button"
+          className="link link-hover"
+          onClick={() => onClick(router, 'services')}
+        >
+          {t('[Software team management]')}
+        </button>
+        <button
+          type="button"
+          className="link link-hover"
+          onClick={() => onClick(router, 'services')}
+        >
+          {t('[Rescue mission]')}
+        </button>
+      </nav>
+      <nav>
+        <h6 className="footer-title">{t('[Company]')}</h6>
+        <button
+          type="button"
+          className="link link-hover"
+          onClick={() => onClick(router, 'about')}
+        >
+          {t('[About us]')}
+        </button>
+        <button
+          type="button"
+          className="link link-hover"
+          onClick={() => onClick(router, 'contact')}
+        >
+          {t('[Contact]')}
+        </button>
+      </nav>
+      <nav>
+        <h6 className="footer-title">{t('[Legal]')}</h6>
+        <Link href="/legalNotice" rel="nofollow" target="_blank">
+          {t('[Aviso legal]')}
+        </Link>
+        <Link href="/privacy" rel="nofollow" target="_blank">
+          {t('[Politica de privacidad]')}
+        </Link>
+        {/* <Link href="/termsAndConditions" rel="nofollow" target="_blank">
+          {t('[Politica de Cookies]')}
+        </Link> */}
+      </nav>
     </footer>
   );
 };

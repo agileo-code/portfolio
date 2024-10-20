@@ -1,7 +1,7 @@
-import { useEffect, useState, useContext } from 'react';
 import Link from 'next/link';
+import { useContext, useEffect, useState } from 'react';
 
-import { LangContext } from '../i18n-nimbel'
+import { LangContext } from '../i18n-nimbel';
 
 const BannerCookies = () => {
   const [bannerOpen, setBannerOpen] = useState(false);
@@ -37,7 +37,7 @@ const BannerCookies = () => {
           <div className="flex flex-col items-center justify-between lg:flex-row">
             <span>
               {t('[Coockie banner text]')}
-              <Link href="/privacy">
+              <Link href="/privacy" legacyBehavior>
                 <a rel="nofollow" className="text-blue-700">{` ${t(
                   '[More info]'
                 )}`}</a>

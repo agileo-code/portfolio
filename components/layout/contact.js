@@ -1,6 +1,6 @@
+import axios from 'axios';
 import { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import axios from 'axios';
 
 import { LangContext } from '../../i18n-nimbel';
 import Toast from '../Toast';
@@ -29,8 +29,8 @@ const Contact = () => {
 
   return (
     <section className="text-gray-700 body-font relative" id="contact">
-      <div className="absolute inset-0 bg-gray-300">
-        <iframe
+      <div className="absolute inset-0 bg-corporative-blue opacity-30">
+        {/*  <iframe
           width="100%"
           height="100%"
           frameBorder="0"
@@ -38,12 +38,12 @@ const Contact = () => {
           marginWidth="0"
           title="map"
           scrolling="no"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4876656.386329172!2d-3.6308707421258255!3d41.2414072109251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a496c2a6d57035%3A0xb16124d430411319!2sSant%20Cugat%20del%20Vall%C3%A8s%2C%20Barcelona!5e0!3m2!1sen!2ses!4v1600853746591!5m2!1sen!2ses"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2527171.085908876!2d-7.116642283983076!3d53.41230584253117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485db37d39d90ebf%3A0xcd14aadb4cca878f!2s9%20Station%20Rd%2C%20Cois%20Na%20hAbhainn%2C%20Moate%2C%20Co.%20Westmeath!5e1!3m2!1ses-419!2sie!4v1729438406511!5m2!1ses-419!2sie"
           style={{ filter: 'contrast(1) opacity(0.4)' }}
-        />
+        /> */}
       </div>
-      <div className="container px-5 py-24 mx-auto flex">
-        <div className="lg:w-2/5 md:w-2/4 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-1">
+      <div className="container px-5 py-10 mx-auto flex">
+        <div className="bg-white rounded-lg p-8 flex flex-col w-full relative z-1">
           <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">
             {t('[Contact Title]')}
           </h2>
@@ -56,7 +56,7 @@ const Contact = () => {
               className="bg-white rounded border border-gray-400 focus:outline-none focus:border-blue-500 text-base px-4 py-2 mb-4"
               name="email"
               placeholder={t('[Email]')}
-              ref={register}
+              {...register}
               required
               type="email"
             />
@@ -65,7 +65,7 @@ const Contact = () => {
               className="bg-white rounded border border-gray-400 focus:outline-none h-32 focus:border-blue-500 text-base px-4 py-2 mb-4 resize-none"
               name="comments"
               placeholder={t('[Comments]')}
-              ref={register}
+              {...register}
               required
             />
             <button

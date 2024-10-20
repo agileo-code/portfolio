@@ -1,12 +1,12 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
+import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { useRouter } from 'next/router';
 
 import Burger from '../../public/images/burger.svg';
 import Cross from '../../public/images/cross.svg';
-import Logo from '../../public/images/nimbel.svg';
+import Logo from '../../public/images/nimbel-code.svg';
 import Menu, { onClick } from '../Menu';
 
 import LanguageSelector from '../LanguageSelector';
@@ -25,9 +25,6 @@ export default function Header() {
     });
   }, []);
 
-  let isBlog = false;
-  if (router.route.indexOf('/blog') > -1) isBlog = true;
-
   return (
     <div
       className={`transition duration-500 flex justify-between items-center w-full z-10 fixed shadow-md ${
@@ -36,10 +33,10 @@ export default function Header() {
     >
       <div
         className={`flex items-center h-full ${
-          transparent ? 'w-48 text-corporative-color' : 'w-40 text-black'
+          transparent ? 'w-32 text-corporative-color' : 'w-32 text-black'
         }`}
       >
-        {(!transparent || isBlog) && (
+        {!transparent && (
           <Logo
             className="w-full m-5 cursor-pointer"
             onClick={() => onMenuClick(router, 'main')}
